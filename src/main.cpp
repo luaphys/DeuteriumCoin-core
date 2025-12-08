@@ -8288,9 +8288,11 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
             if (inv.type == MSG_BLOCK || inv.type == MSG_FILTERED_BLOCK || inv.type == MSG_CMPCT_BLOCK || inv.type == MSG_WITNESS_BLOCK)
             {
                 bool send = false;
+                bool blockFound = false;
                 BlockMap::iterator mi = mapBlockIndex.find(inv.hash);
                 if (mi != mapBlockIndex.end())
                 {
+                    blockFound = true;
                     if (chainActive.Contains(mi->second)) {
                         send = true;
                     } else {
@@ -8309,7 +8311,7 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                 // disconnect node in case we have reached the outbound limit for serving historical blocks
                 // never disconnect whitelisted nodes
                 static const int nOneWeek = 7 * 24 * 60 * 60; // assume > 1 week = historical
-                if (send && CNode::OutboundTargetReached(true) && ( ((pindexBestHeader != nullptr) && (pindexBestHeader->GetBlockTime() - mi->second->GetBlockTime() > nOneWeek)) || inv.type == MSG_FILTERED_BLOCK) && !pfrom->fWhitelisted)
+                if (send && blockFound && CNode::OutboundTargetReached(true) && ( ((pindexBestHeader != nullptr) && (pindexBestHeader->GetBlockTime() - mi->second->GetBlockTime() > nOneWeek)) || inv.type == MSG_FILTERED_BLOCK) && !pfrom->fWhitelisted)
                 {
                     LogPrint("net", "historical block serving limit reached, disconnect peer=%d\n", pfrom->GetId());
 
@@ -8319,7 +8321,7 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                 }
                 // Pruned nodes may have deleted the block, so check whether
                 // it's available before trying to send.
-                if (send && (mi->second->nStatus & BLOCK_HAVE_DATA))
+                if (send && blockFound && (mi->second->nStatus & BLOCK_HAVE_DATA))
                 {
                     // Send block from disk
                     CBlock block;
@@ -8373,6 +8375,9 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                         pfrom->PushMessage(NetMsgType::INV, vInv);
                         pfrom->hashContinue.SetNull();
                     }
+                } else {
+                    // Block not found, can't be served, or pruned - send NOTFOUND so peer doesn't wait indefinitely
+                    vNotFound.push_back(inv);
                 }
             }
             else if (inv.type == MSG_TX || inv.type == MSG_WITNESS_TX || inv.type == MSG_DANDELION_TX || inv.type == MSG_DANDELION_WITNESS_TX)
