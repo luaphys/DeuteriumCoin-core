@@ -8276,10 +8276,6 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
     LOCK(cs_main);
 
     while (it != pfrom->vRecvGetData.end()) {
-        // Don't bother if send buffer is too full to respond anyway
-        if (pfrom->nSendSize >= SendBufferSize())
-            break;
-
         const CInv &inv = *it;
         {
             boost::this_thread::interruption_point();
@@ -8321,8 +8317,8 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                 }
                 // Pruned nodes may have deleted the block, so check whether
                 // it's available before trying to send.
-                if (send && blockFound && (mi->second->nStatus & BLOCK_HAVE_DATA))
-                {
+                // Don't send block if send buffer is too full, but still process request to send NOTFOUND if needed
+                if (send && blockFound && (mi->second->nStatus & BLOCK_HAVE_DATA) && pfrom->nSendSize < SendBufferSize()) {
                     // Send block from disk
                     CBlock block;
                     if (!ReadBlockFromDisk(block, (*mi).second, consensusParams))
@@ -8331,11 +8327,9 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                         pfrom->PushMessageWithFlag(SERIALIZE_TRANSACTION_NO_WITNESS, NetMsgType::BLOCK, block);
                     else if (inv.type == MSG_WITNESS_BLOCK)
                         pfrom->PushMessage(NetMsgType::BLOCK, block);
-                    else if (inv.type == MSG_FILTERED_BLOCK)
-                    {
+                    else if (inv.type == MSG_FILTERED_BLOCK) {
                         LOCK(pfrom->cs_filter);
-                        if (pfrom->pfilter)
-                        {
+                        if (pfrom->pfilter) {
                             CMerkleBlock merkleBlock(block, *pfrom->pfilter);
                             pfrom->PushMessage(NetMsgType::MERKLEBLOCK, merkleBlock);
                             // CMerkleBlock just contains hashes, so also push any transactions in the block the client did not see
@@ -8345,14 +8339,12 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                             // Thus, the protocol spec specified allows for us to provide duplicate txn here,
                             // however we MUST always provide at least what the remote peer needs
                             typedef std::pair<unsigned int, uint256> PairType;
-                            for(PairType& pair: merkleBlock.vMatchedTxn)
+                            for (PairType& pair : merkleBlock.vMatchedTxn)
                                 pfrom->PushMessageWithFlag(SERIALIZE_TRANSACTION_NO_WITNESS, NetMsgType::TX, block.vtx[pair.first]);
                         }
                         // else
                         // no response
-                    }
-                    else if (inv.type == MSG_CMPCT_BLOCK)
-                    {
+                    } else if (inv.type == MSG_CMPCT_BLOCK) {
                         // If a peer is asking for old blocks, we're almost guaranteed
                         // they wont have a useful mempool to match against a compact block,
                         // and we dont feel like constructing the object for them, so
@@ -8365,8 +8357,7 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                     }
 
                     // Trigger the peer node to send a getblocks request for the next batch of inventory
-                    if (inv.hash == pfrom->hashContinue)
-                    {
+                    if (inv.hash == pfrom->hashContinue) {
                         // Bypass PushInventory, this must send even if redundant,
                         // and we want it right after the last block so they don't
                         // wait for other stuff first.
@@ -8376,9 +8367,13 @@ void static ProcessGetData(CNode* pfrom, const Consensus::Params& consensusParam
                         pfrom->hashContinue.SetNull();
                     }
                 } else {
-                    // Block not found, can't be served, or pruned - send NOTFOUND so peer doesn't wait indefinitely
+                    // Block not found, can't be served, pruned, or send buffer full - send NOTFOUND so peer doesn't wait indefinitely
                     vNotFound.push_back(inv);
                 }
+
+                // Don't process more block requests if send buffer is too full
+                if (pfrom->nSendSize >= SendBufferSize())
+                    break;
             }
             else if (inv.type == MSG_TX || inv.type == MSG_WITNESS_TX || inv.type == MSG_DANDELION_TX || inv.type == MSG_DANDELION_WITNESS_TX)
             {
