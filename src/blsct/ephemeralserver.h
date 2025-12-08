@@ -5,10 +5,11 @@
 #ifndef EPHEMERALSERVER_H
 #define EPHEMERALSERVER_H
 
+#include <boost/bind/bind.hpp>
 #include <boost/thread/thread.hpp>
 #include <boost/thread/future.hpp>
 #include <boost/asio.hpp>
-
+#include <set>
 #include <torcontrol.h>
 #include <util.h>
 
