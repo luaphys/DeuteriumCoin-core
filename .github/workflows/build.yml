@@ -1,0 +1,51 @@
+name: Build Windows Coin (NavCoin Fork)
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up MSVC environment
+        uses: ilammy/msvc-dev-cmd@v1
+
+      - name: Install dependencies (vcpkg)
+        run: |
+          git clone https://github.com/microsoft/vcpkg
+          cd vcpkg
+          .\bootstrap-vcpkg.bat
+          .\vcpkg install boost-filesystem boost-system boost-thread openssl berkeleydb
+
+      - name: Run autogen (if exists)
+        shell: bash
+        run: |
+          if [ -f "./autogen.sh" ]; then
+            ./autogen.sh
+          fi
+
+      - name: Configure build (MSVC)
+        shell: bash
+        run: |
+          if [ -f "./configure" ]; then
+            ./configure --with-boost-libdir=/vcpkg/installed/x64-windows/lib
+          fi
+
+      - name: Build (MSBuild)
+        shell: pwsh
+        run: |
+          msbuild *.sln /p:Configuration=Release /m
+
+      - name: Upload binaries
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-binaries
+          path: |
+            **/Release/*.exe
