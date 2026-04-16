@@ -255,7 +255,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signa el &amp;missatge...</translation>
@@ -337,8 +337,8 @@
         <translation>S'estan reindexant els blocs al disc...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Envia monedes a una adreça Navcoin</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Envia monedes a una adreça Deuteriumcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -361,8 +361,8 @@
         <translation>&amp;Verifica el missatge...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -389,12 +389,12 @@
         <translation>Encripta les claus privades pertanyents al moneder</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Signa el missatges amb la seva adreça de Navcoin per provar que les poseeixes</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Signa el missatges amb la seva adreça de Deuteriumcoin per provar que les poseeixes</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Navcoin específica.</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Verifiqueu els missatges per assegurar-vos que han estat signats amb una adreça Deuteriumcoin específica.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -409,8 +409,8 @@
         <translation>&amp;Ajuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Sol·licita pagaments (genera codis QR i navcoin: URI)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Sol·licita pagaments (genera codis QR i deuteriumcoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -421,16 +421,16 @@
         <translation>Mostra la llista d'adreces de recepció i etiquetes utilitzades</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Obre una navcoin: sol·licitud d'URI o pagament</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Obre una deuteriumcoin: sol·licitud d'URI o pagament</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opcions de la &amp;línia d'ordres</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Navcoin network</source>
-        <translation><numerusform>%n connexió activa a la xarxa Navcoin</numerusform><numerusform>%n connexions actives a la xarxa Navcoin</numerusform></translation>
+        <source>%n active connection(s) to Deuteriumcoin network</source>
+        <translation><numerusform>%n connexió activa a la xarxa Deuteriumcoin</numerusform><numerusform>%n connexions actives a la xarxa Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -656,16 +656,16 @@
         <translation>&amp;Gasta el canvi sense confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Obre el port del client de Navcoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Obre el port del client de Deuteriumcoin al router de forma automàtica. Això només funciona quan el router implementa UPnP i l'opció està activada.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Port obert amb &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Connecta a la xarxa Navcoin a través d'un proxy SOCKS5.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Connecta a la xarxa Deuteriumcoin a través d'un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -704,8 +704,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red de Navcoin a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
+        <source>Connect to the Deuteriumcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red de Deuteriumcoin a través de un proxy SOCKS5 per als serveis ocults de Tor</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -824,8 +824,8 @@
         <translation>Import</translation>
     </message>
     <message>
-        <source>Enter a Navcoin address (e.g. %1)</source>
-        <translation>Introduïu una adreça de Navcoin (p. ex. %1)</translation>
+        <source>Enter a Deuteriumcoin address (e.g. %1)</source>
+        <translation>Introduïu una adreça de Deuteriumcoin (p. ex. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1078,8 +1078,8 @@
         <translation>&amp;Desbandeja el node</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Utilitza les fletxes d'amunt i avall per navegar per l'historial, i &lt;b&gt;Ctrl-L&lt;\b&gt; per netejar la pantalla.</translation>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Utilitza les fletxes d'amunt i avall per deuegar per l'historial, i &lt;b&gt;Ctrl-L&lt;\b&gt; per netejar la pantalla.</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -1157,8 +1157,8 @@
         <translation>R&amp;eutilitza una adreça de recepció anterior (no recomanat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Navcoin network.</source>
-        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Navcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Deuteriumcoin network.</source>
+        <translation>Un missatge opcional que s'adjuntarà a la sol·licitud de pagament, que es mostrarà quan s'obri la sol·licitud. Nota: El missatge no s'enviarà amb el pagament per la xarxa Deuteriumcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1302,8 +1302,8 @@
         <translation>total com a mínim</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for navcoin transactions than the network can process.</source>
-        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de navcoins que la xarxa pugui processar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for deuteriumcoin transactions than the network can process.</source>
+        <translation>No hi ha cap problema en pagar només la comissió mínima sempre que hi hagi menys volum de transacció que espai en els blocs. Però tingueu present que això pot acabar en una transacció que mai es confirmi una vegada hi hagi més demanda de transaccions de deuteriumcoins que la xarxa pugui processar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -1369,8 +1369,8 @@
         <translation>Això és un pagament normal.</translation>
     </message>
     <message>
-        <source>The Navcoin address to send the payment to</source>
-        <translation>L'adreça Navcoin on enviar el pagament</translation>
+        <source>The Deuteriumcoin address to send the payment to</source>
+        <translation>L'adreça Deuteriumcoin on enviar el pagament</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1381,8 +1381,8 @@
         <translation>Elimina aquesta entrada</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less navcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys navcoins que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less deuteriumcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La comissió es deduirà de l'import que s'enviarà. El destinatari rebrà menys deuteriumcoins que les que introduïu al camp d'import. Si se seleccionen múltiples destinataris, la comissió es dividirà per igual.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1405,8 +1405,8 @@
         <translation>Introduïu una etiqueta per a aquesta adreça per afegir-la a la llista d'adreces utilitzades</translation>
     </message>
     <message>
-        <source>A message that was attached to the navcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Navcoin network.</source>
-        <translation>Un missatge que s'ha adjuntat al navcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Navcoin.</translation>
+        <source>A message that was attached to the deuteriumcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Deuteriumcoin network.</source>
+        <translation>Un missatge que s'ha adjuntat al deuteriumcoin: URI que s'emmagatzemarà amb la transacció per a la vostra referència. Nota: el missatge no s'enviarà a través de la xarxa Deuteriumcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1442,12 +1442,12 @@
         <translation>&amp;Signa el missatge</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive navcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les navcoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive deuteriumcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podeu signar missatges/acords amb les vostres adreces per provar que rebeu les deuteriumcoins que s'hi envien. Aneu amb compte no signar res que sigui vague o aleatori, perquè en alguns atacs de suplantació es pot provar que hi signeu la vostra identitat. Només signeu aquelles declaracions completament detallades en què hi esteu d'acord. </translation>
     </message>
     <message>
-        <source>The Navcoin address to sign the message with</source>
-        <translation>L'adreça Navcoin amb què signar el missatge</translation>
+        <source>The Deuteriumcoin address to sign the message with</source>
+        <translation>L'adreça Deuteriumcoin amb què signar el missatge</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1478,8 +1478,8 @@
         <translation>Copia la signatura actual al porta-retalls del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça Navcoin</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Signa el missatge per provar que ets propietari d'aquesta adreça Deuteriumcoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1502,12 +1502,12 @@
         <translation>Introduïu l'adreça del receptor, el missatge (assegureu-vos de copiar els salts de línia, espais, tabuladors, etc. exactament) i signatura de sota per verificar el missatge. Tingueu cura de no llegir més en la signatura del que està al missatge signat, per evitar ser enganyat per un atac d'home-en-el-mig. Tingueu en compte que això només demostra que la part que signa rep amb l'adreça, i no es pot provar l'enviament de qualsevol transacció!</translation>
     </message>
     <message>
-        <source>The Navcoin address the message was signed with</source>
-        <translation>L'adreça Navcoin amb què va ser signat el missatge</translation>
+        <source>The Deuteriumcoin address the message was signed with</source>
+        <translation>L'adreça Deuteriumcoin amb què va ser signat el missatge</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Navcoin específica</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Verificar el missatge per assegurar-se que ha estat signat amb una adreça Deuteriumcoin específica</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1608,7 +1608,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opcions:</translation>
@@ -1674,8 +1674,8 @@
         <translation>Accepta connexions de fora (per defecte: 1 si no -proxy o -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>-fallbackfee is set very high! This is the transaction fee you may pay when fee estimates are not available.</source>
@@ -2163,14 +2163,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Formulari</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Esborra</translation>

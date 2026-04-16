@@ -111,7 +111,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Synchronizuji se sítí...</translation>
@@ -145,8 +145,8 @@
         <translation>Změnit heslo k šifrování peněženky</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -362,7 +362,7 @@
     <name>getAddressToReceive</name>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -381,9 +381,9 @@
     </message>
     </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

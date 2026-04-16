@@ -155,7 +155,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Signeeri &amp;sõnum</translation>
@@ -221,8 +221,8 @@
         <translation>Kettal olevate blokkide re-indekseerimine...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Saada münte Navcoini aadressile</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Saada münte Deuteriumcoini aadressile</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -245,8 +245,8 @@
         <translation>&amp;Kontrolli sõnumit...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -273,12 +273,12 @@
         <translation>Krüpteeri oma rahakoti privaatvõtmed</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Navcoini aadressiga</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Omandi tõestamiseks allkirjasta sõnumid oma Deuteriumcoini aadressiga</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Navcoini aadressiga</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Kinnita sõnumid kindlustamaks et need allkirjastati määratud Deuteriumcoini aadressiga</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -444,8 +444,8 @@
         <translation>Ekspert</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Navcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deuteriumcoini kliendi pordi automaatne avamine ruuteris. Toimib, kui sinu ruuter aktsepteerib UPnP ühendust.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -630,7 +630,7 @@
         <translation>Puhasta konsool</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
         <translation>Ajaloo sirvimiseks kasuta üles ja alla nooli, ekraani puhastamiseks &lt;b&gt;Ctrl-L&lt;/b&gt;.</translation>
     </message>
     <message>
@@ -810,8 +810,8 @@
         <translation>Kopeeri praegune signatuur vahemällu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Allkirjasta sõnum Navcoini aadressi sulle kuulumise tõestamiseks</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Allkirjasta sõnum Deuteriumcoini aadressi sulle kuulumise tõestamiseks</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -830,8 +830,8 @@
         <translation>&amp;Kinnita Sõnum</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Navcoini aadressiga.</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Kinnita sõnum tõestamaks selle allkirjastatust määratud Deuteriumcoini aadressiga.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -924,7 +924,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Valikud:</translation>
@@ -954,8 +954,8 @@
         <translation>Luba välisühendusi (vaikeväärtus: 1 kui puudub -proxy või -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoini tuumik</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoini tuumik</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1131,14 +1131,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Vorm</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Eemalda</translation>

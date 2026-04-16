@@ -66,12 +66,12 @@
         <translation>Direcciones de recepción...</translation>
     </message>
     <message>
-        <source>These are your Navcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones Navcoin para enviar pagos. Siempre chequea el monto y la dirección de recibo antes de enviar las monedas.</translation>
+        <source>These are your Deuteriumcoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Deuteriumcoin para enviar pagos. Siempre chequea el monto y la dirección de recibo antes de enviar las monedas.</translation>
     </message>
     <message>
-        <source>These are your Navcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Navcoin para recibir pagos. Es recomendado usar una nueva dirección para cada transacción.</translation>
+        <source>These are your Deuteriumcoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Deuteriumcoin para recibir pagos. Es recomendado usar una nueva dirección para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Confirme el encriptado del monedero</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR NAVCOINS&lt;/b&gt;!</source>
-        <translation>Advertencia: Si usted encripta su monedero y pierde su contraseña, usted &lt;b&gt; PERDERÁ TODAS SUS NAVCOINS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR DEUTERIUMCOINS&lt;/b&gt;!</source>
+        <translation>Advertencia: Si usted encripta su monedero y pierde su contraseña, usted &lt;b&gt; PERDERÁ TODAS SUS DEUTERIUMCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -200,8 +200,8 @@
         <translation>Monedero encriptado</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your navcoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 cerrara ahora para culminar el proceso de encriptación. Recuerde que la encriptación de su monedero no protege totalmente sus navcoin de ser robados por la infección de un malware en su computador.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your deuteriumcoins from being stolen by malware infecting your computer.</source>
+        <translation>%1 cerrara ahora para culminar el proceso de encriptación. Recuerde que la encriptación de su monedero no protege totalmente sus deuteriumcoin de ser robados por la infección de un malware en su computador.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -535,8 +535,8 @@
         <translation>Editar dirección de envío</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Navcoin address.</source>
-        <translation>La dirección ingresada "%1 no es una dirección Navcoin valida.</translation>
+        <source>The entered address "%1" is not a valid Deuteriumcoin address.</source>
+        <translation>La dirección ingresada "%1 no es una dirección Deuteriumcoin valida.</translation>
     </message>
     <message>
         <source>The entered address "%1" is already in the address book.</source>
@@ -554,8 +554,8 @@
 <context>
     <name>FreespaceChecker</name>
     <message>
-        <source>Navcoin will try to import an old wallet.dat file.</source>
-        <translation>Navcoin intentara importar un archivo wallet.dat anterior.</translation>
+        <source>Deuteriumcoin will try to import an old wallet.dat file.</source>
+        <translation>Deuteriumcoin intentara importar un archivo wallet.dat anterior.</translation>
     </message>
     <message>
         <source>You must choose a wallet.dat file.</source>
@@ -651,8 +651,8 @@
         <translation>Como este es la primera vez %1 que es iniciado, todavía hay algunos pasos que necesitan ser completados.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Navcoin block chain. At least %2GB of data will be stored in your computer, and it will grow over time. A wallet is needed to store your coins.</source>
-        <translation>%1 descargara y se almacenara una copia de la cadena de bloques de Navcoin. Por lo menos %2 GB de información sera almacenada en su computador, y esta crecera con el tiempo.  Un monedero es requerido para almacenar sus monedas.</translation>
+        <source>%1 will download and store a copy of the Deuteriumcoin block chain. At least %2GB of data will be stored in your computer, and it will grow over time. A wallet is needed to store your coins.</source>
+        <translation>%1 descargara y se almacenara una copia de la cadena de bloques de Deuteriumcoin. Por lo menos %2 GB de información sera almacenada en su computador, y esta crecera con el tiempo.  Un monedero es requerido para almacenar sus monedas.</translation>
     </message>
     <message>
         <source>Create a new wallet.</source>
@@ -683,7 +683,7 @@
     </message>
 </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Firmar &amp;mensaje...</translation>
@@ -846,7 +846,7 @@
     </message>
     <message numerus="yes">
         <source>%n active connections.</source>
-        <translation><numerusform>%n conexión activa.</numerusform><numerusform>%n conexiones activas hacia la red Navcoin</numerusform></translation>
+        <translation><numerusform>%n conexión activa.</numerusform><numerusform>%n conexiones activas hacia la red Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>Reindexing blocks on disk...</source>
@@ -917,8 +917,8 @@
         <translation>No en staking, por favor espere.</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Enviar navcoins a una dirección Navcoin</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Enviar deuteriumcoins a una dirección Deuteriumcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -941,8 +941,8 @@
         <translation>&amp;Verificar mensaje...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -969,12 +969,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Firmar mensajes con sus direcciones Navcoin para demostrar la propiedad</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Firmar mensajes con sus direcciones Deuteriumcoin para demostrar la propiedad</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones Navcoin concretas</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones Deuteriumcoin concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -989,8 +989,8 @@
         <translation>&amp;Ayuda</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Solicitar pagos (generando códigos QR e identificadores URI "navcoin:")</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Solicitar pagos (generando códigos QR e identificadores URI "deuteriumcoin:")</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -1001,16 +1001,16 @@
         <translation>Muestra la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Abrir un identificador URI "navcoin:" o una petición de pago</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Abrir un identificador URI "deuteriumcoin:" o una petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opciones de consola de comandos</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Navcoin network</source>
-        <translation><numerusform>%n conexión activa hacia la red Navcoin</numerusform><numerusform>%n conexiones activas hacia la red Navcoin</numerusform></translation>
+        <source>%n active connection(s) to Deuteriumcoin network</source>
+        <translation><numerusform>%n conexión activa hacia la red Deuteriumcoin</numerusform><numerusform>%n conexiones activas hacia la red Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -1033,12 +1033,12 @@
         <translation><numerusform>Último bloque: %n</numerusform><numerusform>Último bloque: %n</numerusform></translation>
     </message>
     <message>
-        <source>Connected to Navcoin network.</source>
-        <translation>Conectado a la red Navcoin.</translation>
+        <source>Connected to Deuteriumcoin network.</source>
+        <translation>Conectado a la red Deuteriumcoin.</translation>
     </message>
     <message>
-        <source>Connecting to Navcoin network...</source>
-        <translation>Conectando a la red Navcoin...</translation>
+        <source>Connecting to Deuteriumcoin network...</source>
+        <translation>Conectando a la red Deuteriumcoin...</translation>
     </message>
     <message numerus="yes">
         <source>%n hour(s)</source>
@@ -1077,8 +1077,8 @@
         <translation>Aviso importante de red.</translation>
     </message>
     <message>
-        <source>The Nav Coin Network is currently voting on introducing changes on the consensus protocol. As a participant in our network, we value your input and the decision ultimately is yours. Please cast your vote. &lt;br&gt;&lt;br&gt;For more information on the proposal, please visit &lt;a href="https://navcoin.org/community-fund"&gt;this link&lt;/a&gt;&lt;br&gt;&lt;br&gt;Would you like the Nav Coin Network to update the staking rewards to setup a decentralised community fund that will help grow the network?</source>
-        <translation>La red Navcoin esta votando para introducir cambios en el protocolo de consenso. Como participante de nuestra red, nosotros valoramos su participación y la decisión es enteramente suya. Por favor emita su voto. &lt;br&gt;&lt;br&gt;Para mas información en la propuesta, por favor visite&lt;a href="https://navcoin.org/community-fund"&gt;esta dirección &lt;/a&gt;&lt;br&gt;&lt;br&gt; Quisiera que la red Navcoin actualice las recompensas de staking para preparar un fondo descentralizado comunitario que ayudara a crecer la red?</translation>
+        <source>The Nav Coin Network is currently voting on introducing changes on the consensus protocol. As a participant in our network, we value your input and the decision ultimately is yours. Please cast your vote. &lt;br&gt;&lt;br&gt;For more information on the proposal, please visit &lt;a href="https://deuteriumcoin.org/community-fund"&gt;this link&lt;/a&gt;&lt;br&gt;&lt;br&gt;Would you like the Nav Coin Network to update the staking rewards to setup a decentralised community fund that will help grow the network?</source>
+        <translation>La red Deuteriumcoin esta votando para introducir cambios en el protocolo de consenso. Como participante de nuestra red, nosotros valoramos su participación y la decisión es enteramente suya. Por favor emita su voto. &lt;br&gt;&lt;br&gt;Para mas información en la propuesta, por favor visite&lt;a href="https://deuteriumcoin.org/community-fund"&gt;esta dirección &lt;/a&gt;&lt;br&gt;&lt;br&gt; Quisiera que la red Deuteriumcoin actualice las recompensas de staking para preparar un fondo descentralizado comunitario que ayudara a crecer la red?</translation>
     </message>
     <message>
         <source>Yes</source>
@@ -1105,8 +1105,8 @@
         <translation>Actualizado</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Navcoin command-line options</source>
-        <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de linea de comandos de Navcoin</translation>
+        <source>Show the %1 help message to get a list with possible Deuteriumcoin command-line options</source>
+        <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de linea de comandos de Deuteriumcoin</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -1174,12 +1174,12 @@
         <translation>Preparador NavTech</translation>
     </message>
     <message>
-        <source>Navcoin uses an unique parallel cluster of nodes called NavTech to protect the privacy of your transactions.</source>
-        <translation>Navcoin usa un clúster paralelo único de nodos llamado NavTech para proteger la privacidad de sus transacciones.</translation>
+        <source>Deuteriumcoin uses an unique parallel cluster of nodes called NavTech to protect the privacy of your transactions.</source>
+        <translation>Deuteriumcoin usa un clúster paralelo único de nodos llamado NavTech para proteger la privacidad de sus transacciones.</translation>
     </message>
     <message>
-        <source>You will find below the list of the Navcoin Foundation Servers. Feel free to modify this list to include your prefered servers:</source>
-        <translation>A continuación, encontrará la lista de los servidores de la Fundación Navcoin. Siéntase libre de modificar esta lista para incluir sus servidores preferidos:</translation>
+        <source>You will find below the list of the Deuteriumcoin Foundation Servers. Feel free to modify this list to include your prefered servers:</source>
+        <translation>A continuación, encontrará la lista de los servidores de la Fundación Deuteriumcoin. Siéntase libre de modificar esta lista para incluir sus servidores preferidos:</translation>
     </message>
     <message>
         <source>95.183.52.55:3000
@@ -1324,16 +1324,16 @@
         <translation>&amp;Gastar cambio no confirmado</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente el puerto del cliente Navcoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente el puerto del cliente Deuteriumcoin en el router. Esta opción solo funciona si el router admite UPnP y está activado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapear el puerto mediante &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Conectarse a la red Navcoin a través de un proxy SOCKS5.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Conectarse a la red Deuteriumcoin a través de un proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1372,8 +1372,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red Navcoin mediante un proxy SOCKS5 por separado para los servicios ocultos de Tor.</translation>
+        <source>Connect to the Deuteriumcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red Deuteriumcoin mediante un proxy SOCKS5 por separado para los servicios ocultos de Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -1421,7 +1421,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían navcoins.</translation>
+        <translation>Elegir la subdivisión predeterminada para mostrar cantidades en la interfaz y cuando se envían deuteriumcoins.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1507,24 +1507,24 @@
         <translation>24H:</translation>
     </message>
     <message>
-        <source>87 312.312 123 NAV</source>
-        <translation>87 312.312 123 NAV</translation>
+        <source>87 312.312 123 DEU</source>
+        <translation>87 312.312 123 DEU</translation>
     </message>
     <message>
         <source>7D</source>
         <translation>7D</translation>
     </message>
     <message>
-        <source>1 312.312 NAV</source>
-        <translation>1 312.312 NAV</translation>
+        <source>1 312.312 DEU</source>
+        <translation>1 312.312 DEU</translation>
     </message>
     <message>
         <source>30D</source>
         <translation>30D</translation>
     </message>
     <message>
-        <source>132 431.41 NAV</source>
-        <translation>132 431.41 NAV</translation>
+        <source>132 431.41 DEU</source>
+        <translation>132 431.41 DEU</translation>
     </message>
     <message>
         <source>Cold Staking</source>
@@ -1535,8 +1535,8 @@
         <translation>Transacciones</translation>
     </message>
     <message>
-        <source>Connecting to Navcoin network...</source>
-        <translation>Conectando a la red Navcoin...</translation>
+        <source>Connecting to Deuteriumcoin network...</source>
+        <translation>Conectando a la red Deuteriumcoin...</translation>
     </message>
     <message>
         <source>32 active connections.</source>
@@ -1606,7 +1606,7 @@
         <translation>Dirección de pago invalida %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Navcoin address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid Deuteriumcoin address or malformed URI parameters.</source>
         <translation>¡URI no puede ser analizado! Esto puede ser causado por una dirección NAvTech invalida o un parámetro URI mal formado.</translation>
     </message>
     <message>
@@ -1708,8 +1708,8 @@
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a Navcoin address (e.g. %1)</source>
-        <translation>Introducir una dirección Navcoin (p. ej. %1)</translation>
+        <source>Enter a Deuteriumcoin address (e.g. %1)</source>
+        <translation>Introducir una dirección Deuteriumcoin (p. ej. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1994,8 +1994,8 @@
         <translation>Bienvenido a la consola RPC %1.</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Use las flechas arriba y abajo para navegar por el historial y &lt;b&gt;Control+L&lt;/b&gt; para vaciar la pantalla.</translation>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Use las flechas arriba y abajo para deuegar por el historial y &lt;b&gt;Control+L&lt;/b&gt; para vaciar la pantalla.</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -2073,8 +2073,8 @@
         <translation>R&amp;eutilizar una dirección existente para recibir (no recomendado)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Navcoin network.</source>
-        <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se muestra cuando se abre la solicitud. Nota: El mensaje no se enviará con el pago por la red Navcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Deuteriumcoin network.</source>
+        <translation>Un mensaje opcional para adjuntar a la solicitud de pago, que se muestra cuando se abre la solicitud. Nota: El mensaje no se enviará con el pago por la red Deuteriumcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2223,7 +2223,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Enviar navcoins</translation>
+        <translation>Enviar deuteriumcoins</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -2286,8 +2286,8 @@
         <translation>total por lo menos</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for navcoin transactions than the network can process.</source>
-        <translation>Pagando solamente la cuota mínima es correcto, siempre y cuando haya menos volumen de transacciones que el espacio en los bloques. Pero tenga en cuenta que esto puede terminar en una transacción nunca confirmada, una vez que haya más demanda para transacciones Navcoin que la red pueda procesar.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for deuteriumcoin transactions than the network can process.</source>
+        <translation>Pagando solamente la cuota mínima es correcto, siempre y cuando haya menos volumen de transacciones que el espacio en los bloques. Pero tenga en cuenta que esto puede terminar en una transacción nunca confirmada, una vez que haya más demanda para transacciones Deuteriumcoin que la red pueda procesar.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2306,16 +2306,16 @@
         <translation>(Tarifa inteligente no inicializado aún. Esto generalmente lleva a pocos bloques...)</translation>
     </message>
     <message>
-        <source>You don't have any NAVTech server added. </source>
-        <translation>No tiene ningún servidor NAVTech agregado.</translation>
+        <source>You don't have any DEUTech server added. </source>
+        <translation>No tiene ningún servidor DEUTech agregado.</translation>
     </message>
     <message>
         <source>Private payment</source>
         <translation>Pago privado</translation>
     </message>
     <message>
-        <source>Manage NAVTech servers</source>
-        <translation>Administre servidores NAVTech</translation>
+        <source>Manage DEUTech servers</source>
+        <translation>Administre servidores DEUTech</translation>
     </message>
     <message>
         <source>Use full amount</source>
@@ -2382,8 +2382,8 @@
         <translation>Copiar cambio</translation>
     </message>
     <message>
-        <source>NAVTech server returned a different number of addresses.</source>
-        <translation>Servidor NAVtech devolvió un numero diferente de direcciones.</translation>
+        <source>DEUTech server returned a different number of addresses.</source>
+        <translation>Servidor DEUtech devolvió un numero diferente de direcciones.</translation>
     </message>
     <message>
         <source>Something went wrong:</source>
@@ -2494,8 +2494,8 @@
         <translation><numerusform>Se estima que se confirme después de %n bloque.</numerusform><numerusform>Se estima que se confirme después de %n bloques.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Navcoin address</source>
-        <translation>Advertencia: dirección Navcoin invalida</translation>
+        <source>Warning: Invalid Deuteriumcoin address</source>
+        <translation>Advertencia: dirección Deuteriumcoin invalida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2525,8 +2525,8 @@
         <translation>Esto es un pago ordinario.</translation>
     </message>
     <message>
-        <source>The Navcoin address to send the payment to</source>
-        <translation>Dirección Navcoin a la que enviar el pago</translation>
+        <source>The Deuteriumcoin address to send the payment to</source>
+        <translation>Dirección Deuteriumcoin a la que enviar el pago</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2537,8 +2537,8 @@
         <translation>Eliminar esta transacción</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less navcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>La cuota será deducida de la cantidad que sea mandada. El destinatario recibirá menos navcoins de los que entres en el  </translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less deuteriumcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>La cuota será deducida de la cantidad que sea mandada. El destinatario recibirá menos deuteriumcoins de los que entres en el  </translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2561,16 +2561,16 @@
         <translation>Introduce una etiqueta para esta dirección para añadirla a la lista de direcciones utilizadas</translation>
     </message>
     <message>
-        <source>A message that was attached to the navcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Navcoin network.</source>
-        <translation>Un mensaje que se adjuntó a la navcoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Navcoin.</translation>
+        <source>A message that was attached to the deuteriumcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Deuteriumcoin network.</source>
+        <translation>Un mensaje que se adjuntó a la deuteriumcoin: URL que será almacenada con la transacción para su referencia. Nota: Este mensaje no se envía a través de la red Deuteriumcoin.</translation>
     </message>
     <message>
         <source>Save in Address Book</source>
         <translation>Guarde en Libro de Direcciones</translation>
     </message>
     <message>
-        <source>A&amp;mount (NAV):</source>
-        <translation>C&amp;antidad (NAV):</translation>
+        <source>A&amp;mount (DEU):</source>
+        <translation>C&amp;antidad (DEU):</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2614,12 +2614,12 @@
         <translation>&amp;Firmar mensaje</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive navcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive deuteriumcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Puede firmar los mensajes con sus direcciones para demostrar que las posee. Tenga cuidado de no firmar cualquier cosa de manera vaga o aleatoria, pues los ataques de phishing pueden tratar de engañarle firmando su identidad a través de ellos. Sólo firme declaraciones totalmente detalladas con las que usted esté de acuerdo.</translation>
     </message>
     <message>
-        <source>The Navcoin address to sign the message with</source>
-        <translation>Dirección Navcoin con la que firmar el mensaje</translation>
+        <source>The Deuteriumcoin address to sign the message with</source>
+        <translation>Dirección Deuteriumcoin con la que firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2650,8 +2650,8 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Firmar el mensaje para demostrar que se posee esta dirección Navcoin</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Firmar el mensaje para demostrar que se posee esta dirección Deuteriumcoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2674,12 +2674,12 @@
         <translation>Introduzca la dirección para la firma, el mensaje (asegurándose de copiar tal cual los saltos de línea, espacios, tabulaciones, etc.) y la firma a continuación para verificar el mensaje. Tenga cuidado de no asumir más información de lo que dice el propio mensaje firmado para evitar fraudes basados en ataques de tipo man-in-the-middle. </translation>
     </message>
     <message>
-        <source>The Navcoin address the message was signed with</source>
-        <translation>La dirección Navcoin con la que se firmó el mensaje</translation>
+        <source>The Deuteriumcoin address the message was signed with</source>
+        <translation>La dirección Deuteriumcoin con la que se firmó el mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Navcoin indicada</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Verificar el mensaje para comprobar que fue firmado con la dirección Deuteriumcoin indicada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3242,7 +3242,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Enviar navcoins</translation>
+        <translation>Enviar deuteriumcoins</translation>
     </message>
 </context>
 <context>
@@ -3320,8 +3320,8 @@
         <translation>Error agregando llave al monedero.</translation>
     </message>
     <message>
-        <source>Navcoin needs to scan the chain... Please, wait.</source>
-        <translation>Navcoin necesita escanear la cadena... Por favor, espere.</translation>
+        <source>Deuteriumcoin needs to scan the chain... Please, wait.</source>
+        <translation>Deuteriumcoin necesita escanear la cadena... Por favor, espere.</translation>
     </message>
     <message>
         <source>Private key correctly added!</source>
@@ -3335,8 +3335,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>Use the following address to receive Navcoins:</source>
-        <translation>Use la siguiente dirección para recibir Navcoins:</translation>
+        <source>Use the following address to receive Deuteriumcoins:</source>
+        <translation>Use la siguiente dirección para recibir Deuteriumcoins:</translation>
     </message>
     <message>
         <source>QR Code</source>
@@ -3376,7 +3376,7 @@
     </message>
 </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opciones:
@@ -3445,8 +3445,8 @@
         <translation>Aceptar conexiones desde el exterior (predeterminado: 1 si no -proxy o -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -4332,7 +4332,7 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Formulario</translation>
@@ -4355,7 +4355,7 @@
     </message>
 </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Dialog</source>
         <translation>Dialogo</translation>

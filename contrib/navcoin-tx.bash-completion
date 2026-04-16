@@ -1,15 +1,15 @@
-# bash programmable completion for navcoin-tx(1)
+# bash programmable completion for deuteriumcoin-tx(1)
 # Copyright (c) 2016 The Bitcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_navcoin_tx() {
+_deuteriumcoin_tx() {
     local cur prev words=() cword
-    local navcoin_tx
+    local deuteriumcoin_tx
 
-    # save and use original argument to invoke navcoin-tx for -help
+    # save and use original argument to invoke deuteriumcoin-tx for -help
     # it might not be in $PATH
-    navcoin_tx="$1"
+    deuteriumcoin_tx="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n =: cur prev words cword
@@ -27,15 +27,15 @@ _navcoin_tx() {
 
     if [[ "$cword" == 1 || ( "$prev" != "-create" && "$prev" == -* ) ]]; then
         # only options (or an uncompletable hex-string) allowed
-        # parse navcoin-tx -help for options
+        # parse deuteriumcoin-tx -help for options
         local helpopts
-        helpopts=$($navcoin_tx -help | sed -e '/^  -/ p' -e d )
+        helpopts=$($deuteriumcoin_tx -help | sed -e '/^  -/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
     else
         # only commands are allowed
         # parse -help for commands
         local helpcmds
-        helpcmds=$($navcoin_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
+        helpcmds=$($deuteriumcoin_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpcmds" -- "$cur" ) )
     fi
 
@@ -46,7 +46,7 @@ _navcoin_tx() {
 
     return 0
 } &&
-complete -F _navcoin_tx navcoin-tx
+complete -F _deuteriumcoin_tx deuteriumcoin-tx
 
 # Local variables:
 # mode: shell-script

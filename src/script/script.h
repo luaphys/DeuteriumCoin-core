@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_SCRIPT_SCRIPT_H
-#define NAVCOIN_SCRIPT_SCRIPT_H
+#ifndef DEUTERIUMCOIN_SCRIPT_SCRIPT_H
+#define DEUTERIUMCOIN_SCRIPT_SCRIPT_H
 
 #include <crypto/common.h>
 #include <prevector.h>
@@ -665,7 +665,7 @@ public:
     }
 
     /**
-     * Pre-version-0.6, Navcoin always counted CHECKMULTISIGs
+     * Pre-version-0.6, Deuteriumcoin always counted CHECKMULTISIGs
      * as 20 sigops. With pay-to-script-hash, that changed:
      * CHECKMULTISIGs serialized in scriptSigs are
      * counted more accurately, assuming they are of the form
@@ -766,4 +766,4 @@ public:
 
 
 
-#endif // NAVCOIN_SCRIPT_SCRIPT_H
+#endif // DEUTERIUMCOIN_SCRIPT_SCRIPT_H

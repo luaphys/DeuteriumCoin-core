@@ -168,7 +168,7 @@
     </message>
     <message>
         <source>The label associated with this address list entry</source>
-        <translation>Oznaka, pod katero je spodnji naslov naveden v vašem imeniku naslovov.</translation>
+        <translation>Oznaka, pod katero je spodnji naslov deueden v vašem imeniku naslovov.</translation>
     </message>
     <message>
         <source>The address associated with this address list entry. This can only be modified for sending addresses.</source>
@@ -223,7 +223,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Podpiši &amp;sporočilo ...</translation>
@@ -305,8 +305,8 @@
         <translation>Poustvarjam kazalo blokov na disku ...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Izvedite plačilo na naslov Navcoin</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Izvedite plačilo na naslov Deuteriumcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -329,8 +329,8 @@
         <translation>&amp;Preveri sporočilo ...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -357,12 +357,12 @@
         <translation>Šifrirajte zasebne ključe, ki se nahajajo v denarnici</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Podpišite poljubno sporočilo z enim svojih naslovov Navcoin, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Podpišite poljubno sporočilo z enim svojih naslovov Deuteriumcoin, da prejemniku sporočila dokažete, da je ta naslov v vaši lasti.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom Navcoin</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Preverite, če je bilo prejeto sporočilo podpisano z določenim naslovom Deuteriumcoin</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -377,8 +377,8 @@
         <translation>&amp;Pomoč</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Zahtevajte plačilo (ustvarite zahtevek s kodo QR in URI tipa navcoin:)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Zahtevajte plačilo (ustvarite zahtevek s kodo QR in URI tipa deuteriumcoin:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -389,16 +389,16 @@
         <translation>Preglejte in uredite seznam naslovov, na katere ste kdaj prejeli plačila</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Izvedite plačilo iz zahtevka v datoteki ali iz URI tipa navcoin:</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Izvedite plačilo iz zahtevka v datoteki ali iz URI tipa deuteriumcoin:</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opcije &amp;ukazne vrstice</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Navcoin network</source>
-        <translation><numerusform>%n aktivna povezava v omrežje Navcoin</numerusform><numerusform>%n aktivni povezavi v omrežje Navcoin</numerusform><numerusform>%n aktivne povezave v omrežje Navcoin</numerusform><numerusform>%n aktivnih povezav v omrežje Navcoin</numerusform></translation>
+        <source>%n active connection(s) to Deuteriumcoin network</source>
+        <translation><numerusform>%n aktivna povezava v omrežje Deuteriumcoin</numerusform><numerusform>%n aktivni povezavi v omrežje Deuteriumcoin</numerusform><numerusform>%n aktivne povezave v omrežje Deuteriumcoin</numerusform><numerusform>%n aktivnih povezav v omrežje Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -577,7 +577,7 @@
     </message>
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
-        <translation>Naslovi URL tretjih oseb (npr. raziskovalec blokov), ki bodo navedeni v kontekstnem meniju seznama transakcij. Niz %s iz naslova URL je nadomeščen s hash vrednostjo transakcije. Več zaporednih naslovov URL je med seboj ločenih z znakom |.</translation>
+        <translation>Naslovi URL tretjih oseb (npr. raziskovalec blokov), ki bodo deuedeni v kontekstnem meniju seznama transakcij. Niz %s iz naslova URL je nadomeščen s hash vrednostjo transakcije. Več zaporednih naslovov URL je med seboj ločenih z znakom |.</translation>
     </message>
     <message>
         <source>Third party transaction URLs</source>
@@ -624,7 +624,7 @@
         <translation>Omogoči &amp;trošenje drobiža iz še nepotrjenih plačil</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Program samodejno odpre ustrezna vrata na usmerjevalniku. To deluje samo, če vaš usmerjevalnik podpira in ima omogočen UPnP.</translation>
     </message>
     <message>
@@ -632,8 +632,8 @@
         <translation>Preslikaj vrata z uporabo &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Poveži se v omrežje Navcoin preko posredniškega strežnika SOCKS5.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Poveži se v omrežje Deuteriumcoin preko posredniškega strežnika SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -768,8 +768,8 @@
         <translation>Znesek</translation>
     </message>
     <message>
-        <source>Enter a Navcoin address (e.g. %1)</source>
-        <translation>Vnesite naslov Navcoin (npr. %1):</translation>
+        <source>Enter a Deuteriumcoin address (e.g. %1)</source>
+        <translation>Vnesite naslov Deuteriumcoin (npr. %1):</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -954,8 +954,8 @@
         <translation>Počisti konzolo</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Uporabite tipki gor in dol za navigacijo po zgodovini ukazov. Uporabite &lt;b&gt;Ctrl-L&lt;/b&gt; za izbris zaslona in zgodovine ukazov.</translation>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Uporabite tipki gor in dol za deuigacijo po zgodovini ukazov. Uporabite &lt;b&gt;Ctrl-L&lt;/b&gt; za izbris zaslona in zgodovine ukazov.</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -1029,8 +1029,8 @@
         <translation>P&amp;onovno uporabite obstoječ naslov za prejemanje. (Ni priporočeno.)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Navcoin network.</source>
-        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja Navcoin tega sporočila ne bo vsebovalo.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Deuteriumcoin network.</source>
+        <translation>Neobvezno sporočilo kot priponka zahtevku za plačilo, ki bo prikazano, ko bo zahtevek odprt. Opomba: Opravljeno plačilo.prek omrežja Deuteriumcoin tega sporočila ne bo vsebovalo.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1174,7 +1174,7 @@
         <translation>skupno vsaj</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for navcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for deuteriumcoin transactions than the network can process.</source>
         <translation>Dokler bo v blokih še dovolj prostora za vse nastajajoče transakcije, zadostuje, če plačate samo minimalno provizijo. Ko pa se bo količina vseh transakcij povečala do meja zmogljivosti omrežja, se lahko zgodi, da vaša transakcija brez večje provizije nikoli ne bo potrjena.</translation>
     </message>
     <message>
@@ -1191,7 +1191,7 @@
     </message>
     <message>
         <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
-        <translation>(Samodejni obračun provizije še ni pripravljen. Po navadi izračun traja nekaj blokov ...)</translation>
+        <translation>(Samodejni obračun provizije še ni pripravljen. Po deuadi izračun traja nekaj blokov ...)</translation>
     </message>
     <message>
         <source>Confirmation time:</source>
@@ -1199,7 +1199,7 @@
     </message>
     <message>
         <source>normal</source>
-        <translation>navadno</translation>
+        <translation>deuadno</translation>
     </message>
     <message>
         <source>fast</source>
@@ -1238,11 +1238,11 @@
     </message>
     <message>
         <source>This is a normal payment.</source>
-        <translation>Plačilo je navadne vrste.</translation>
+        <translation>Plačilo je deuadne vrste.</translation>
     </message>
     <message>
-        <source>The Navcoin address to send the payment to</source>
-        <translation>Naslov Navcoin, na katerega bo plačilo poslano</translation>
+        <source>The Deuteriumcoin address to send the payment to</source>
+        <translation>Naslov Deuteriumcoin, na katerega bo plačilo poslano</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1253,7 +1253,7 @@
         <translation>Izpraznite vsebino polja</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less navcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less deuteriumcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>Znesek plačila bo zmanjšan za znesek provizije. Prejemnik bo prejel manjše število kovancev, kot je bil vnešeni znesek. Če je prejemnikov več, bo provizija med njih enakomerno porazdeljena.</translation>
     </message>
     <message>
@@ -1277,8 +1277,8 @@
         <translation>Če vnesete oznako za zgornji naslov, se bo skupaj z naslovom shranila v imenk že uporabljenih naslovov</translation>
     </message>
     <message>
-        <source>A message that was attached to the navcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Navcoin network.</source>
-        <translation>Sporočilo, ki ste ga pripeli na URI tipa navcoin:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja Navcoin.</translation>
+        <source>A message that was attached to the deuteriumcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Deuteriumcoin network.</source>
+        <translation>Sporočilo, ki ste ga pripeli na URI tipa deuteriumcoin:. Shranjeno bo skupaj s podatki o transakciji. Opomba: Sporočilo ne bo poslano preko omrežja Deuteriumcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1314,12 +1314,12 @@
         <translation>&amp;Podpiši sporočilo</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive navcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive deuteriumcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>S svojimi naslovi lahko podpisujete sporočila ali pogodbe in s tem dokazujete, da na teh naslovih lahko prejemate kovance. Bodite previdni in ne podpisujte ničesar nejasnega ali naključnega, ker vas zlikovci preko ribarjenja (phishing) lahko prelisičijo, da na njih prepišete svojo identiteto. Podpisujte samo podrobno opisane izjave, s katerimi se strinjate.</translation>
     </message>
     <message>
-        <source>The Navcoin address to sign the message with</source>
-        <translation>Naslov Navcoin, s katerim podpisujete sporočilo</translation>
+        <source>The Deuteriumcoin address to sign the message with</source>
+        <translation>Naslov Deuteriumcoin, s katerim podpisujete sporočilo</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1350,7 +1350,7 @@
         <translation>Kopiranje trenutnega podpisa na sistemsko odložišče.</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
         <translation>Podpišite sporočilo, da dokažete lastništvo nad zgornjim naslovom.</translation>
     </message>
     <message>
@@ -1371,15 +1371,15 @@
     </message>
     <message>
         <source>Enter the receiver's address, message (ensure you copy line breaks, spaces, tabs, etc. exactly) and signature below to verify the message. Be careful not to read more into the signature than what is in the signed message itself, to avoid being tricked by a man-in-the-middle attack. Note that this only proves the signing party receives with the address, it cannot prove sendership of any transaction!</source>
-        <translation>Da preverite verodostojnost sporočila, spodaj vnesite: prejemnikov naslov, prejeto sporočilo (pazljivo skopirajte vse prelome vrstic, presledke, tabulatorje ipd.,) in prejeti podpis. Da se izognete napadom tipa man-in-the-middle, vedite, da iz veljavnega podpisa ne sledi nič drugega, kot tisto, kar je navedeno v sporočilu. Podpis samo potrjuje dejstvo, da ima podpisnik v lasti prejemni naslov, ne more pa dokazati vira nobene transakcije!</translation>
+        <translation>Da preverite verodostojnost sporočila, spodaj vnesite: prejemnikov naslov, prejeto sporočilo (pazljivo skopirajte vse prelome vrstic, presledke, tabulatorje ipd.,) in prejeti podpis. Da se izognete napadom tipa man-in-the-middle, vedite, da iz veljavnega podpisa ne sledi nič drugega, kot tisto, kar je deuedeno v sporočilu. Podpis samo potrjuje dejstvo, da ima podpisnik v lasti prejemni naslov, ne more pa dokazati vira nobene transakcije!</translation>
     </message>
     <message>
-        <source>The Navcoin address the message was signed with</source>
-        <translation>Naslov Navcoin, s katerim je bilo sporočilo podpisano</translation>
+        <source>The Deuteriumcoin address the message was signed with</source>
+        <translation>Naslov Deuteriumcoin, s katerim je bilo sporočilo podpisano</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z navedenim naslovom Navcoin.</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Preverite, ali je bilo sporočilo v resnici podpisano z deuedenim naslovom Deuteriumcoin.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1480,7 +1480,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -1510,8 +1510,8 @@
         <translation>Sprejemaj zunanje povezave (privzeto: 1, razen če ste vklopili opciji -proxy ali -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1519,7 +1519,7 @@
     </message>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file COPYING or &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</source>
-        <translation>Distribuirano v okviru programske licence MIT. Podrobnosti so navedene v  priloženi datoteki COPYING ali na naslovu &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
+        <translation>Distribuirano v okviru programske licence MIT. Podrobnosti so deuedene v  priloženi datoteki COPYING ali na naslovu &lt;http://www.opensource.org/licenses/mit-license.php&gt;.</translation>
     </message>
     <message>
         <source>Execute command when a wallet transaction changes (%s in cmd is replaced by TxID)</source>
@@ -1543,7 +1543,7 @@
     </message>
     <message>
         <source>Whitelist peers connecting from the given netmask or IP address. Can be specified multiple times.</source>
-        <translation>Sprejemaj povezave samo od soležnikov, ki so na naslovih, ki ustrezajo navedeni omrežni maski ali naslovu. Opcijo lahko navedete večkrat.</translation>
+        <translation>Sprejemaj povezave samo od soležnikov, ki so na naslovih, ki ustrezajo deuedeni omrežni maski ali naslovu. Opcijo lahko deuedete večkrat.</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>
@@ -1555,7 +1555,7 @@
     </message>
     <message>
         <source>Connect only to the specified node(s)</source>
-        <translation>Poveži se samo z (enim ali več) navedenimi vozlišči</translation>
+        <translation>Poveži se samo z (enim ali več) deuedenimi vozlišči</translation>
     </message>
     <message>
         <source>Connection options:</source>
@@ -1663,15 +1663,15 @@
     </message>
     <message>
         <source>Allow JSON-RPC connections from specified source. Valid for &lt;ip&gt; are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times</source>
-        <translation>Iz navedenega vira dovoli povezave na JSON-RPC. Veljavne oblike vrednosti parametra &lt;ip&gt; so: edinstven naslov IP (npr.: 1.2.3.4), kombinacija omrežje/netmask (npr.: 1.2.3.4/255.255.255.0), ali pa kombinacija omrežje/CIDR (1.2.3.4/24). To opcijo lahko navedete večkrat.</translation>
+        <translation>Iz deuedenega vira dovoli povezave na JSON-RPC. Veljavne oblike vrednosti parametra &lt;ip&gt; so: edinstven naslov IP (npr.: 1.2.3.4), kombinacija omrežje/netmask (npr.: 1.2.3.4/255.255.255.0), ali pa kombinacija omrežje/CIDR (1.2.3.4/24). To opcijo lahko deuedete večkrat.</translation>
     </message>
     <message>
         <source>Bind to given address and whitelist peers connecting to it. Use [host]:port notation for IPv6</source>
-        <translation>Veži dani naslov in sprejemaj povezave samo od navedenih soležnikov. Za naslove protokola IPv6 uporabite zapis [gostitelj]:vrata.</translation>
+        <translation>Veži dani naslov in sprejemaj povezave samo od deuedenih soležnikov. Za naslove protokola IPv6 uporabite zapis [gostitelj]:vrata.</translation>
     </message>
     <message>
         <source>Bind to given address to listen for JSON-RPC connections. Use [host]:port notation for IPv6. This option can be specified multiple times (default: bind to all interfaces)</source>
-        <translation>Veži dani naslov in sprejemaj povezave na JSON-RPC. Za naslove protokola IPv6 uporabite zapis [gostitelj]:vrata. To opcijo lahko navedete večkrat. (privzeto: veži vse omrežne vmesnike)</translation>
+        <translation>Veži dani naslov in sprejemaj povezave na JSON-RPC. Za naslove protokola IPv6 uporabite zapis [gostitelj]:vrata. To opcijo lahko deuedete večkrat. (privzeto: veži vse omrežne vmesnike)</translation>
     </message>
     <message>
         <source>Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)</source>
@@ -1687,7 +1687,7 @@
     </message>
     <message>
         <source>Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)</source>
-        <translation>Ko bo prejeto ustrezno opozorilo, ali ko bo opažena zelo dolga razvejitev, izvedi navedeni ukazni niz. (Niz %s bo nadomeščen z vsebino sporočila.)</translation>
+        <translation>Ko bo prejeto ustrezno opozorilo, ali ko bo opažena zelo dolga razvejitev, izvedi deuedeni ukazni niz. (Niz %s bo nadomeščen z vsebino sporočila.)</translation>
     </message>
     <message>
         <source>If paytxfee is not set, include enough fee so transactions begin confirmation on average within n blocks (default: %u)</source>
@@ -1711,7 +1711,7 @@
     </message>
     <message>
         <source>Need to specify a port with -whitebind: '%s'</source>
-        <translation>Pri opciji -whitebind morate navesti vrata: %s</translation>
+        <translation>Pri opciji -whitebind morate deuesti vrata: %s</translation>
     </message>
     <message>
         <source>Send trace/debug info to console instead of debug.log file</source>
@@ -1791,15 +1791,15 @@
     </message>
     <message>
         <source>Specify configuration file (default: %s)</source>
-        <translation>Za shranjevanje konfiguracije uporabi navedeno datoteko. (privzeto: %s)</translation>
+        <translation>Za shranjevanje konfiguracije uporabi deuedeno datoteko. (privzeto: %s)</translation>
     </message>
     <message>
         <source>Specify connection timeout in milliseconds (minimum: 1, default: %d)</source>
-        <translation>Vzpostavljanje nove povezave poteče po navedenem št. pretečenih milisekund. (najmanj: 1, privzeto: %d)</translation>
+        <translation>Vzpostavljanje nove povezave poteče po deuedenem št. pretečenih milisekund. (najmanj: 1, privzeto: %d)</translation>
     </message>
     <message>
         <source>Specify pid file (default: %s)</source>
-        <translation>Za shranjevanje PID uporabi navedeno datoteko. (privzeto: %s)</translation>
+        <translation>Za shranjevanje PID uporabi deuedeno datoteko. (privzeto: %s)</translation>
     </message>
     <message>
         <source>Spend unconfirmed change when sending transactions (default: %u)</source>
@@ -1807,7 +1807,7 @@
     </message>
     <message>
         <source>Threshold for disconnecting misbehaving peers (default: %u)</source>
-        <translation>Prekini povezavo s soležnikom, ko št. njegovih kazenskih točk preseže navedeni prag. (privzeto: %u)</translation>
+        <translation>Prekini povezavo s soležnikom, ko št. njegovih kazenskih točk preseže deuedeni prag. (privzeto: %u)</translation>
     </message>
     <message>
         <source>Unknown network specified in -onlynet: '%s'</source>
@@ -1851,14 +1851,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Oblika</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Odstrani</translation>

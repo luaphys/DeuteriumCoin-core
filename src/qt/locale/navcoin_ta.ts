@@ -127,7 +127,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;கண்ணோட்டம்</translation>
@@ -165,8 +165,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -746,10 +746,10 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin மையம்</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin மையம்</translation>
     </message>
     <message>
         <source>(default: %u)</source>
@@ -773,14 +773,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>படிவம்</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>நீக்கு</translation>

@@ -267,7 +267,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Podpísať &amp;správu...</translation>
@@ -361,8 +361,8 @@
         <translation>Preindexúvam bloky na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Poslať navcoins na adresu</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Poslať deuteriumcoins na adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -385,8 +385,8 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -413,12 +413,12 @@
         <translation>Zašifruj súkromné kľúče ktoré patria do vašej peňaženky</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Podpísať správu s vašou adresou Navcoin aby ste preukázali že ju vlastníte</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Podpísať správu s vašou adresou Deuteriumcoin aby ste preukázali že ju vlastníte</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Overiť či správa bola podpísaná uvedenou Navcoin adresou</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Overiť či správa bola podpísaná uvedenou Deuteriumcoin adresou</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -433,8 +433,8 @@
         <translation>&amp;Pomoc</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Vyžiadať platby (vygeneruje QR kódy a navcoin: URI)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Vyžiadať platby (vygeneruje QR kódy a deuteriumcoin: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -445,16 +445,16 @@
         <translation>Zobraziť zoznam použitých prijímacích adries a ich popisov</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Otvoriť navcoin URI alebo výzvu k platbe</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Otvoriť deuteriumcoin URI alebo výzvu k platbe</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Možnosti príkazového riadku</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Navcoin network</source>
-        <translation><numerusform>%n aktívne pripojenie do siete Navcoin</numerusform><numerusform>%n aktívne pripojenia do siete Navcoin</numerusform><numerusform>%n aktívnych pripojení do siete Navcoin</numerusform><numerusform>%n aktívnych pripojení do siete Navcoin</numerusform></translation>
+        <source>%n active connection(s) to Deuteriumcoin network</source>
+        <translation><numerusform>%n aktívne pripojenie do siete Deuteriumcoin</numerusform><numerusform>%n aktívne pripojenia do siete Deuteriumcoin</numerusform><numerusform>%n aktívnych pripojení do siete Deuteriumcoin</numerusform><numerusform>%n aktívnych pripojení do siete Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -529,8 +529,8 @@
         <translation>Aktualizovaný</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Navcoin command-line options</source>
-        <translation>Ukáž %1 zoznam možných nastavení Navcoinu pomocou príkazového riadku</translation>
+        <source>Show the %1 help message to get a list with possible Deuteriumcoin command-line options</source>
+        <translation>Ukáž %1 zoznam možných nastavení Deuteriumcoinu pomocou príkazového riadku</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -704,16 +704,16 @@
         <translation>Minúť nepotvrdený výdavok</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automaticky otvorit port pre Navcoin na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automaticky otvorit port pre Deuteriumcoin na routeri. Toto funguje len ak router podporuje UPnP a je táto podpora aktivovaná.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapovať port pomocou &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Pripojiť do siete Navcoin cez proxy server SOCKS5.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Pripojiť do siete Deuteriumcoin cez proxy server SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -752,8 +752,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Pripojiť k Navcoinovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
+        <source>Connect to the Deuteriumcoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Pripojiť k Deuteriumcoinovej sieti cez separované SOCKS5 proxy pre skrytú službu Tor.</translation>
     </message>
     <message>
         <source>Use separate SOCKS5 proxy to reach peers via Tor hidden services:</source>
@@ -801,7 +801,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Zvoľte ako deliť navcoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
+        <translation>Zvoľte ako deliť deuteriumcoin pri zobrazovaní pri platbách a užívateľskom rozhraní.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -884,8 +884,8 @@
         <translation>Suma</translation>
     </message>
     <message>
-        <source>Enter a Navcoin address (e.g. %1)</source>
-        <translation>Zadajte navcoin adresu (napr. %1)</translation>
+        <source>Enter a Deuteriumcoin address (e.g. %1)</source>
+        <translation>Zadajte deuteriumcoin adresu (napr. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1147,8 +1147,8 @@
         <translation>&amp;odblokovať uzol</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Použi šípky hore a dolu pre navigáciu históriou a &lt;b&gt;Ctrl-L&lt;/b&gt; pre vyčistenie obrazovky.</translation>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Použi šípky hore a dolu pre deuigáciu históriou a &lt;b&gt;Ctrl-L&lt;/b&gt; pre vyčistenie obrazovky.</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -1226,8 +1226,8 @@
         <translation>Znovu použiť jestvujúcu prijímaciu adresu (neodporúča sa)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Navcoin network.</source>
-        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť Navcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Deuteriumcoin network.</source>
+        <translation>Pridať voliteľnú správu k výzve na zaplatenie, ktorá sa zobrazí keď bude výzva otvorená. Poznámka: Správa nebude poslaná s platbou cez sieť Deuteriumcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1308,7 +1308,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať Navcoins</translation>
+        <translation>Poslať Deuteriumcoins</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1371,7 +1371,7 @@
         <translation>spolu aspoň</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for navcoin transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for deuteriumcoin transactions than the network can process.</source>
         <translation>Zaplatenie len minimálneho poplatku je v poriadku, pokiaľ existuje menej transakcií ako miesta v blokoch. Uvedomte si však, že ak bude vyšší dopyt po transakciách ako dokáže sieť spracovať, môže byť vaša transakcia odsúvaná a nepotvrdená donekonečna.</translation>
     </message>
     <message>
@@ -1438,7 +1438,7 @@
         <translation>Toto je normálna platba.</translation>
     </message>
     <message>
-        <source>The Navcoin address to send the payment to</source>
+        <source>The Deuteriumcoin address to send the payment to</source>
         <translation>Zvoľte adresu kam poslať platbu</translation>
     </message>
     <message>
@@ -1450,8 +1450,8 @@
         <translation>Odstrániť túto položku</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less navcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej navcoinov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less deuteriumcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatok sa odpočíta od čiastky, ktorú odosielate. Príjemca dostane menej deuteriumcoinov ako zadáte. Ak je vybraných viacero príjemcov, poplatok je rozdelený rovným dielom.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -1474,8 +1474,8 @@
         <translation>Vložte popis pre túto adresu aby sa uložila do zoznamu použitých adries</translation>
     </message>
     <message>
-        <source>A message that was attached to the navcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Navcoin network.</source>
-        <translation>Správa ktorá bola pripojená k navcoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Navcoin.</translation>
+        <source>A message that was attached to the deuteriumcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Deuteriumcoin network.</source>
+        <translation>Správa ktorá bola pripojená k deuteriumcoin: URI a ktorá bude uložená s transakcou pre Vaše potreby. Poznámka: Táto správa nebude poslaná cez sieť Deuteriumcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1515,8 +1515,8 @@
         <translation>&amp;Podpísať Správu</translation>
     </message>
     <message>
-        <source>The Navcoin address to sign the message with</source>
-        <translation>Navcoin adresa pre podpísanie správy s</translation>
+        <source>The Deuteriumcoin address to sign the message with</source>
+        <translation>Deuteriumcoin adresa pre podpísanie správy s</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1547,7 +1547,7 @@
         <translation>Kopírovať práve zvolenú adresu do systémového klipbordu</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
         <translation>Podpíšte správu aby ste dokázali že vlastníte túto adresu</translation>
     </message>
     <message>
@@ -1567,12 +1567,12 @@
         <translation>O&amp;veriť správu...</translation>
     </message>
     <message>
-        <source>The Navcoin address the message was signed with</source>
-        <translation>Adresa Navcoin, ktorou bola podpísaná správa</translation>
+        <source>The Deuteriumcoin address the message was signed with</source>
+        <translation>Adresa Deuteriumcoin, ktorou bola podpísaná správa</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Overím správy sa uistiť že bola podpísaná označenou Navcoin adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Overím správy sa uistiť že bola podpísaná označenou Deuteriumcoin adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1647,7 +1647,7 @@
     <name>WalletModel</name>
     <message>
         <source>Send Coins</source>
-        <translation>Poslať Navcoins</translation>
+        <translation>Poslať Deuteriumcoins</translation>
     </message>
 </context>
 <context>
@@ -1673,7 +1673,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Možnosti:</translation>
@@ -1727,8 +1727,8 @@
         <translation>Prijať spojenia zvonku (predvolené: 1 ak žiadne -proxy alebo -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Jadro Navcoin</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Jadro Deuteriumcoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1756,7 +1756,7 @@
     </message>
     <message>
         <source>Please contribute if you find %s useful. Visit %s for further information about the software.</source>
-        <translation>Keď si myslíte, že %s je užitočný, podporte nás. Pre viac informácií o software navštívte %s.</translation>
+        <translation>Keď si myslíte, že %s je užitočný, podporte nás. Pre viac informácií o software deuštívte %s.</translation>
     </message>
     <message>
         <source>Set the number of script verification threads (%u to %d, 0 = auto, &lt;0 = leave that many cores free, default: %d)</source>
@@ -1768,7 +1768,7 @@
     </message>
     <message>
         <source>This is a pre-release test build - use at your own risk - do not use for mining or merchant applications</source>
-        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu navcoin ani obchodovanie.</translation>
+        <translation>Toto je pred-testovacia verzia - použitie je na vlastné riziko - nepoužívajte na tvorbu deuteriumcoin ani obchodovanie.</translation>
     </message>
     <message>
         <source>Warning: The network does not appear to fully agree! Some miners appear to be experiencing issues.</source>
@@ -2338,14 +2338,14 @@ The network does not appear to fully agree! Some miners appear to be experiencin
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Forma</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Odstrániť</translation>

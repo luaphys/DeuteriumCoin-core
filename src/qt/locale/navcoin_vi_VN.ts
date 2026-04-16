@@ -215,7 +215,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Chứ ký &amp; Tin nhắn...</translation>
@@ -305,8 +305,8 @@
         <translation>Đánh chỉ số (indexing) lại các khối (blocks) trên ổ đĩa ...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Gửi coins đến tài khoản Navcoin</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Gửi coins đến tài khoản Deuteriumcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -325,8 +325,8 @@
         <translation>&amp;Tin nhắn xác thực</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -353,12 +353,12 @@
         <translation>Mã hoá các khoá bí mật trong Ví của bạn.</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Dùng địa chỉ Navcoin của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Dùng địa chỉ Deuteriumcoin của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ Navcoin xác định.</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ Deuteriumcoin xác định.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -373,8 +373,8 @@
         <translation>Trợ &amp;giúp</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ Navcoin: URLs)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ Deuteriumcoin: URLs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -385,8 +385,8 @@
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Mở navcoin:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Mở deuteriumcoin:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -540,8 +540,8 @@
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến máy chủ Navcoin thông qua SOCKS5 proxy.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến máy chủ Deuteriumcoin thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -792,14 +792,14 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Lựa chọn:</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>(default: %u)</source>
@@ -859,13 +859,13 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

@@ -159,7 +159,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Потпиши &amp;порака...</translation>
@@ -233,7 +233,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
+        <source>Send coins to a Deuteriumcoin address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -241,7 +241,7 @@
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
+        <source>Deuteriumcoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -648,13 +648,13 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Опции:</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
+        <source>Deuteriumcoin Core</source>
         <translation>Биткоин Core</translation>
     </message>
     <message>
@@ -667,9 +667,9 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

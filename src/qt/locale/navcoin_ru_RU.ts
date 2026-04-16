@@ -115,7 +115,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Опции командной строки</translation>
@@ -258,10 +258,10 @@
     <name>getAddressToReceive</name>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>Information</source>
@@ -277,9 +277,9 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

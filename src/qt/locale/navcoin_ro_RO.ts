@@ -259,7 +259,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Semnează &amp;mesaj...</translation>
@@ -341,8 +341,8 @@
         <translation>Se reindexează blocurile pe disc...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Trimite monede către o adresă Navcoin</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Trimite monede către o adresă Deuteriumcoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -365,8 +365,8 @@
         <translation>&amp;Verifică mesaj...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -393,12 +393,12 @@
         <translation>Criptează cheile private ale portofelului dvs.</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Semnaţi mesaje cu adresa dvs. Navcoin pentru a dovedi că vă aparţin</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Semnaţi mesaje cu adresa dvs. Deuteriumcoin pentru a dovedi că vă aparţin</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Verificaţi mesaje pentru a vă asigura că au fost semnate cu adresa Navcoin specificată</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Verificaţi mesaje pentru a vă asigura că au fost semnate cu adresa Deuteriumcoin specificată</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -413,8 +413,8 @@
         <translation>A&amp;jutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Cereţi plăţi (generează coduri QR şi navcoin-uri: URls)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Cereţi plăţi (generează coduri QR şi deuteriumcoin-uri: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -425,16 +425,16 @@
         <translation>Arată lista de adrese pentru primire şi etichetele</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Deschidere navcoin: o adresa URI sau o cerere de plată</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Deschidere deuteriumcoin: o adresa URI sau o cerere de plată</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opţiuni linie de &amp;comandă</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Navcoin network</source>
-        <translation><numerusform>%n conexiune activă către reţeaua Navcoin</numerusform><numerusform>%n conexiuni active către reţeaua Navcoin</numerusform><numerusform>%n de conexiuni active către reţeaua Navcoin</numerusform></translation>
+        <source>%n active connection(s) to Deuteriumcoin network</source>
+        <translation><numerusform>%n conexiune activă către reţeaua Deuteriumcoin</numerusform><numerusform>%n conexiuni active către reţeaua Deuteriumcoin</numerusform><numerusform>%n de conexiuni active către reţeaua Deuteriumcoin</numerusform></translation>
     </message>
     <message>
         <source>No block source available...</source>
@@ -660,16 +660,16 @@
         <translation>Cheltuire rest neconfirmat</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Deschide automat în router portul aferent clientului Navcoin. Funcţionează doar dacă routerul duportă UPnP şi e activat.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deschide automat în router portul aferent clientului Deuteriumcoin. Funcţionează doar dacă routerul duportă UPnP şi e activat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Mapare port folosind &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the Navcoin network through a SOCKS5 proxy.</source>
-        <translation>Conectare la reţeaua Navcoin printr-un proxy SOCKS.</translation>
+        <source>Connect to the Deuteriumcoin network through a SOCKS5 proxy.</source>
+        <translation>Conectare la reţeaua Deuteriumcoin printr-un proxy SOCKS.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -729,7 +729,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de navcoin.</translation>
+        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de deuteriumcoin.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -769,7 +769,7 @@
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adresa navcoin pe care aţi specificat-o nu este validă.</translation>
+        <translation>Adresa deuteriumcoin pe care aţi specificat-o nu este validă.</translation>
     </message>
 </context>
 <context>
@@ -812,8 +812,8 @@
         <translation>Cantitate</translation>
     </message>
     <message>
-        <source>Enter a Navcoin address (e.g. %1)</source>
-        <translation>Introduceţi o adresă Navcoin (de exemplu %1)</translation>
+        <source>Enter a Deuteriumcoin address (e.g. %1)</source>
+        <translation>Introduceţi o adresă Deuteriumcoin (de exemplu %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1034,8 +1034,8 @@
         <translation>1 &amp;an</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
-        <translation>Folosiţi săgetile sus şi jos pentru a naviga în istoric şi &lt;b&gt;Ctrl-L&lt;/b&gt; pentru a curăţa.</translation>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <translation>Folosiţi săgetile sus şi jos pentru a deuiga în istoric şi &lt;b&gt;Ctrl-L&lt;/b&gt; pentru a curăţa.</translation>
     </message>
     <message>
         <source>Type &lt;b&gt;help&lt;/b&gt; for an overview of available commands.</source>
@@ -1109,8 +1109,8 @@
         <translation>R&amp;efoloseşte o adresă de primire (nu este recomandat)</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Navcoin network.</source>
-        <translation>Un mesaj opţional de ataşat la cererea de plată, care va fi afişat cînd cererea este deschisă. Notă: Acest mesaj nu va fi trimis cu plata către reţeaua Navcoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Deuteriumcoin network.</source>
+        <translation>Un mesaj opţional de ataşat la cererea de plată, care va fi afişat cînd cererea este deschisă. Notă: Acest mesaj nu va fi trimis cu plata către reţeaua Deuteriumcoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1305,8 +1305,8 @@
         <translation>Aceasta este o tranzacţie normală.</translation>
     </message>
     <message>
-        <source>The Navcoin address to send the payment to</source>
-        <translation>Adresa navcoin către care se face plata</translation>
+        <source>The Deuteriumcoin address to send the payment to</source>
+        <translation>Adresa deuteriumcoin către care se face plata</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1325,8 +1325,8 @@
         <translation>Introduceţi eticheta pentru ca această adresa să fie introdusă în lista de adrese folosite</translation>
     </message>
     <message>
-        <source>A message that was attached to the navcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Navcoin network.</source>
-        <translation>un mesaj a fost ataşat la navcoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua navcoin.</translation>
+        <source>A message that was attached to the deuteriumcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Deuteriumcoin network.</source>
+        <translation>un mesaj a fost ataşat la deuteriumcoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua deuteriumcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1366,7 +1366,7 @@
         <translation>&amp;Semnează mesaj</translation>
     </message>
     <message>
-        <source>The Navcoin address to sign the message with</source>
+        <source>The Deuteriumcoin address to sign the message with</source>
         <translation>Adresa cu care semnaţi mesajul</translation>
     </message>
     <message>
@@ -1398,8 +1398,8 @@
         <translation>Copiază semnatura curentă în clipboard-ul sistemului</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Semnează mesajul pentru a dovedi ca deţineţi acestă adresă Navcoin</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Semnează mesajul pentru a dovedi ca deţineţi acestă adresă Deuteriumcoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1418,12 +1418,12 @@
         <translation>&amp;Verifică mesaj</translation>
     </message>
     <message>
-        <source>The Navcoin address the message was signed with</source>
-        <translation>Introduceţi o adresă Navcoin</translation>
+        <source>The Deuteriumcoin address the message was signed with</source>
+        <translation>Introduceţi o adresă Deuteriumcoin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Verificaţi mesajul pentru a vă asigura că a fost semnat cu adresa Navcoin specificată</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Verificaţi mesajul pentru a vă asigura că a fost semnat cu adresa Deuteriumcoin specificată</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1524,7 +1524,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Opţiuni:</translation>
@@ -1554,8 +1554,8 @@
         <translation>Acceptă conexiuni din afară (implicit: 1 dacă nu se foloseşte -proxy sau -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Nucleul Navcoin</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Nucleul Deuteriumcoin</translation>
     </message>
     <message>
         <source>Bind to given address and always listen on it. Use [host]:port notation for IPv6</source>
@@ -1887,14 +1887,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Înlătură</translation>

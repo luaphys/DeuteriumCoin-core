@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_NAVCOINAMOUNTFIELD_H
-#define NAVCOIN_QT_NAVCOINAMOUNTFIELD_H
+#ifndef DEUTERIUMCOIN_QT_DEUTERIUMCOINAMOUNTFIELD_H
+#define DEUTERIUMCOIN_QT_DEUTERIUMCOINAMOUNTFIELD_H
 
 #include <amount.h>
 
@@ -16,18 +16,18 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering navcoin amounts.
+/** Widget for entering deuteriumcoin amounts.
   */
-class NavcoinAmountField: public QWidget
+class DeuteriumcoinAmountField: public QWidget
 {
     Q_OBJECT
 
     // ugly hack: for some unknown reason CAmount (instead of qint64) does not work here as expected
-    // discussion: https://github.com/navcoin/navcoin/pull/5117
+    // discussion: https://github.com/deuteriumcoin/deuteriumcoin/pull/5117
     Q_PROPERTY(qint64 value READ value WRITE setValue NOTIFY valueChanged USER true)
 
 public:
-    explicit NavcoinAmountField(QWidget *parent = 0, bool fUnit = false);
+    explicit DeuteriumcoinAmountField(QWidget *parent = 0, bool fUnit = false);
 
     CAmount value(bool *value=0) const;
 
@@ -76,4 +76,4 @@ private Q_SLOTS:
 
 };
 
-#endif // NAVCOIN_QT_NAVCOINAMOUNTFIELD_H
+#endif // DEUTERIUMCOIN_QT_DEUTERIUMCOINAMOUNTFIELD_H

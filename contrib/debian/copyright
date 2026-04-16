@@ -1,13 +1,13 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: Navcoin
+Upstream-Name: Deuteriumcoin
 Upstream-Contact: Satoshi Nakamoto <satoshin@gmx.com>
- irc://#navcoin@freenode.net
-Source: https://github.com/navcoin/navcoin
+ irc://#deuteriumcoin@freenode.net
+Source: https://github.com/deuteriumcoin/deuteriumcoin
 
 Files: *
 Copyright: 2009-2016, Bitcoin Core Developers
 License: Expat
-Comment: The Navcoin Core Developers encompasses the current developers listed on navcoin.org,
+Comment: The Deuteriumcoin Core Developers encompasses the current developers listed on deuteriumcoin.org,
          as well as the numerous contributors to the project.
 
 Files: debian/*
@@ -75,12 +75,12 @@ License: Expat
 Comment: Modifications of Stephan Hutchings Typicons
 
 Files: src/qt/res/icons/about.png
-       src/qt/res/icons/navcoin.*
-       share/pixmaps/navcoin*
-       src/qt/res/src/navcoin.svg
+       src/qt/res/icons/deuteriumcoin.*
+       share/pixmaps/deuteriumcoin*
+       src/qt/res/src/deuteriumcoin.svg
 Copyright: Bitboy, Jonas Schnelli
 License: public-domain
-Comment: Site: https://navcointalk.org/?topic=1756.0
+Comment: Site: https://deuteriumcointalk.org/?topic=1756.0
 
 
 License: Expat

@@ -1,36 +1,36 @@
-Navcoin Core
+Deuteriumcoin Core
 =====================
 
 Setup
 ---------------------
-[Navcoin Core](http://navcoin.org/en/download) is the original Navcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Navcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
+[Deuteriumcoin Core](http://deuteriumcoin.org/en/download) is the original Deuteriumcoin client and it builds the backbone of the network. However, it downloads and stores the entire history of Deuteriumcoin transactions (which is currently several GBs); depending on the speed of your computer and network connection, the synchronization process can take anywhere from a few hours to a day or more.
 
 Running
 ---------------------
-The following are some helpful notes on how to run Navcoin on your native platform.
+The following are some helpful notes on how to run Deuteriumcoin on your native platform.
 
 ### Unix
 
 Unpack the files into a directory and run:
 
-- `bin/navcoin-qt` (GUI) or
-- `bin/navcoind` (headless)
+- `bin/deuteriumcoin-qt` (GUI) or
+- `bin/deuteriumcoind` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run navcoin-qt.exe.
+Unpack the files into a directory, and then run deuteriumcoin-qt.exe.
 
 ### OS X
 
-Drag Navcoin-Core to your applications folder, and then run Navcoin-Core.
+Drag Deuteriumcoin-Core to your applications folder, and then run Deuteriumcoin-Core.
 
 ### Need Help?
 
-* Ask for help on [Discord](https://discord.gg/y4Vu9jw) or [Telegram](https://t.me/navcoin).
+* Ask for help on [Discord](https://discord.gg/y4Vu9jw) or [Telegram](https://t.me/deuteriumcoin).
 
 Building
 ---------------------
-The following are developer notes on how to build Navcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build Deuteriumcoin on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [OS X Build Notes](build-osx.md)
 - [Unix Build Notes](build-unix.md)
@@ -40,13 +40,13 @@ The following are developer notes on how to build Navcoin on your native platfor
 
 Development
 ---------------------
-The Navcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The Deuteriumcoin repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Multiwallet Qt Development](multiwallet-qt.md)
 - [Release Notes](release-notes.md)
 - [Release Process](release-process.md)
-- [Source Code Documentation (External Link)](https://dev.visucore.com/navcoin/doxygen/)
+- [Source Code Documentation (External Link)](https://dev.visucore.com/deuteriumcoin/doxygen/)
 - [Translation Process](translation_process.md)
 - [Translation Strings Policy](translation_strings_policy.md)
 - [Unit Tests](unit-tests.md)
@@ -58,7 +58,7 @@ The Navcoin repo's [root README](/README.md) contains relevant information on th
 
 ### Resources
 * Discuss project-specific development on the Development boards on Discord. 
-* Discuss general Navcoin development on #dev-navcoin-core on Discord. 
+* Discuss general Deuteriumcoin development on #dev-deuteriumcoin-core on Discord. 
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)

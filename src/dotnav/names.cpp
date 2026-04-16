@@ -1,10 +1,10 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2021 The Navcoin developers
+// Copyright (c) 2021 The Deuteriumcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <dotnav/names.h>
+#include <dotdeu/names.h>
 
 namespace DotNav
 {
@@ -30,7 +30,7 @@ bool IsValid(const std::string& name_)
 
     return name.substr(1, name.size()-5).find_first_not_of("abcdefghijklmnopqrstuvwxyz01234566789-") == std::string::npos &&
             name.substr(0, 1).find_first_not_of("abcdefghijklmnopqrstuvwxyz01234566789") == std::string::npos &&
-            name.size() < 64 && name.size() >= 5 && name.substr(name.size()-4, 4) == ".nav";
+            name.size() < 64 && name.size() >= 5 && name.substr(name.size()-4, 4) == ".deu";
 }
 
 bool IsValidKey(const std::string& name_)

@@ -1,6 +1,6 @@
 [Protocol]
-exec=navcoin-qt '%u'
-protocol=navcoin
+exec=deuteriumcoin-qt '%u'
+protocol=deuteriumcoin
 input=none
 output=none
 helper=true

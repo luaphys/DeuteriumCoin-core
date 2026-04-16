@@ -5,7 +5,7 @@
 #include <qt/overviewpage.h>
 #include <ui_overviewpage.h>
 
-#include <qt/navcoinunits.h>
+#include <qt/deuteriumcoinunits.h>
 #include <qt/clientmodel.h>
 #include <qt/guiconstants.h>
 #include <qt/guiutil.h>
@@ -30,7 +30,7 @@ class TxViewDelegate : public QAbstractItemDelegate
     Q_OBJECT
 public:
     TxViewDelegate(const PlatformStyle *platformStyle):
-        QAbstractItemDelegate(), unit(NavcoinUnits::NAV),
+        QAbstractItemDelegate(), unit(DeuteriumcoinUnits::DEU),
         platformStyle(platformStyle)
     {
 
@@ -89,7 +89,7 @@ public:
             foreground = COLOR_POSITIVE;
         }
         painter->setPen(foreground);
-        QString amountText = NavcoinUnits::formatWithUnit(unit, amount, true, NavcoinUnits::separatorAlways, fPrivate);
+        QString amountText = DeuteriumcoinUnits::formatWithUnit(unit, amount, true, DeuteriumcoinUnits::separatorAlways, fPrivate);
         painter->drawText(amountRect, Qt::AlignRight|Qt::AlignVCenter, amountText);
 
         painter->setPen(option.palette.color(QPalette::Text));
@@ -130,7 +130,7 @@ OverviewPage::OverviewPage(const PlatformStyle *platformStyle, QWidget *parent) 
     connect(ui->listTransactions, SIGNAL(clicked(QModelIndex)), this, SLOT(handleTransactionClicked(QModelIndex)));
     connect(ui->swapButton, SIGNAL(clicked()), this, SLOT(ShowSwapDialog()));
 
-    swapDialog = new SwapXNAVDialog(this);
+    swapDialog = new SwapXDEUDialog(this);
 }
 
 void OverviewPage::handleTransactionClicked(const QModelIndex &index)
@@ -178,14 +178,14 @@ void OverviewPage::setBalance(
     currentWatchUnconfBalance = watchUnconfBalance;
     currentWatchImmatureBalance = watchImmatureBalance;
     currentWatchOnlyTotalBalance = watchOnlyBalance + watchUnconfBalance + watchImmatureBalance;
-    ui->labelBalance->setText(NavcoinUnits::formatWithUnit(unit, balance, false, NavcoinUnits::separatorAlways));
-    ui->labelPrivateBalance->setText(NavcoinUnits::formatWithUnit(unit, privateBalance, false, NavcoinUnits::separatorAlways, true));
-    ui->labelPrivateBalancePending->setText(NavcoinUnits::formatWithUnit(unit, privPending, false, NavcoinUnits::separatorAlways, true));
-    ui->labelUnconfirmed->setText(NavcoinUnits::formatWithUnit(unit, unconfirmedBalance, false, NavcoinUnits::separatorAlways));
-    ui->labelColdStaking->setText(NavcoinUnits::formatWithUnit(unit, currentColdStakingBalance, false, NavcoinUnits::separatorAlways));
-    ui->labelImmature->setText(NavcoinUnits::formatWithUnit(unit, currentImmatureBalance, false, NavcoinUnits::separatorAlways));
-    ui->labelWatchedBalance->setText(NavcoinUnits::formatWithUnit(unit, currentWatchOnlyTotalBalance, false, NavcoinUnits::separatorAlways));
-    ui->labelTotal->setText(NavcoinUnits::formatWithUnit(unit, currentTotalBalance + currentPrivateBalance + currentPrivateBalancePending + currentWatchOnlyTotalBalance, false, NavcoinUnits::separatorAlways));
+    ui->labelBalance->setText(DeuteriumcoinUnits::formatWithUnit(unit, balance, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelPrivateBalance->setText(DeuteriumcoinUnits::formatWithUnit(unit, privateBalance, false, DeuteriumcoinUnits::separatorAlways, true));
+    ui->labelPrivateBalancePending->setText(DeuteriumcoinUnits::formatWithUnit(unit, privPending, false, DeuteriumcoinUnits::separatorAlways, true));
+    ui->labelUnconfirmed->setText(DeuteriumcoinUnits::formatWithUnit(unit, unconfirmedBalance, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelColdStaking->setText(DeuteriumcoinUnits::formatWithUnit(unit, currentColdStakingBalance, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelImmature->setText(DeuteriumcoinUnits::formatWithUnit(unit, currentImmatureBalance, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelWatchedBalance->setText(DeuteriumcoinUnits::formatWithUnit(unit, currentWatchOnlyTotalBalance, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelTotal->setText(DeuteriumcoinUnits::formatWithUnit(unit, currentTotalBalance + currentPrivateBalance + currentPrivateBalancePending + currentWatchOnlyTotalBalance, false, DeuteriumcoinUnits::separatorAlways));
 
     swapDialog->SetPublicBalance(balance);
     swapDialog->SetPrivateBalance(privateBalance);
@@ -288,7 +288,7 @@ void OverviewPage::setWalletModel(WalletModel *model)
         model->StartBalanceTimer();
     }
 
-    // update the display unit, to not use the default ("NAV")
+    // update the display unit, to not use the default ("DEU")
     updateDisplayUnit();
 }
 
@@ -333,7 +333,7 @@ void OverviewPage::ShowSwapDialog()
     if (!IsBLSCTEnabled(chainActive.Tip(),Params().GetConsensus()))
     {
         QMessageBox::warning(this, tr("Not available"),
-                "xNAV is not active yet!");
+                "xDEU is not active yet!");
         return;
     }
 
@@ -363,12 +363,12 @@ void OverviewPage::setStakes(
     currentAmountAll = amountAll;
     currentAmountExp = amountExp;
 
-    ui->label24hStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amount24h, false, NavcoinUnits::separatorAlways));
-    ui->label7dStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amount7d, false, NavcoinUnits::separatorAlways));
-    ui->label30dStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amount30d, false, NavcoinUnits::separatorAlways));
-    ui->label1yStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amount1y, false, NavcoinUnits::separatorAlways));
-    ui->labelallStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amountAll, false, NavcoinUnits::separatorAlways));
-    ui->labelExpectedStakingStats->setText(NavcoinUnits::formatWithUnit(unit, amountExp, false, NavcoinUnits::separatorAlways));
+    ui->label24hStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amount24h, false, DeuteriumcoinUnits::separatorAlways));
+    ui->label7dStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amount7d, false, DeuteriumcoinUnits::separatorAlways));
+    ui->label30dStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amount30d, false, DeuteriumcoinUnits::separatorAlways));
+    ui->label1yStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amount1y, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelallStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amountAll, false, DeuteriumcoinUnits::separatorAlways));
+    ui->labelExpectedStakingStats->setText(DeuteriumcoinUnits::formatWithUnit(unit, amountExp, false, DeuteriumcoinUnits::separatorAlways));
 
     uiInterface.SetStaked(amountAll, amount24h, amount7d);
 }

@@ -27,7 +27,7 @@ getAddressToReceive::getAddressToReceive(QWidget *parent) :
     LOCK(pwalletMain->cs_wallet);
     for(const std::pair<CTxDestination, CAddressBookData>& item: pwalletMain->mapAddressBook)
     {
-        const CNavcoinAddress& addressbook = item.first;
+        const CDeuteriumcoinAddress& addressbook = item.first;
         bool fMine = IsMine(*pwalletMain, addressbook.Get());
         if(fMine)
         {
@@ -38,11 +38,11 @@ getAddressToReceive::getAddressToReceive(QWidget *parent) :
 
     ui->textAddress->setMinimumWidth(260 * GUIUtil::scale());
 
-    QPixmap p1(":/icons/mininav");
-    QPixmap p2(":/icons/minixnav");
+    QPixmap p1(":/icons/minideu");
+    QPixmap p2(":/icons/minixdeu");
 
-    ui->typeBox->insertItem(0,"Public NAV");
-    ui->typeBox->insertItem(1,"Private xNAV");
+    ui->typeBox->insertItem(0,"Public DEU");
+    ui->typeBox->insertItem(1,"Private xDEU");
     ui->typeBox->setItemData(0,p1,Qt::DecorationRole);
     ui->typeBox->setItemData(1,p2,Qt::DecorationRole);
     ui->typeBox->setIconSize(QSize(32,32));
@@ -74,7 +74,7 @@ void getAddressToReceive::showPrivateAddress(int what)
         LOCK(pwalletMain->cs_wallet);
         for(const std::pair<CTxDestination, CAddressBookData>& item: pwalletMain->mapAddressBook)
         {
-            const CNavcoinAddress& addressbook = item.first;
+            const CDeuteriumcoinAddress& addressbook = item.first;
             bool fMine = IsMine(*pwalletMain, addressbook.Get());
             if(fMine)
             {
@@ -92,9 +92,9 @@ void getAddressToReceive::showPrivateAddress(int what)
 
         blsctDoublePublicKey k;
         if (pwalletMain->GetBLSCTSubAddressPublicKeys(std::make_pair(0, 0), k))
-            address = QString::fromStdString(CNavcoinAddress(k).ToString());
+            address = QString::fromStdString(CDeuteriumcoinAddress(k).ToString());
         else
-            address = "Unavailable";
+            address = "Udeuailable";
 
         ui->requestNewAddressButton->hide();
         ui->coldStakingButton->hide();
@@ -144,7 +144,7 @@ void getAddressToReceive::getColdStakingAddress()
 void getAddressToReceive::showQR()
 {
 #ifdef USE_QRCODE
-    QString uri = "navcoin:" + address;
+    QString uri = "deuteriumcoin:" + address;
     ui->lblQRCode->setText("");
     if(!uri.isEmpty())
     {

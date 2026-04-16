@@ -1,11 +1,11 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2021 The Navcoin developers
+// Copyright (c) 2021 The Deuteriumcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_NAME_DATA_H
-#define NAVCOIN_NAME_DATA_H
+#ifndef DEUTERIUMCOIN_NAME_DATA_H
+#define DEUTERIUMCOIN_NAME_DATA_H
 
 #include <uint256.h>
 #include <hash.h>

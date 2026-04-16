@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Navcoin"
-            VALUE "FileDescription",    "navcoin-tx (CLI Navcoin transaction editor utility)"
+            VALUE "CompanyName",        "Deuteriumcoin"
+            VALUE "FileDescription",    "deuteriumcoin-tx (CLI Deuteriumcoin transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "navcoin-tx"
+            VALUE "InternalName",       "deuteriumcoin-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "navcoin-tx.exe"
-            VALUE "ProductName",        "navcoin-tx"
+            VALUE "OriginalFilename",   "deuteriumcoin-tx.exe"
+            VALUE "ProductName",        "deuteriumcoin-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

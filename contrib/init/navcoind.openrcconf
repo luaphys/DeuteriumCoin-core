@@ -1,33 +1,33 @@
-# /etc/conf.d/navcoind: config file for /etc/init.d/navcoind
+# /etc/conf.d/deuteriumcoind: config file for /etc/init.d/deuteriumcoind
 
 # Config file location
-#NAVCOIND_CONFIGFILE="/etc/navcoin/navcoin.conf"
+#DEUTERIUMCOIND_CONFIGFILE="/etc/deuteriumcoin/deuteriumcoin.conf"
 
-# What directory to write pidfile to?  (created and owned by $NAVCOIND_USER)
-#NAVCOIND_PIDDIR="/var/run/navcoind"
+# What directory to write pidfile to?  (created and owned by $DEUTERIUMCOIND_USER)
+#DEUTERIUMCOIND_PIDDIR="/var/run/deuteriumcoind"
 
 # What filename to give the pidfile
-#NAVCOIND_PIDFILE="${NAVCOIND_PIDDIR}/navcoind.pid"
+#DEUTERIUMCOIND_PIDFILE="${DEUTERIUMCOIND_PIDDIR}/deuteriumcoind.pid"
 
-# Where to write navcoind data (be mindful that the blockchain is large)
-#NAVCOIND_DATADIR="/var/lib/navcoind"
+# Where to write deuteriumcoind data (be mindful that the blockchain is large)
+#DEUTERIUMCOIND_DATADIR="/var/lib/deuteriumcoind"
 
-# User and group to own navcoind process
-#NAVCOIND_USER="navcoin"
-#NAVCOIND_GROUP="navcoin"
+# User and group to own deuteriumcoind process
+#DEUTERIUMCOIND_USER="deuteriumcoin"
+#DEUTERIUMCOIND_GROUP="deuteriumcoin"
 
-# Path to navcoind executable
-#NAVCOIND_BIN="/usr/bin/navcoind"
+# Path to deuteriumcoind executable
+#DEUTERIUMCOIND_BIN="/usr/bin/deuteriumcoind"
 
-# Nice value to run navcoind under
-#NAVCOIND_NICE=0
+# Nice value to run deuteriumcoind under
+#DEUTERIUMCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
-NAVCOIND_OPTS="-disablewallet"
+DEUTERIUMCOIND_OPTS="-disablewallet"
 
-# The timeout in seconds OpenRC will wait for navcoind to terminate
+# The timeout in seconds OpenRC will wait for deuteriumcoind to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule
 # here. For more information see man 8 start-stop-daemon.
-NAVCOIND_SIGTERM_TIMEOUT=60
+DEUTERIUMCOIND_SIGTERM_TIMEOUT=60

@@ -1,2 +1,2 @@
-contrib/navcoind.bash-completion	navcoind
-contrib/navcoin-cli.bash-completion	navcoin-cli
+contrib/deuteriumcoind.bash-completion	deuteriumcoind
+contrib/deuteriumcoin-cli.bash-completion	deuteriumcoin-cli

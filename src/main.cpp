@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2017-2021 The Navcoin Core developers
+// Copyright (c) 2017-2021 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -54,7 +54,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "Navcoin cannot be compiled without assertions."
+# error "Deuteriumcoin cannot be compiled without assertions."
 #endif
 
 /**
@@ -137,7 +137,7 @@ arith_uint256 bnProofOfStakeLimitV2(~arith_uint256() >> 20);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "Navcoin Signed Message:\n";
+const std::string strMessageMagic = "Deuteriumcoin Signed Message:\n";
 
 
 enum FlushStateMode {
@@ -1502,7 +1502,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                             }
                             else if (program.action == UPDATE_NAME_FIRST)
                             {
-                                if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_NAVNS_FEE, view)))
+                                if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_DEUNS_FEE, view)))
                                     return state.DoS(100, false, REJECT_INVALID, "register-name-missing-contribution");
 
                                 NameRecordValue recordvalue;
@@ -1542,7 +1542,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                                     }
                                 }
 
-                                if (!viewMemPool.AddNameData(hash, DotNav::GetHashName(program.sParameters[0]), std::make_pair(chainActive.Tip()->nHeight, NameDataValue("_expiry", std::to_string(chainActive.Tip()->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_LENGTH, view))))))
+                                if (!viewMemPool.AddNameData(hash, DotNav::GetHashName(program.sParameters[0]), std::make_pair(chainActive.Tip()->nHeight, NameDataValue("_expiry", std::to_string(chainActive.Tip()->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_LENGTH, view))))))
                                     return state.DoS(100, false, REJECT_INVALID, "name-could-not-update");
                                 if (!viewMemPool.AddNameData(hash, DotNav::GetHashName(program.sParameters[0]), std::make_pair(chainActive.Tip()->nHeight, NameDataValue("_key", HexStr(program.kParameters[0].Serialize())))))
                                     return state.DoS(100, false, REJECT_INVALID, "name-could-not-update");
@@ -1551,13 +1551,13 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                                 if (viewMemPool.GetNameData(DotNav::GetHashName(program.sParameters[0]), data))
                                 {
                                     auto mapData = DotNav::Consolidate(data, chainActive.Tip()->nHeight);
-                                    if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_FEE_EXTRADATA, view)))
+                                    if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_FEE_EXTRADATA, view)))
                                         return state.DoS(100, false, REJECT_INVALID, "register-name-missing-contribution");
                                 } else {
                                     return state.DoS(100, false, REJECT_INVALID, "could-not-verify-written-data");
                                 }
 
-                                LogPrint("dotnav", "%s: updated name first %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
+                                LogPrint("dotdeu", "%s: updated name first %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
                             } else if (program.action == UPDATE_NAME) {
                                 NameDataValues data;
                                 if (!view.GetNameData(DotNav::GetHashName(program.sParameters[0]), data))
@@ -1576,7 +1576,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                                     return state.DoS(100, false, REJECT_INVALID, "invalid-subdomain");
                                 if (!(DotNav::IsValidKey(program.sParameters[2]) || program.sParameters[2] == "_key"))
                                     return state.DoS(100, false, REJECT_INVALID, "invalid-key");
-                                if (program.sParameters[3].size() > GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))
+                                if (program.sParameters[3].size() > GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))
                                     return state.DoS(100, false, REJECT_INVALID, "too-long-value");
                                 if (program.sParameters[2] == "_key")
                                 {
@@ -1595,15 +1595,15 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                                 {
                                     auto mapData = DotNav::Consolidate(data, chainActive.Tip()->nHeight);
 
-                                    if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_FEE_EXTRADATA, view)))
+                                    if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_FEE_EXTRADATA, view)))
                                         return state.DoS(100, false, REJECT_INVALID, "register-name-missing-contribution");
                                 } else {
                                     return state.DoS(100, false, REJECT_INVALID, "could-not-verify-written-data");
                                 }
 
-                                LogPrint("dotnav", "%s: updated name %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
+                                LogPrint("dotdeu", "%s: updated name %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
                             } else if (program.action == RENEW_NAME) {
-                                if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_NAVNS_FEE, view)))
+                                if (!(txout.scriptPubKey.IsCommunityFundContribution() && txout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_DEUNS_FEE, view)))
                                     return state.DoS(100, false, REJECT_INVALID, "renew-name-missing-contribution");
                                 NameDataValues data;
 
@@ -1615,7 +1615,7 @@ bool AcceptToMemoryPoolWorker(CTxMemPool& pool, CCriticalSection *mpcs, CCritica
                                 } else {
                                     return state.DoS(100, false, REJECT_INVALID, "name-not-active");
                                 }
-                                LogPrint("dotnav", "%s: renewed name %s %s %s %s\n", __func__, program.sParameters[0]);
+                                LogPrint("dotdeu", "%s: renewed name %s %s %s %s\n", __func__, program.sParameters[0]);
                             }
                         } catch(std::exception& e) {
                             return state.DoS(100, false, REJECT_INVALID, strprintf("error-program-vdata(%s)", e.what()));
@@ -2574,7 +2574,7 @@ bool CheckTxInputs(const CTransaction& tx, CValidationState& state, const CState
     // This doesn't trigger the DoS code on purpose; if it did, it would make it easier
     // for an attacker to attempt to split the network.
     if (!inputs.HaveInputs(tx))
-        return state.Invalid(false, 0, "", "Inputs unavailable");
+        return state.Invalid(false, 0, "", "Inputs udeuailable");
     CAmount nValueIn = 0;
     CAmount nFees = 0;
     bool fHasBLSInput = false;
@@ -2992,7 +2992,7 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                             view.RemoveNameRecord(program.hParameters[0]);
                         } else if (program.action == UPDATE_NAME_FIRST || program.action == UPDATE_NAME || program.action == RENEW_NAME) {
                             view.RemoveNameData(NameDataKey(program.sParameters[0], pindex->nHeight));
-                            LogPrint("dotnav", "%s: removing name data for %s %d\n", __func__, program.sParameters[0], pindex->nHeight);
+                            LogPrint("dotdeu", "%s: removing name data for %s %d\n", __func__, program.sParameters[0], pindex->nHeight);
                         }
                     }
                 } catch(...) {
@@ -3047,7 +3047,7 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                     int type = 0;
                     CTxDestination destination;
                     ExtractDestination(out.scriptPubKey, destination);
-                    CNavcoinAddress address(destination);
+                    CDeuteriumcoinAddress address(destination);
                     address.GetIndexKey(hashBytes, type);
 
                     // undo spending activity
@@ -3062,13 +3062,13 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                         addressHistoryMap.insert(std::make_pair(addressHistoryKey, CAddressHistoryValue()));
 
                 } else if (out.scriptPubKey.IsColdStaking() || out.scriptPubKey.IsColdStakingv2()) {
-                    CNavcoinAddress addressStaking, addressVoting, addressSpending;
+                    CDeuteriumcoinAddress addressStaking, addressVoting, addressSpending;
                     uint160 hashBytes, hashBytesSpending, hashBytesStaking, hashBytesVoting;
                     int type = 0;
 
                     CTxDestination destination;
                     ExtractDestination(out.scriptPubKey, destination);
-                    CNavcoinAddress address(destination);
+                    CDeuteriumcoinAddress address(destination);
                     address.GetIndexKey(hashBytes, type);
                     address.GetSpendingAddress(addressSpending);
                     addressSpending.GetIndexKey(hashBytesSpending, type);
@@ -3183,7 +3183,7 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                         int type = 0;
                         CTxDestination destination;
                         ExtractDestination(prevout.scriptPubKey, destination);
-                        CNavcoinAddress address(destination);
+                        CDeuteriumcoinAddress address(destination);
                         address.GetIndexKey(hashBytes, type);
 
                         // undo spending activity
@@ -3199,7 +3199,7 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                     }
                     else if (prevout.scriptPubKey.IsColdStaking() || prevout.scriptPubKey.IsColdStakingv2())
                     {
-                        CNavcoinAddress addressStaking, addressVoting, addressSpending;
+                        CDeuteriumcoinAddress addressStaking, addressVoting, addressSpending;
 
                         uint160 hashBytes, hashBytesSpending, hashBytesStaking, hashBytesVoting;
 
@@ -3207,7 +3207,7 @@ bool DisconnectBlock(const CBlock& block, CValidationState& state, const CBlockI
                         CTxDestination destination;
 
                         ExtractDestination(prevout.scriptPubKey, destination);
-                        CNavcoinAddress address(destination);
+                        CDeuteriumcoinAddress address(destination);
 
                         if (prevout.scriptPubKey.IsColdStaking() || prevout.scriptPubKey.IsColdStakingv2())
                             address.GetSpendingAddress(addressSpending);
@@ -3453,7 +3453,7 @@ bool FindUndoPos(CValidationState &state, int nFile, CDiskBlockPos &pos, unsigne
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("navcoin-scriptch");
+    RenameThread("deuteriumcoin-scriptch");
     scriptcheckqueue.Thread();
 }
 
@@ -4380,7 +4380,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     } else if (prevout.scriptPubKey.IsPayToPublicKeyHash() || prevout.scriptPubKey.IsPayToPublicKey()) {
                         CTxDestination destination;
                         ExtractDestination(prevout.scriptPubKey, destination);
-                        CNavcoinAddress address(destination);
+                        CDeuteriumcoinAddress address(destination);
                         address.GetIndexKey(hashBytes, addressType);
 
                         CAddressHistoryKey addressHistoryKey(hashBytes, hashBytes, pindex->nHeight, i, txhash, tx.nTime);
@@ -4395,10 +4395,10 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     {
                         CTxDestination destination;
                         uint160 hashBytesSpending, hashBytesStaking;
-                        CNavcoinAddress addressStaking, addresssSpending;
+                        CDeuteriumcoinAddress addressStaking, addresssSpending;
 
                         ExtractDestination(prevout.scriptPubKey, destination);
-                        CNavcoinAddress address(destination);
+                        CDeuteriumcoinAddress address(destination);
                         address.GetSpendingAddress(addresssSpending);
                         address.GetIndexKey(hashBytes, addressType);
                         addresssSpending.GetIndexKey(hashBytesSpending, addressType);
@@ -4438,10 +4438,10 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     {
                         CTxDestination destination;
                         uint160 hashBytesStaking, hashBytesVoting, hashBytesSpending;
-                        CNavcoinAddress addressStaking, addressVoting, addresssSpending;
+                        CDeuteriumcoinAddress addressStaking, addressVoting, addresssSpending;
 
                         ExtractDestination(prevout.scriptPubKey, destination);
-                        CNavcoinAddress address(destination);
+                        CDeuteriumcoinAddress address(destination);
                         address.GetSpendingAddress(addresssSpending);
                         address.GetIndexKey(hashBytes, addressType);
                         addresssSpending.GetIndexKey(hashBytesSpending, addressType);
@@ -4622,11 +4622,11 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 } else if (out.scriptPubKey.IsColdStaking())
                 {
                     uint160 hashBytes, hashBytesStaking, hashBytesSpending;
-                    CNavcoinAddress addressSpending, addressStaking;
+                    CDeuteriumcoinAddress addressSpending, addressStaking;
                     int type = 0;
                     CTxDestination destination;
                     ExtractDestination(out.scriptPubKey, destination);
-                    CNavcoinAddress address(destination);
+                    CDeuteriumcoinAddress address(destination);
                     address.GetSpendingAddress(addressSpending);
                     address.GetIndexKey(hashBytes, type);
                     addressSpending.GetIndexKey(hashBytesSpending, type);
@@ -4669,12 +4669,12 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                 else if (out.scriptPubKey.IsColdStakingv2())
                 {
                     uint160 hashBytes, hashBytesStaking, hashBytesVoting, hashBytesSpending;
-                    CNavcoinAddress addressSpending, addressStaking, addressVoting;
+                    CDeuteriumcoinAddress addressSpending, addressStaking, addressVoting;
 
                     int type = 0;
                     CTxDestination destination;
                     ExtractDestination(out.scriptPubKey, destination);
-                    CNavcoinAddress address(destination);
+                    CDeuteriumcoinAddress address(destination);
                     address.GetSpendingAddress(addressSpending);
                     addressSpending.GetIndexKey(hashBytesSpending, type);
                     address.GetIndexKey(hashBytes, type);
@@ -4735,7 +4735,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                     int type = 0;
                     CTxDestination destination;
                     ExtractDestination(out.scriptPubKey, destination);
-                    CNavcoinAddress address(destination);
+                    CDeuteriumcoinAddress address(destination);
                     address.GetIndexKey(hashBytes, type);
 
                     // record spending activity
@@ -4883,7 +4883,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                             if (!view.AddNameRecord(std::make_pair(program.hParameters[0], NameRecordValue(pindex->nHeight))))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("register-name-could-not-add:%s", program.sParameters[0]));
                         } else if (program.action == UPDATE_NAME_FIRST) {
-                            if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_NAVNS_FEE, view)))
+                            if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_DEUNS_FEE, view)))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("register-name-missing-contribution:%s", program.sParameters[0]));
 
                             NameRecordValue recordvalue;
@@ -4917,7 +4917,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                                     return state.DoS(100, false, REJECT_INVALID, strprintf("invalid-key-to-update:%s", program.sParameters[0]));
                                 }
                             }
-                            if (!view.AddNameData(DotNav::GetHashName(program.sParameters[0]), std::make_pair(pindex->nHeight, NameDataValue("_expiry", std::to_string(pindex->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_LENGTH, view))))))
+                            if (!view.AddNameData(DotNav::GetHashName(program.sParameters[0]), std::make_pair(pindex->nHeight, NameDataValue("_expiry", std::to_string(pindex->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_LENGTH, view))))))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("name-could-not-update:%s", program.sParameters[0]));
                             if (!view.AddNameData(DotNav::GetHashName(program.sParameters[0]), std::make_pair(pindex->nHeight, NameDataValue("_key", HexStr(program.kParameters[0].Serialize())))))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("name-could-not-update:%s", program.sParameters[0]));
@@ -4927,15 +4927,15 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                             {
                                 auto mapData = DotNav::Consolidate(data, pindex->nHeight);
 
-                                if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_FEE_EXTRADATA, view)))
+                                if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_FEE_EXTRADATA, view)))
                                     return state.DoS(100, false, REJECT_INVALID, strprintf("register-name-missing-contribution:%s", program.sParameters[0]));
                             } else {
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("could-not-verify-written-data:%s", program.sParameters[0]));
                             }
 
-                            LogPrint("dotnav", "%s: updated name first %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
+                            LogPrint("dotdeu", "%s: updated name first %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
                         } else if (program.action == RENEW_NAME) {
-                            if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_NAVNS_FEE, view)))
+                            if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= GetConsensusParameter(Consensus::CONSENSUS_PARAM_DEUNS_FEE, view)))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("register-name-missing-contribution:%s", program.sParameters[0]));
                             NameDataValues data;
 
@@ -4947,10 +4947,10 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                             } else {
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("name-not-active:%s", program.sParameters[0]));
                             }
-                            if (!view.AddNameData(DotNav::GetHashName(program.sParameters[0]), std::make_pair(pindex->nHeight, NameDataValue("_expiry", std::to_string(pindex->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_LENGTH, view))))))
+                            if (!view.AddNameData(DotNav::GetHashName(program.sParameters[0]), std::make_pair(pindex->nHeight, NameDataValue("_expiry", std::to_string(pindex->nHeight+GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_LENGTH, view))))))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("name-could-not-update:%s", program.sParameters[0]));
 
-                            LogPrint("dotnav", "%s: renewed name %s\n", __func__, program.sParameters[0]);
+                            LogPrint("dotdeu", "%s: renewed name %s\n", __func__, program.sParameters[0]);
                         } else if (program.action == UPDATE_NAME) {
                             NameDataValues data;
                             if (!view.GetNameData(DotNav::GetHashName(program.sParameters[0]), data))
@@ -4959,7 +4959,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("invalid-subdomain:%s", program.sParameters[0]));
                             if (!(DotNav::IsValidKey(program.sParameters[2]) || program.sParameters[2] == "_key"))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("invalid-name:%s", program.sParameters[0]));
-                            if (program.sParameters[3].size() > GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))
+                            if (program.sParameters[3].size() > GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("too-long-value:%s", program.sParameters[0]));
                             auto mapData = DotNav::Consolidate(data, pindex->nHeight);
                             if (!mapData.count("_key"))
@@ -4987,13 +4987,13 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
                             if (view.GetNameData(DotNav::GetHashName(program.sParameters[0]), data))
                             {
                                 auto mapData = DotNav::Consolidate(data, pindex->nHeight);
-                                if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTNAV_FEE_EXTRADATA, view)))
+                                if (!(vout.scriptPubKey.IsCommunityFundContribution() && vout.nValue >= std::floor(DotNav::CalculateSize(mapData)/GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_MAXDATA, view))*GetConsensusParameter(Consensus::CONSENSUS_PARAMS_DOTDEU_FEE_EXTRADATA, view)))
                                     return state.DoS(100, false, REJECT_INVALID, strprintf("register-name-missing-contribution:%s", program.sParameters[0]));
                             } else {
                                 return state.DoS(100, false, REJECT_INVALID, strprintf("could-not-verify-written-data:%s", program.sParameters[0]));
                             }
 
-                            LogPrint("dotnav", "%s: updated name %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
+                            LogPrint("dotdeu", "%s: updated name %s %s %s %s\n", __func__, program.sParameters[1], program.sParameters[0], program.sParameters[2], program.sParameters[3]);
                         }
                     }
                 } catch(...) {
@@ -5267,7 +5267,7 @@ bool ConnectBlock(const CBlock& block, CValidationState& state, CBlockIndex* pin
 
                 bool fv452Fork = (pindex->pprev->nHeight >= Params().GetConsensus().nHeightv452Fork);
 
-                if(block.vtx[0].vout[i].nValue != prequest.nAmount || (fv452Fork && prequest.GetLastState() != DAOFlags::ACCEPTED) || proposal.GetPaymentAddress() != CNavcoinAddress(address).ToString())
+                if(block.vtx[0].vout[i].nValue != prequest.nAmount || (fv452Fork && prequest.GetLastState() != DAOFlags::ACCEPTED) || proposal.GetPaymentAddress() != CDeuteriumcoinAddress(address).ToString())
                     return state.DoS(100, error("CheckBlock() : coinbase output does not match an accepted payment request"));
 
                 CBlockIndex* pblockindex = prequest.GetLastStateBlockIndexForState(DAOFlags::ACCEPTED);
@@ -5584,7 +5584,7 @@ void static UpdateTip(CBlockIndex *pindexNew, uint256 statehash, const CChainPar
         int nUpgraded = 0;
         const CBlockIndex* pindex = chainActive.Tip();
         //
-        // Commented - Navcoin uses now version control
+        // Commented - Deuteriumcoin uses now version control
         //
         //        for (int bit = 0; bit < VERSIONBITS_NUM_BITS; bit++) {
         //            WarningBitsConditionChecker checker(bit);
@@ -6607,13 +6607,13 @@ bool IsDaoConsensusEnabled(const CBlockIndex* pindexPrev, const Consensus::Param
 bool IsXNavSerEnabled(const CBlockIndex* pindexPrev, const Consensus::Params& params)
 {
     LOCK(cs_main);
-    return (VersionBitsState(pindexPrev, params, Consensus::DEPLOYMENT_XNAV_SER, versionbitscache) == THRESHOLD_ACTIVE);
+    return (VersionBitsState(pindexPrev, params, Consensus::DEPLOYMENT_XDEU_SER, versionbitscache) == THRESHOLD_ACTIVE);
 }
 
 bool IsDotNavEnabled(const CBlockIndex* pindexPrev, const Consensus::Params& params)
 {
     LOCK(cs_main);
-    return (VersionBitsState(pindexPrev, params, Consensus::DEPLOYMENT_DOT_NAV, versionbitscache) == THRESHOLD_ACTIVE);
+    return (VersionBitsState(pindexPrev, params, Consensus::DEPLOYMENT_DOT_DEU, versionbitscache) == THRESHOLD_ACTIVE);
 }
 
 // Compute at which vout of the block's coinbase transaction the witness
@@ -8523,31 +8523,31 @@ bool static ProcessMessage(CNode* pfrom, std::string strCommand, CDataStream& vR
 
         if(pfrom->nVersion < 70015)
         {
-            reason = "You are using an old version of Navcoin, please update.";
+            reason = "You are using an old version of Deuteriumcoin, please update.";
             fObsolete = true;
         }
 
         if(pfrom->nVersion < 70017 && IsWitnessEnabled(chainActive.Tip(), Params().GetConsensus()))
         {
-            reason = "Segregated Witness has been enabled and you are using an old version of Navcoin, please update.";
+            reason = "Segregated Witness has been enabled and you are using an old version of Deuteriumcoin, please update.";
             fObsolete = true;
         }
 
         if(pfrom->nVersion < 70020 && IsCommunityFundEnabled(chainActive.Tip(), Params().GetConsensus()))
         {
-            reason = "Community Fund has been enabled and you are using an old version of Navcoin, please update.";
+            reason = "Community Fund has been enabled and you are using an old version of Deuteriumcoin, please update.";
             fObsolete = true;
         }
 
         if(pfrom->nVersion < 80020 && IsBLSCTEnabled(chainActive.Tip(), Params().GetConsensus()))
         {
-            reason = "xNAV has been enabled and you are using an old version of Navcoin, please update.";
+            reason = "xDEU has been enabled and you are using an old version of Deuteriumcoin, please update.";
             fObsolete = true;
         }
 
         if(pfrom->nVersion >= 80020 && pfrom->nVersion < 80021 && IsBLSCTEnabled(chainActive.Tip(), Params().GetConsensus()))
         {
-            reason = "You are using an old version of Navcoin, please update.";
+            reason = "You are using an old version of Deuteriumcoin, please update.";
             fObsolete = true;
             fBan = false;
         }

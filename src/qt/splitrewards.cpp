@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2020 The Navcoin Core developers
+// Copyright (c) 2019-2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -79,7 +79,7 @@ SplitRewardsDialog::SplitRewardsDialog(QWidget *parent) :
     {
         CTxDestination dest;
         if (ExtractDestination(out.tx->vout[out.i].scriptPubKey, dest)){
-            CNavcoinAddress address(dest);
+            CDeuteriumcoinAddress address(dest);
             if (address.IsColdStakingAddress(Params()))
                 if (!address.GetStakingAddress(address))
                     continue;
@@ -94,7 +94,7 @@ SplitRewardsDialog::SplitRewardsDialog(QWidget *parent) :
 
     for (const auto &it: mapAddressBalance)
     {
-        comboAddress->insertItem(i++, it.first +" ("+ QString::fromStdString(FormatMoney(it.second)) +" NAV)",it.first);
+        comboAddress->insertItem(i++, it.first +" ("+ QString::fromStdString(FormatMoney(it.second)) +" DEU)",it.first);
     }
 
     showFor("all");
@@ -120,7 +120,7 @@ void SplitRewardsDialog::showFor(QString sin)
 
     for (auto &key: j.keys())
     {
-        CNavcoinAddress address(key.toStdString());
+        CDeuteriumcoinAddress address(key.toStdString());
         double amount;
 
         if (address.IsValid())
@@ -163,7 +163,7 @@ void SplitRewardsDialog::showFor(QString sin)
 
     tree->resizeColumnToContents(1);
 
-    strDesc->setText(tr("For each block, %1 NAV will go to the Community Fund, %2 and %3 will be accumulated in your own address").arg(QString::fromStdString(FormatMoney(nCFundContribution)), descs.join(", "), QString::fromStdString(FormatMoney(PercentageToNav(availableAmount)))));
+    strDesc->setText(tr("For each block, %1 DEU will go to the Community Fund, %2 and %3 will be accumulated in your own address").arg(QString::fromStdString(FormatMoney(nCFundContribution)), descs.join(", "), QString::fromStdString(FormatMoney(PercentageToNav(availableAmount)))));
 
     jmodel->loadJson(doc.toJson());
 }
@@ -225,10 +225,10 @@ void SplitRewardsDialog::onAdd()
         return;
     }
 
-    if (!CNavcoinAddress(address.toStdString()).IsValid())
+    if (!CDeuteriumcoinAddress(address.toStdString()).IsValid())
     {
         QMessageBox msgBox(this);
-        msgBox.setText(tr("Invalid Navcoin Address"));
+        msgBox.setText(tr("Invalid Deuteriumcoin Address"));
         msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
         msgBox.setIcon(QMessageBox::Warning);
         msgBox.setWindowTitle("Error");

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_CONSENSUS_VERSIONBITS
-#define NAVCOIN_CONSENSUS_VERSIONBITS
+#ifndef DEUTERIUMCOIN_CONSENSUS_VERSIONBITS
+#define DEUTERIUMCOIN_CONSENSUS_VERSIONBITS
 
 #include <chain.h>
 #include <map>
@@ -20,7 +20,7 @@ static const int32_t VERSIONBITS_NUM_BITS = 29;
 
 /***
 *
-* Navcoin Version Bits
+* Deuteriumcoin Version Bits
 *
 * SIGNAL
 *

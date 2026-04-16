@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_MACNOTIFICATIONHANDLER_H
-#define NAVCOIN_QT_MACNOTIFICATIONHANDLER_H
+#ifndef DEUTERIUMCOIN_QT_MACNOTIFICATIONHANDLER_H
+#define DEUTERIUMCOIN_QT_MACNOTIFICATIONHANDLER_H
 
 #include <QObject>
 
@@ -24,4 +24,4 @@ public:
 };
 
 
-#endif // NAVCOIN_QT_MACNOTIFICATIONHANDLER_H
+#endif // DEUTERIUMCOIN_QT_MACNOTIFICATIONHANDLER_H

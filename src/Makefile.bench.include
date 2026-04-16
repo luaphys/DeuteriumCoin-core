@@ -1,10 +1,10 @@
-bin_PROGRAMS += bench/bench_navcoin
+bin_PROGRAMS += bench/bench_deuteriumcoin
 BENCH_SRCDIR = bench
-BENCH_BINARY = bench/bench_navcoin$(EXEEXT)
+BENCH_BINARY = bench/bench_deuteriumcoin$(EXEEXT)
 
 
-bench_bench_navcoin_SOURCES = \
-  bench/bench_navcoin.cpp \
+bench_bench_deuteriumcoin_SOURCES = \
+  bench/bench_deuteriumcoin.cpp \
   bench/bench.cpp \
   bench/bench.h \
   bench/Examples.cpp \
@@ -12,14 +12,14 @@ bench_bench_navcoin_SOURCES = \
   bench/crypto_hash.cpp \
   bench/base58.cpp
 
-bench_bench_navcoin_CPPFLAGS = $(AM_CPPFLAGS) $(NAVCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
-bench_bench_navcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-bench_bench_navcoin_LDADD = \
-  $(LIBNAVCOIN_SERVER) \
-  $(LIBNAVCOIN_COMMON) \
-  $(LIBNAVCOIN_UTIL) \
-  $(LIBNAVCOIN_CONSENSUS) \
-  $(LIBNAVCOIN_CRYPTO) \
+bench_bench_deuteriumcoin_CPPFLAGS = $(AM_CPPFLAGS) $(DEUTERIUMCOIN_INCLUDES) $(EVENT_CLFAGS) $(EVENT_PTHREADS_CFLAGS) -I$(builddir)/bench/
+bench_bench_deuteriumcoin_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+bench_bench_deuteriumcoin_LDADD = \
+  $(LIBDEUTERIUMCOIN_SERVER) \
+  $(LIBDEUTERIUMCOIN_COMMON) \
+  $(LIBDEUTERIUMCOIN_UTIL) \
+  $(LIBDEUTERIUMCOIN_CONSENSUS) \
+  $(LIBDEUTERIUMCOIN_CRYPTO) \
   $(LIBLEVELDB) \
   $(LIBMEMENV) \
   $(LIBSECP256K1) \
@@ -30,25 +30,25 @@ bench_bench_navcoin_LDADD = \
   $(ZLIB_LIBS)
 
 if ENABLE_ZMQ
-bench_bench_navcoin_LDADD += $(LIBNAVCOIN_ZMQ) $(ZMQ_LIBS)
+bench_bench_deuteriumcoin_LDADD += $(LIBDEUTERIUMCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 
 if ENABLE_WALLET
-bench_bench_navcoin_LDADD += $(LIBNAVCOIN_WALLET)
+bench_bench_deuteriumcoin_LDADD += $(LIBDEUTERIUMCOIN_WALLET)
 endif
 
-bench_bench_navcoin_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(ZLIB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) \
+bench_bench_deuteriumcoin_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(ZLIB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) \
 	$(CURL_LIBS) $(LIBBLS) $(LIBEVENT_LIBS) $(LIBSECCOMP_LIBS) $(LIBCAP_LIBS) $(ZLIB_LIBS)
-bench_bench_navcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+bench_bench_deuteriumcoin_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
-CLEAN_NAVCOIN_BENCH = bench/*.gcda bench/*.gcno
+CLEAN_DEUTERIUMCOIN_BENCH = bench/*.gcda bench/*.gcno
 
-CLEANFILES += $(CLEAN_NAVCOIN_BENCH)
+CLEANFILES += $(CLEAN_DEUTERIUMCOIN_BENCH)
 
-navcoin_bench: $(BENCH_BINARY)
+deuteriumcoin_bench: $(BENCH_BINARY)
 
 bench: $(BENCH_BINARY) FORCE
 	$(BENCH_BINARY)
 
-navcoin_bench_clean : FORCE
-	rm -f $(CLEAN_NAVCOIN_BENCH) $(bench_bench_navcoin_OBJECTS) $(BENCH_BINARY)
+deuteriumcoin_bench_clean : FORCE
+	rm -f $(CLEAN_DEUTERIUMCOIN_BENCH) $(bench_bench_deuteriumcoin_OBJECTS) $(BENCH_BINARY)

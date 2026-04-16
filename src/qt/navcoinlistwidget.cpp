@@ -1,10 +1,10 @@
-// Copyright (c) 2019-2020 The Navcoin Core developers
+// Copyright (c) 2019-2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "navcoinlistwidget.h"
+#include "deuteriumcoinlistwidget.h"
 
-NavcoinListWidget::NavcoinListWidget(QWidget *parent, QString title, ValidatorFunc validator) :
+DeuteriumcoinListWidget::DeuteriumcoinListWidget(QWidget *parent, QString title, ValidatorFunc validator) :
     QWidget(parent),
     listWidget(new QListWidget),
     addInput(new QLineEdit),
@@ -49,17 +49,17 @@ NavcoinListWidget::NavcoinListWidget(QWidget *parent, QString title, ValidatorFu
     listWidget->setSortingEnabled(true);
 }
 
-void NavcoinListWidget::onRemove()
+void DeuteriumcoinListWidget::onRemove()
 {
     listWidget->takeItem(listWidget->row(listWidget->currentItem()));
 }
 
-void NavcoinListWidget::onSelect(QListWidgetItem* item)
+void DeuteriumcoinListWidget::onSelect(QListWidgetItem* item)
 {
     removeBtn->setVisible(item != nullptr);
 }
 
-void NavcoinListWidget::onInsert()
+void DeuteriumcoinListWidget::onInsert()
 {
     QString itemText = addInput->text();
 
@@ -92,7 +92,7 @@ void NavcoinListWidget::onInsert()
     listWidget->insertItem(row, newItem);
 }
 
-QStringList NavcoinListWidget::getEntries()
+QStringList DeuteriumcoinListWidget::getEntries()
 {
     QStringList ret;
 

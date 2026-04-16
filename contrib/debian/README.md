@@ -1,21 +1,21 @@
 
 Debian
 ====================
-This directory contains files used to package navcoind/navcoin-qt
-for Debian-based Linux systems. If you compile navcoind/navcoin-qt yourself, there are some useful files here.
+This directory contains files used to package deuteriumcoind/deuteriumcoin-qt
+for Debian-based Linux systems. If you compile deuteriumcoind/deuteriumcoin-qt yourself, there are some useful files here.
 
-## navcoin: URI support ##
+## deuteriumcoin: URI support ##
 
 
-navcoin-qt.desktop  (Gnome / Open Desktop)
+deuteriumcoin-qt.desktop  (Gnome / Open Desktop)
 To install:
 
-	sudo desktop-file-install navcoin-qt.desktop
+	sudo desktop-file-install deuteriumcoin-qt.desktop
 	sudo update-desktop-database
 
 If you build yourself, you will either need to modify the paths in
-the .desktop file or copy or symlink your navcoin-qt binary to `/usr/bin`
-and the `../../share/pixmaps/navcoin128.png` to `/usr/share/pixmaps`
+the .desktop file or copy or symlink your deuteriumcoin-qt binary to `/usr/bin`
+and the `../../share/pixmaps/deuteriumcoin128.png` to `/usr/share/pixmaps`
 
-navcoin-qt.protocol (KDE)
+deuteriumcoin-qt.protocol (KDE)
 

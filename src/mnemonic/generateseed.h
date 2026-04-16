@@ -2,13 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_GENERATESEED_H
-#define NAVCOIN_GENERATESEED_H
+#ifndef DEUTERIUMCOIN_GENERATESEED_H
+#define DEUTERIUMCOIN_GENERATESEED_H
 
 #include <uint256.h>
 
-namespace navcoin {
+namespace deuteriumcoin {
 uint512 GenerateNewMnemonicSeed(std::string& mnemonic, const std::string& strLanguage);
 }
 
-#endif //NAVCOIN_GENERATESEED_H
+#endif //DEUTERIUMCOIN_GENERATESEED_H

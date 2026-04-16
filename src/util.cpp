@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/navcoin-config.h>
+#include <config/deuteriumcoin-config.h>
 #endif
 
 #include <util.h>
@@ -94,8 +94,8 @@
 #include <openssl/rand.h>
 #include <openssl/conf.h>
 
-const char * const NAVCOIN_CONF_FILENAME = "navcoin.conf";
-const char * const NAVCOIN_PID_FILENAME = "navcoin.pid";
+const char * const DEUTERIUMCOIN_CONF_FILENAME = "deuteriumcoin.conf";
+const char * const DEUTERIUMCOIN_PID_FILENAME = "deuteriumcoin.pid";
 const char * const DEFAULT_WALLET_DAT = "wallet.dat";
 
 std::vector<std::pair<std::string, bool>> vAddedProposalVotes;
@@ -532,7 +532,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(NULL, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "navcoin";
+    const char* pszModule = "deuteriumcoin";
 #endif
     if (pex)
         return strprintf(
@@ -552,13 +552,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 fs::path GetDefaultDataDir()
 {
     namespace fs = boost::filesystem;
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\NavCoin4
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\NavCoin4
-    // Mac: ~/Library/Application Support/NavCoin4
-    // Unix: ~/.navcoin4
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\Deuteriumcoin4
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\Deuteriumcoin4
+    // Mac: ~/Library/Application Support/Deuteriumcoin4
+    // Unix: ~/.deuteriumcoin4
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "NavCoin4";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "Deuteriumcoin4";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -568,10 +568,10 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/NavCoin4";
+    return pathRet / "Library/Application Support/Deuteriumcoin4";
 #else
     // Unix
-    return pathRet / ".navcoin4";
+    return pathRet / ".deuteriumcoin4";
 #endif
 #endif
 }
@@ -637,7 +637,7 @@ void ClearDatadirCache()
 
 fs::path GetConfigFile()
 {
-    fs::path pathConfigFile(GetArg("-conf", NAVCOIN_CONF_FILENAME));
+    fs::path pathConfigFile(GetArg("-conf", DEUTERIUMCOIN_CONF_FILENAME));
     if (!pathConfigFile.is_complete())
         pathConfigFile = GetDataDir(false) / pathConfigFile;
 
@@ -690,7 +690,7 @@ void ReadConfigFile(std::map<std::string, std::string>& mapSettingsRet,
 {
     fs::ifstream stream(GetConfigFile());
     if (!stream.good())
-        return; // No navcoin.conf file is OK
+        return; // No deuteriumcoin.conf file is OK
 
     for (const std::pair<std::string, std::string>& option : GetConfigOptions(stream)) {
         std::string strKey = std::string("-") + option.first;
@@ -854,7 +854,7 @@ void RemoveConfigFile(std::string key)
 #ifndef WIN32
 fs::path GetPidFile()
 {
-    fs::path pathPidFile(GetArg("-pid", NAVCOIN_PID_FILENAME));
+    fs::path pathPidFile(GetArg("-pid", DEUTERIUMCOIN_PID_FILENAME));
     if (!pathPidFile.is_complete()) pathPidFile = GetDataDir() / pathPidFile;
     return pathPidFile;
 }

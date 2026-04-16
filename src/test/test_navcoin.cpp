@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#define BOOST_TEST_MODULE Navcoin Test Suite
+#define BOOST_TEST_MODULE Deuteriumcoin Test Suite
 
-#include <test/test_navcoin.h>
+#include <test/test_deuteriumcoin.h>
 
 #include <fs.h>
 #include <chainparams.h>
@@ -52,7 +52,7 @@ TestingSetup::TestingSetup(const std::string& chainName) : BasicTestingSetup(cha
         // instead of unit tests, but for now we need these here.
         RegisterAllCoreRPCCommands(tableRPC);
         ClearDatadirCache();
-        pathTemp = GetTempPath() / strprintf("test_navcoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
+        pathTemp = GetTempPath() / strprintf("test_deuteriumcoin_%lu_%i", (unsigned long)GetTime(), (int)(GetRand(100000)));
         fs::create_directories(pathTemp);
         mapArgs["-datadir"] = pathTemp.string();
         mempool.setSanityCheck(1.0);

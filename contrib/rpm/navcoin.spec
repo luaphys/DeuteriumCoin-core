@@ -13,32 +13,32 @@
 %endif
 %endif
 
-Name:		navcoin
+Name:		deuteriumcoin
 Version:	0.12.0
 Release:	2%{?dist}
 Summary:	Peer to Peer Cryptographic Currency
 
 Group:		Applications/System
 License:	MIT
-URL:		https://navcoin.org/
-Source0:	https://navcoin.org/bin/navcoin-core-%{version}/navcoin-%{version}.tar.gz
+URL:		https://deuteriumcoin.org/
+Source0:	https://deuteriumcoin.org/bin/deuteriumcoin-core-%{version}/deuteriumcoin-%{version}.tar.gz
 Source1:	http://download.oracle.com/berkeley-db/db-%{bdbv}.NC.tar.gz
 
-Source10:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/debian/examples/navcoin.conf
+Source10:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/debian/examples/deuteriumcoin.conf
 
 #man pages
-Source20:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/debian/manpages/navcoind.1
-Source21:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/debian/manpages/navcoin-cli.1
-Source22:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/debian/manpages/navcoin-qt.1
-Source23:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/debian/manpages/navcoin.conf.5
+Source20:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/debian/manpages/deuteriumcoind.1
+Source21:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/debian/manpages/deuteriumcoin-cli.1
+Source22:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/debian/manpages/deuteriumcoin-qt.1
+Source23:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/debian/manpages/deuteriumcoin.conf.5
 
 #selinux
-Source30:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/rpm/navcoin.te
-# Source31 - what about navcoin-tx and bench_navcoin ???
-Source31:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/rpm/navcoin.fc
-Source32:	https://raw.githubusercontent.com/navcoin/navcoin/v%{version}/contrib/rpm/navcoin.if
+Source30:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/rpm/deuteriumcoin.te
+# Source31 - what about deuteriumcoin-tx and bench_deuteriumcoin ???
+Source31:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/rpm/deuteriumcoin.fc
+Source32:	https://raw.githubusercontent.com/deuteriumcoin/deuteriumcoin/v%{version}/contrib/rpm/deuteriumcoin.if
 
-Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Navcoin.svg
+Source100:	https://upload.wikimedia.org/wikipedia/commons/4/46/Deuteriumcoin.svg
 
 %if 0%{?_use_libressl:1}
 BuildRequires:	libressl-devel
@@ -51,13 +51,13 @@ BuildRequires:	autoconf automake libtool
 BuildRequires:	libevent-devel
 
 
-Patch0:		navcoin-0.12.0-libressl.patch
+Patch0:		deuteriumcoin-0.12.0-libressl.patch
 
 
 %description
-Navcoin is a digital cryptographic currency that uses peer-to-peer technology to
+Deuteriumcoin is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
-issuing of navcoins is carried out collectively by the network.
+issuing of deuteriumcoins is carried out collectively by the network.
 
 %if %{_buildqt}
 %package core
@@ -80,42 +80,42 @@ BuildRequires:	%{_bindir}/inkscape
 BuildRequires:	%{_bindir}/convert
 
 %description core
-Navcoin is a digital cryptographic currency that uses peer-to-peer technology to
+Deuteriumcoin is a digital cryptographic currency that uses peer-to-peer technology to
 operate with no central authority or banks; managing transactions and the
-issuing of navcoins is carried out collectively by the network.
+issuing of deuteriumcoins is carried out collectively by the network.
 
 This package contains the Qt based graphical client and node. If you are looking
-to run a Navcoin wallet, this is probably the package you want.
+to run a Deuteriumcoin wallet, this is probably the package you want.
 %endif
 
 
 %package libs
-Summary:	Navcoin shared libraries
+Summary:	Deuteriumcoin shared libraries
 Group:		System Environment/Libraries
 
 %description libs
-This package provides the navcoinconsensus shared libraries. These libraries
+This package provides the deuteriumcoinconsensus shared libraries. These libraries
 may be used by third party software to provide consensus verification
 functionality.
 
 Unless you know need this package, you probably do not.
 
 %package devel
-Summary:	Development files for navcoin
+Summary:	Development files for deuteriumcoin
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
 
 %description devel
 This package contains the header files and static library for the
-navcoinconsensus shared library. If you are developing or compiling software
+deuteriumcoinconsensus shared library. If you are developing or compiling software
 that wants to link against that library, then you need this package installed.
 
 Most people do not need this package installed.
 
 %package server
-Summary:	The navcoin daemon
+Summary:	The deuteriumcoin daemon
 Group:		System Environment/Daemons
-Requires:	navcoin-utils = %{version}-%{release}
+Requires:	deuteriumcoin-utils = %{version}-%{release}
 Requires:	selinux-policy policycoreutils-python
 Requires(pre):	shadow-utils
 Requires(post):	%{_sbindir}/semodule %{_sbindir}/restorecon %{_sbindir}/fixfiles %{_sbindir}/sestatus
@@ -125,34 +125,34 @@ BuildRequires:	checkpolicy
 BuildRequires:	%{_datadir}/selinux/devel/Makefile
 
 %description server
-This package provides a stand-alone navcoin-core daemon. For most users, this
+This package provides a stand-alone deuteriumcoin-core daemon. For most users, this
 package is only needed if they need a full-node without the graphical client.
 
 Some third party wallet software will want this package to provide the actual
-navcoin-core node they use to connect to the network.
+deuteriumcoin-core node they use to connect to the network.
 
-If you use the graphical navcoin-core client then you almost certainly do not
+If you use the graphical deuteriumcoin-core client then you almost certainly do not
 need this package.
 
 %package utils
-Summary:	Navcoin utilities
+Summary:	Deuteriumcoin utilities
 Group:		Applications/System
 
 %description utils
 This package provides several command line utilities for interacting with a
-navcoin-core daemon.
+deuteriumcoin-core daemon.
 
-The navcoin-cli utility allows you to communicate and control a navcoin daemon
-over RPC, the navcoin-tx utility allows you to create a custom transaction, and
-the bench_navcoin utility can be used to perform some benchmarks.
+The deuteriumcoin-cli utility allows you to communicate and control a deuteriumcoin daemon
+over RPC, the deuteriumcoin-tx utility allows you to create a custom transaction, and
+the bench_deuteriumcoin utility can be used to perform some benchmarks.
 
-This package contains utilities needed by the navcoin-server package.
+This package contains utilities needed by the deuteriumcoin-server package.
 
 
 %prep
 %setup -q
 %patch0 -p1 -b .libressl
-cp -p %{SOURCE10} ./navcoin.conf.example
+cp -p %{SOURCE10} ./deuteriumcoin.conf.example
 tar -zxf %{SOURCE1}
 cp -p db-%{bdbv}.NC/LICENSE ./db-%{bdbv}.NC-LICENSE
 mkdir db4 SELinux
@@ -173,7 +173,7 @@ make %{?_smp_mflags}
 pushd SELinux
 for selinuxvariant in %{selinux_variants}; do
 	make NAME=${selinuxvariant} -f %{_datadir}/selinux/devel/Makefile
-	mv navcoin.pp navcoin.pp.${selinuxvariant}
+	mv deuteriumcoin.pp deuteriumcoin.pp.${selinuxvariant}
 	make NAME=${selinuxvariant} -f %{_datadir}/selinux/devel/Makefile clean
 done
 popd
@@ -183,42 +183,42 @@ popd
 make install DESTDIR=%{buildroot}
 
 mkdir -p -m755 %{buildroot}%{_sbindir}
-mv %{buildroot}%{_bindir}/navcoind %{buildroot}%{_sbindir}/navcoind
+mv %{buildroot}%{_bindir}/deuteriumcoind %{buildroot}%{_sbindir}/deuteriumcoind
 
 # systemd stuff
 mkdir -p %{buildroot}%{_tmpfilesdir}
-cat <<EOF > %{buildroot}%{_tmpfilesdir}/navcoin.conf
-d /run/navcoind 0750 navcoin navcoin -
+cat <<EOF > %{buildroot}%{_tmpfilesdir}/deuteriumcoin.conf
+d /run/deuteriumcoind 0750 deuteriumcoin deuteriumcoin -
 EOF
-touch -a -m -t 201504280000 %{buildroot}%{_tmpfilesdir}/navcoin.conf
+touch -a -m -t 201504280000 %{buildroot}%{_tmpfilesdir}/deuteriumcoin.conf
 
 mkdir -p %{buildroot}%{_sysconfdir}/sysconfig
-cat <<EOF > %{buildroot}%{_sysconfdir}/sysconfig/navcoin
-# Provide options to the navcoin daemon here, for example
+cat <<EOF > %{buildroot}%{_sysconfdir}/sysconfig/deuteriumcoin
+# Provide options to the deuteriumcoin daemon here, for example
 # OPTIONS="-testnet -disable-wallet"
 
 OPTIONS=""
 
 # System service defaults.
 # Don't change these unless you know what you're doing.
-CONFIG_FILE="%{_sysconfdir}/navcoin/navcoin.conf"
-DATA_DIR="%{_localstatedir}/lib/navcoin"
-PID_FILE="/run/navcoind/navcoind.pid"
+CONFIG_FILE="%{_sysconfdir}/deuteriumcoin/deuteriumcoin.conf"
+DATA_DIR="%{_localstatedir}/lib/deuteriumcoin"
+PID_FILE="/run/deuteriumcoind/deuteriumcoind.pid"
 EOF
-touch -a -m -t 201504280000 %{buildroot}%{_sysconfdir}/sysconfig/navcoin
+touch -a -m -t 201504280000 %{buildroot}%{_sysconfdir}/sysconfig/deuteriumcoin
 
 mkdir -p %{buildroot}%{_unitdir}
-cat <<EOF > %{buildroot}%{_unitdir}/navcoin.service
+cat <<EOF > %{buildroot}%{_unitdir}/deuteriumcoin.service
 [Unit]
-Description=Navcoin daemon
+Description=Deuteriumcoin daemon
 After=syslog.target network.target
 
 [Service]
 Type=forking
-ExecStart=%{_sbindir}/navcoind -daemon -conf=\${CONFIG_FILE} -datadir=\${DATA_DIR} -pid=\${PID_FILE} \$OPTIONS
-EnvironmentFile=%{_sysconfdir}/sysconfig/navcoin
-User=navcoin
-Group=navcoin
+ExecStart=%{_sbindir}/deuteriumcoind -daemon -conf=\${CONFIG_FILE} -datadir=\${DATA_DIR} -pid=\${PID_FILE} \$OPTIONS
+EnvironmentFile=%{_sysconfdir}/sysconfig/deuteriumcoin
+User=deuteriumcoin
+Group=deuteriumcoin
 
 Restart=on-failure
 PrivateTmp=true
@@ -230,63 +230,63 @@ StartLimitBurst=5
 [Install]
 WantedBy=multi-user.target
 EOF
-touch -a -m -t 201504280000 %{buildroot}%{_unitdir}/navcoin.service
+touch -a -m -t 201504280000 %{buildroot}%{_unitdir}/deuteriumcoin.service
 #end systemd stuff
 
-mkdir %{buildroot}%{_sysconfdir}/navcoin
-mkdir -p %{buildroot}%{_localstatedir}/lib/navcoin
+mkdir %{buildroot}%{_sysconfdir}/deuteriumcoin
+mkdir -p %{buildroot}%{_localstatedir}/lib/deuteriumcoin
 
 #SELinux
 for selinuxvariant in %{selinux_variants}; do
 	install -d %{buildroot}%{_datadir}/selinux/${selinuxvariant}
-	install -p -m 644 SELinux/navcoin.pp.${selinuxvariant} %{buildroot}%{_datadir}/selinux/${selinuxvariant}/navcoin.pp
+	install -p -m 644 SELinux/deuteriumcoin.pp.${selinuxvariant} %{buildroot}%{_datadir}/selinux/${selinuxvariant}/deuteriumcoin.pp
 done
 
 %if %{_buildqt}
 # qt icons
-install -D -p share/pixmaps/navcoin.ico %{buildroot}%{_datadir}/pixmaps/navcoin.ico
+install -D -p share/pixmaps/deuteriumcoin.ico %{buildroot}%{_datadir}/pixmaps/deuteriumcoin.ico
 install -p share/pixmaps/nsis-header.bmp %{buildroot}%{_datadir}/pixmaps/
 install -p share/pixmaps/nsis-wizard.bmp %{buildroot}%{_datadir}/pixmaps/
-install -p %{SOURCE100} %{buildroot}%{_datadir}/pixmaps/navcoin.svg
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/navcoin16.png -w16 -h16
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/navcoin32.png -w32 -h32
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/navcoin64.png -w64 -h64
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/navcoin128.png -w128 -h128
-%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/navcoin256.png -w256 -h256
-%{_bindir}/convert -resize 16x16 %{buildroot}%{_datadir}/pixmaps/navcoin256.png %{buildroot}%{_datadir}/pixmaps/navcoin16.xpm
-%{_bindir}/convert -resize 32x32 %{buildroot}%{_datadir}/pixmaps/navcoin256.png %{buildroot}%{_datadir}/pixmaps/navcoin32.xpm
-%{_bindir}/convert -resize 64x64 %{buildroot}%{_datadir}/pixmaps/navcoin256.png %{buildroot}%{_datadir}/pixmaps/navcoin64.xpm
-%{_bindir}/convert -resize 128x128 %{buildroot}%{_datadir}/pixmaps/navcoin256.png %{buildroot}%{_datadir}/pixmaps/navcoin128.xpm
-%{_bindir}/convert %{buildroot}%{_datadir}/pixmaps/navcoin256.png %{buildroot}%{_datadir}/pixmaps/navcoin256.xpm
+install -p %{SOURCE100} %{buildroot}%{_datadir}/pixmaps/deuteriumcoin.svg
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/deuteriumcoin16.png -w16 -h16
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/deuteriumcoin32.png -w32 -h32
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/deuteriumcoin64.png -w64 -h64
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/deuteriumcoin128.png -w128 -h128
+%{_bindir}/inkscape %{SOURCE100} --export-png=%{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png -w256 -h256
+%{_bindir}/convert -resize 16x16 %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png %{buildroot}%{_datadir}/pixmaps/deuteriumcoin16.xpm
+%{_bindir}/convert -resize 32x32 %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png %{buildroot}%{_datadir}/pixmaps/deuteriumcoin32.xpm
+%{_bindir}/convert -resize 64x64 %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png %{buildroot}%{_datadir}/pixmaps/deuteriumcoin64.xpm
+%{_bindir}/convert -resize 128x128 %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png %{buildroot}%{_datadir}/pixmaps/deuteriumcoin128.xpm
+%{_bindir}/convert %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.png %{buildroot}%{_datadir}/pixmaps/deuteriumcoin256.xpm
 touch %{buildroot}%{_datadir}/pixmaps/*.png -r %{SOURCE100}
 touch %{buildroot}%{_datadir}/pixmaps/*.xpm -r %{SOURCE100}
 
 # Desktop File - change the touch timestamp if modifying
 mkdir -p %{buildroot}%{_datadir}/applications
-cat <<EOF > %{buildroot}%{_datadir}/applications/navcoin-core.desktop
+cat <<EOF > %{buildroot}%{_datadir}/applications/deuteriumcoin-core.desktop
 [Desktop Entry]
 Encoding=UTF-8
-Name=Navcoin
-Comment=Navcoin P2P Cryptocurrency
-Comment[fr]=Navcoin, monnaie virtuelle cryptographique pair à pair
-Comment[tr]=Navcoin, eşten eşe kriptografik sanal para birimi
-Exec=navcoin-qt %u
+Name=Deuteriumcoin
+Comment=Deuteriumcoin P2P Cryptocurrency
+Comment[fr]=Deuteriumcoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Deuteriumcoin, eşten eşe kriptografik sanal para birimi
+Exec=deuteriumcoin-qt %u
 Terminal=false
 Type=Application
-Icon=navcoin128
-MimeType=x-scheme-handler/navcoin;
+Icon=deuteriumcoin128
+MimeType=x-scheme-handler/deuteriumcoin;
 Categories=Office;Finance;
 EOF
 # change touch date when modifying desktop
-touch -a -m -t 201511100546 %{buildroot}%{_datadir}/applications/navcoin-core.desktop
-%{_bindir}/desktop-file-validate %{buildroot}%{_datadir}/applications/navcoin-core.desktop
+touch -a -m -t 201511100546 %{buildroot}%{_datadir}/applications/deuteriumcoin-core.desktop
+%{_bindir}/desktop-file-validate %{buildroot}%{_datadir}/applications/deuteriumcoin-core.desktop
 
 # KDE protocol - change the touch timestamp if modifying
 mkdir -p %{buildroot}%{_datadir}/kde4/services
-cat <<EOF > %{buildroot}%{_datadir}/kde4/services/navcoin-core.protocol
+cat <<EOF > %{buildroot}%{_datadir}/kde4/services/deuteriumcoin-core.protocol
 [Protocol]
-exec=navcoin-qt '%u'
-protocol=navcoin
+exec=deuteriumcoin-qt '%u'
+protocol=deuteriumcoin
 input=none
 output=none
 helper=true
@@ -297,16 +297,16 @@ makedir=false
 deleting=false
 EOF
 # change touch date when modifying protocol
-touch -a -m -t 201511100546 %{buildroot}%{_datadir}/kde4/services/navcoin-core.protocol
+touch -a -m -t 201511100546 %{buildroot}%{_datadir}/kde4/services/deuteriumcoin-core.protocol
 %endif
 
 # man pages
-install -D -p %{SOURCE20} %{buildroot}%{_mandir}/man1/navcoind.1
-install -p %{SOURCE21} %{buildroot}%{_mandir}/man1/navcoin-cli.1
+install -D -p %{SOURCE20} %{buildroot}%{_mandir}/man1/deuteriumcoind.1
+install -p %{SOURCE21} %{buildroot}%{_mandir}/man1/deuteriumcoin-cli.1
 %if %{_buildqt}
-install -p %{SOURCE22} %{buildroot}%{_mandir}/man1/navcoin-qt.1
+install -p %{SOURCE22} %{buildroot}%{_mandir}/man1/deuteriumcoin-qt.1
 %endif
-install -D -p %{SOURCE23} %{buildroot}%{_mandir}/man5/navcoin.conf.5
+install -D -p %{SOURCE23} %{buildroot}%{_mandir}/man5/deuteriumcoin.conf.5
 
 # nuke these, we do extensive testing of binaries in %%check before packaging
 rm -f %{buildroot}%{_bindir}/test_*
@@ -314,7 +314,7 @@ rm -f %{buildroot}%{_bindir}/test_*
 %check
 make check
 pushd src
-srcdir=. test/navcoin-util-test.py
+srcdir=. test/deuteriumcoin-util-test.py
 popd
 test/pull-tester/rpc-tests.py -extended
 
@@ -323,35 +323,35 @@ test/pull-tester/rpc-tests.py -extended
 %postun libs -p /sbin/ldconfig
 
 %pre server
-getent group navcoin >/dev/null || groupadd -r navcoin
-getent passwd navcoin >/dev/null ||
-	useradd -r -g navcoin -d /var/lib/navcoin -s /sbin/nologin \
-	-c "Navcoin wallet server" navcoin
+getent group deuteriumcoin >/dev/null || groupadd -r deuteriumcoin
+getent passwd deuteriumcoin >/dev/null ||
+	useradd -r -g deuteriumcoin -d /var/lib/deuteriumcoin -s /sbin/nologin \
+	-c "Deuteriumcoin wallet server" deuteriumcoin
 exit 0
 
 %post server
-%systemd_post navcoin.service
+%systemd_post deuteriumcoin.service
 # SELinux
 if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
 for selinuxvariant in %{selinux_variants}; do
-	%{_sbindir}/semodule -s ${selinuxvariant} -i %{_datadir}/selinux/${selinuxvariant}/navcoin.pp &> /dev/null || :
+	%{_sbindir}/semodule -s ${selinuxvariant} -i %{_datadir}/selinux/${selinuxvariant}/deuteriumcoin.pp &> /dev/null || :
 done
-%{_sbindir}/semanage port -a -t navcoin_port_t -p tcp 5555
-%{_sbindir}/semanage port -a -t navcoin_port_t -p tcp 5556
-%{_sbindir}/semanage port -a -t navcoin_port_t -p tcp 15555
-%{_sbindir}/semanage port -a -t navcoin_port_t -p tcp 15556
-%{_sbindir}/fixfiles -R navcoin-server restore &> /dev/null || :
-%{_sbindir}/restorecon -R %{_localstatedir}/lib/navcoin || :
+%{_sbindir}/semanage port -a -t deuteriumcoin_port_t -p tcp 5555
+%{_sbindir}/semanage port -a -t deuteriumcoin_port_t -p tcp 5556
+%{_sbindir}/semanage port -a -t deuteriumcoin_port_t -p tcp 15555
+%{_sbindir}/semanage port -a -t deuteriumcoin_port_t -p tcp 15556
+%{_sbindir}/fixfiles -R deuteriumcoin-server restore &> /dev/null || :
+%{_sbindir}/restorecon -R %{_localstatedir}/lib/deuteriumcoin || :
 fi
 
 %posttrans server
 %{_bindir}/systemd-tmpfiles --create
 
 %preun server
-%systemd_preun navcoin.service
+%systemd_preun deuteriumcoin.service
 
 %postun server
-%systemd_postun navcoin.service
+%systemd_postun deuteriumcoin.service
 # SELinux
 if [ $1 -eq 0 ]; then
 	if [ `%{_sbindir}/sestatus |grep -c "disabled"` -eq 0 ]; then
@@ -360,11 +360,11 @@ if [ $1 -eq 0 ]; then
 	%{_sbindir}/semanage port -d -p tcp 15555
 	%{_sbindir}/semanage port -d -p tcp 15556
 	for selinuxvariant in %{selinux_variants}; do
-		%{_sbindir}/semodule -s ${selinuxvariant} -r navcoin &> /dev/null || :
+		%{_sbindir}/semodule -s ${selinuxvariant} -r deuteriumcoin &> /dev/null || :
 	done
-	%{_sbindir}/fixfiles -R navcoin-server restore &> /dev/null || :
-	[ -d %{_localstatedir}/lib/navcoin ] && \
-		%{_sbindir}/restorecon -R %{_localstatedir}/lib/navcoin &> /dev/null || :
+	%{_sbindir}/fixfiles -R deuteriumcoin-server restore &> /dev/null || :
+	[ -d %{_localstatedir}/lib/deuteriumcoin ] && \
+		%{_sbindir}/restorecon -R %{_localstatedir}/lib/deuteriumcoin &> /dev/null || :
 	fi
 fi
 
@@ -375,16 +375,16 @@ rm -rf %{buildroot}
 %files core
 %defattr(-,root,root,-)
 %license COPYING db-%{bdbv}.NC-LICENSE
-%doc COPYING navcoin.conf.example doc/README.md doc/bips.md doc/files.md doc/multiwallet-qt.md doc/reduce-traffic.md doc/release-notes.md doc/tor.md
-%attr(0755,root,root) %{_bindir}/navcoin-qt
-%attr(0644,root,root) %{_datadir}/applications/navcoin-core.desktop
-%attr(0644,root,root) %{_datadir}/kde4/services/navcoin-core.protocol
+%doc COPYING deuteriumcoin.conf.example doc/README.md doc/bips.md doc/files.md doc/multiwallet-qt.md doc/reduce-traffic.md doc/release-notes.md doc/tor.md
+%attr(0755,root,root) %{_bindir}/deuteriumcoin-qt
+%attr(0644,root,root) %{_datadir}/applications/deuteriumcoin-core.desktop
+%attr(0644,root,root) %{_datadir}/kde4/services/deuteriumcoin-core.protocol
 %attr(0644,root,root) %{_datadir}/pixmaps/*.ico
 %attr(0644,root,root) %{_datadir}/pixmaps/*.bmp
 %attr(0644,root,root) %{_datadir}/pixmaps/*.svg
 %attr(0644,root,root) %{_datadir}/pixmaps/*.png
 %attr(0644,root,root) %{_datadir}/pixmaps/*.xpm
-%attr(0644,root,root) %{_mandir}/man1/navcoin-qt.1*
+%attr(0644,root,root) %{_mandir}/man1/deuteriumcoin-qt.1*
 %endif
 
 %files libs
@@ -406,32 +406,32 @@ rm -rf %{buildroot}
 %files server
 %defattr(-,root,root,-)
 %license COPYING db-%{bdbv}.NC-LICENSE
-%doc COPYING navcoin.conf.example doc/README.md doc/REST-interface.md doc/bips.md doc/dnsseed-policy.md doc/files.md doc/reduce-traffic.md doc/release-notes.md doc/tor.md
-%attr(0755,root,root) %{_sbindir}/navcoind
-%attr(0644,root,root) %{_tmpfilesdir}/navcoin.conf
-%attr(0644,root,root) %{_unitdir}/navcoin.service
-%dir %attr(0750,navcoin,navcoin) %{_sysconfdir}/navcoin
-%dir %attr(0750,navcoin,navcoin) %{_localstatedir}/lib/navcoin
-%config(noreplace) %attr(0600,root,root) %{_sysconfdir}/sysconfig/navcoin
+%doc COPYING deuteriumcoin.conf.example doc/README.md doc/REST-interface.md doc/bips.md doc/dnsseed-policy.md doc/files.md doc/reduce-traffic.md doc/release-notes.md doc/tor.md
+%attr(0755,root,root) %{_sbindir}/deuteriumcoind
+%attr(0644,root,root) %{_tmpfilesdir}/deuteriumcoin.conf
+%attr(0644,root,root) %{_unitdir}/deuteriumcoin.service
+%dir %attr(0750,deuteriumcoin,deuteriumcoin) %{_sysconfdir}/deuteriumcoin
+%dir %attr(0750,deuteriumcoin,deuteriumcoin) %{_localstatedir}/lib/deuteriumcoin
+%config(noreplace) %attr(0600,root,root) %{_sysconfdir}/sysconfig/deuteriumcoin
 %attr(0644,root,root) %{_datadir}/selinux/*/*.pp
-%attr(0644,root,root) %{_mandir}/man1/navcoind.1*
-%attr(0644,root,root) %{_mandir}/man5/navcoin.conf.5*
+%attr(0644,root,root) %{_mandir}/man1/deuteriumcoind.1*
+%attr(0644,root,root) %{_mandir}/man5/deuteriumcoin.conf.5*
 
 %files utils
 %defattr(-,root,root,-)
 %license COPYING
-%doc COPYING navcoin.conf.example doc/README.md
-%attr(0755,root,root) %{_bindir}/navcoin-cli
-%attr(0755,root,root) %{_bindir}/navcoin-tx
-%attr(0755,root,root) %{_bindir}/bench_navcoin
-%attr(0644,root,root) %{_mandir}/man1/navcoin-cli.1*
-%attr(0644,root,root) %{_mandir}/man5/navcoin.conf.5*
+%doc COPYING deuteriumcoin.conf.example doc/README.md
+%attr(0755,root,root) %{_bindir}/deuteriumcoin-cli
+%attr(0755,root,root) %{_bindir}/deuteriumcoin-tx
+%attr(0755,root,root) %{_bindir}/bench_deuteriumcoin
+%attr(0644,root,root) %{_mandir}/man1/deuteriumcoin-cli.1*
+%attr(0644,root,root) %{_mandir}/man5/deuteriumcoin.conf.5*
 
 
 
 %changelog
 * Fri Feb 26 2016 Alice Wonder <buildmaster@librelamp.com> - 0.12.0-2
-- Rename Qt package from navcoin to navcoin-core
+- Rename Qt package from deuteriumcoin to deuteriumcoin-core
 - Make building of the Qt package optional
 - When building the Qt package, default to Qt5 but allow building
 -  against Qt4
@@ -441,4 +441,4 @@ rm -rf %{buildroot}
 - Initial spec file for 0.12.0 release
 
 # This spec file is written from scratch but a lot of the packaging decisions are directly
-# based upon the 0.11.2 package spec file from https://www.ringingliberty.com/navcoin/
+# based upon the 0.11.2 package spec file from https://www.ringingliberty.com/deuteriumcoin/

@@ -1,14 +1,14 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
-// Copyright (c) 2021 The Navcoin developers
+// Copyright (c) 2021 The Deuteriumcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_NAMES_H
-#define NAVCOIN_NAMES_H
+#ifndef DEUTERIUMCOIN_NAMES_H
+#define DEUTERIUMCOIN_NAMES_H
 
 #include <consensus/programs.h>
-#include <dotnav/namedata.h>
+#include <dotdeu/namedata.h>
 #include <utilstrencodings.h>
 #include <util.h>
 #include <hash.h>
@@ -39,4 +39,4 @@ std::map<std::string, std::map<std::string, std::string>> ConsolidateSubdomains(
 size_t CalculateSize(const std::map<std::string, std::string>& map);
 }
 
-#endif // NAVCOIN_
+#endif // DEUTERIUMCOIN_

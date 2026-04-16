@@ -1,2 +1,2 @@
-usr/local/bin/navcoind usr/bin
-usr/local/bin/navcoin-cli usr/bin
+usr/local/bin/deuteriumcoind usr/bin
+usr/local/bin/deuteriumcoin-cli usr/bin

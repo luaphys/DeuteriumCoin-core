@@ -95,7 +95,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Synchronizing with network...</source>
         <translation>Netwerk-sinkronisasie...</translation>
@@ -153,8 +153,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Stuur munte na 'n Navcoin adres</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Stuur munte na 'n Deuteriumcoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -165,8 +165,8 @@
         <translation>Verander die wagwoord wat ek vir kodifikasie van my beursie gebruik</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -189,20 +189,20 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Navcoin adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u Deuteriumcoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Navcoin adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Deuteriumcoin adresse</translation>
     </message>
     <message>
         <source>&amp;Help</source>
         <translation>&amp;Help</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en navcoin: URI's)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en deuteriumcoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -213,8 +213,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Skep 'n navcoin: URI of betalingsversoek</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Skep 'n deuteriumcoin: URI of betalingsversoek</translation>
     </message>
     </context>
 <context>
@@ -310,10 +310,10 @@
     <name>getAddressToReceive</name>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Kern</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Kern</translation>
     </message>
     <message>
         <source>Do not keep transactions in the mempool longer than &lt;n&gt; hours (default: %u)</source>
@@ -321,9 +321,9 @@
     </message>
     </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

@@ -1,4 +1,4 @@
-Source: navcoin
+Source: deuteriumcoin
 Section: utils
 Priority: optional
 Maintainer: Jonas Smedegaard <dr@jones.dk>
@@ -23,45 +23,45 @@ Build-Depends: debhelper,
  libprotobuf-dev, protobuf-compiler,
  python
 Standards-Version: 3.9.2
-Homepage: https://navcoincore.org/
-Vcs-Git: git://github.com/navcoin/navcoin.git
-Vcs-Browser: https://github.com/navcoin/navcoin
+Homepage: https://deuteriumcoincore.org/
+Vcs-Git: git://github.com/deuteriumcoin/deuteriumcoin.git
+Vcs-Browser: https://github.com/deuteriumcoin/deuteriumcoin
 
-Package: navcoind
+Package: deuteriumcoind
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - daemon
- Navcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Navcoin uses peer-to-peer
+ Deuteriumcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Deuteriumcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Navcoin Core
+ and issuing money are carried out collectively by the network. Deuteriumcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides the daemon, navcoind, and the CLI tool
- navcoin-cli to interact with the daemon.
+ This package provides the daemon, deuteriumcoind, and the CLI tool
+ deuteriumcoin-cli to interact with the daemon.
 
-Package: navcoin-qt
+Package: deuteriumcoin-qt
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer network based digital currency - Qt GUI
- Navcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Navcoin uses peer-to-peer
+ Deuteriumcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Deuteriumcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Navcoin Core
+ and issuing money are carried out collectively by the network. Deuteriumcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides Navcoin-Qt, a GUI for Navcoin based on Qt.
+ This package provides Deuteriumcoin-Qt, a GUI for Deuteriumcoin based on Qt.
 
-Package: navcoin-tx
+Package: deuteriumcoin-tx
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: peer-to-peer digital currency - standalone transaction tool
- Navcoin is an experimental new digital currency that enables instant
- payments to anyone, anywhere in the world. Navcoin uses peer-to-peer
+ Deuteriumcoin is an experimental new digital currency that enables instant
+ payments to anyone, anywhere in the world. Deuteriumcoin uses peer-to-peer
  technology to operate with no central authority: managing transactions
- and issuing money are carried out collectively by the network. Navcoin Core
+ and issuing money are carried out collectively by the network. Deuteriumcoin Core
  is the name of the open source software which enables the use of this currency.
  .
- This package provides navcoin-tx, a command-line transaction creation
- tool which can be used without a navcoin daemon.  Some means of
+ This package provides deuteriumcoin-tx, a command-line transaction creation
+ tool which can be used without a deuteriumcoin daemon.  Some means of
  exchanging minimal transaction data with peers is still required.

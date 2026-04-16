@@ -1,4 +1,4 @@
-AC_DEFUN([NAVCOIN_FIND_BDB],[
+AC_DEFUN([DEUTERIUMCOIN_FIND_BDB],[
   AC_ARG_VAR(BDB_CFLAGS, [C compiler flags for BerkeleyDB, bypasses autodetection])
   AC_ARG_VAR(BDB_LIBS, [Linker flags for BerkeleyDB, bypasses autodetection])
 
@@ -43,14 +43,14 @@ AC_DEFUN([NAVCOIN_FIND_BDB],[
       AC_MSG_RESULT([no])
       AC_MSG_ERROR([libdb_cxx headers missing, ]AC_PACKAGE_NAME[ requires this library for wallet functionality (--disable-wallet to disable wallet functionality)])
     elif test "x$bdb53path" = "xX"; then
-      NAVCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdbpath}],db_cxx)
+      DEUTERIUMCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdbpath}],db_cxx)
       AC_ARG_WITH([incompatible-bdb],[AS_HELP_STRING([--with-incompatible-bdb], [allow using a bdb version other than 5.3])],[
         AC_MSG_WARN([Found Berkeley DB other than 5.3; wallets opened by this build will not be portable!])
       ],[
         AC_MSG_ERROR([Found Berkeley DB other than 5.3, required for portable wallets (--with-incompatible-bdb to ignore or --disable-wallet to disable wallet functionality)])
       ])
     else
-      NAVCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdb53path}],db_cxx)
+      DEUTERIUMCOIN_SUBDIR_TO_INCLUDE(BDB_CPPFLAGS,[${bdb53path}],db_cxx)
       bdbpath="${bdb53path}"
     fi
   else

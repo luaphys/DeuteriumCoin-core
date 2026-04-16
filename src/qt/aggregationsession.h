@@ -1,4 +1,4 @@
-// Copyright (c) 2020 The Navcoin developers
+// Copyright (c) 2020 The Deuteriumcoin developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 

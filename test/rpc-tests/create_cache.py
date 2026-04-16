@@ -5,12 +5,12 @@
 
 #
 # Helper script to create the cache
-# (see NavcoinTestFramework.setup_chain)
+# (see DeuteriumcoinTestFramework.setup_chain)
 #
 
-from test_framework.test_framework import NavcoinTestFramework
+from test_framework.test_framework import DeuteriumcoinTestFramework
 
-class CreateCache(NavcoinTestFramework):
+class CreateCache(DeuteriumcoinTestFramework):
 
     def setup_network(self):
         # Don't setup any test nodes

@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_NAVCOINGUI_H
-#define NAVCOIN_QT_NAVCOINGUI_H
+#ifndef DEUTERIUMCOIN_QT_DEUTERIUMCOINGUI_H
+#define DEUTERIUMCOIN_QT_DEUTERIUMCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/navcoin-config.h>
+#include <config/deuteriumcoin-config.h>
 #endif
 
 #include <amount.h>
@@ -56,18 +56,18 @@ class ClickableProgressBar;
 }
 
 /**
-  Navcoin GUI main class. This class represents the main window of the Navcoin UI. It communicates with both the client and
+  Deuteriumcoin GUI main class. This class represents the main window of the Deuteriumcoin UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
-class NavcoinGUI : public QMainWindow
+class DeuteriumcoinGUI : public QMainWindow
 {
     Q_OBJECT
 
 public:
     static const QString DEFAULT_WALLET;
 
-    explicit NavcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
-    ~NavcoinGUI();
+    explicit DeuteriumcoinGUI(const PlatformStyle *platformStyle, const NetworkStyle *networkStyle, QWidget *parent = 0);
+    ~DeuteriumcoinGUI();
 
     /** Get the screen scale, usefull for scaling UI elements */
     float scale();
@@ -101,7 +101,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a navcoin wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a deuteriumcoin wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     bool addWallet(const QString& name, WalletModel *walletModel);
@@ -330,7 +330,7 @@ private Q_SLOTS:
     void cfundPaymentRequestsClicked();
     /** Show about dialog */
     void aboutClicked();
-    /** Open Navcoin Knowledge base */
+    /** Open Deuteriumcoin Knowledge base */
     void infoClicked();
     /** Show debug window */
     void showDebugWindow();
@@ -371,4 +371,4 @@ private Q_SLOTS:
     void showModalOverlay();
 };
 
-#endif // NAVCOIN_QT_NAVCOINGUI_H
+#endif // DEUTERIUMCOIN_QT_DEUTERIUMCOINGUI_H

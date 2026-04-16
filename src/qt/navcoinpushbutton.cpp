@@ -1,26 +1,26 @@
-// Copyright (c) 2019-2020 The Navcoin Core developers
+// Copyright (c) 2019-2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "navcoinpushbutton.h"
+#include "deuteriumcoinpushbutton.h"
 
-NavcoinPushButton::NavcoinPushButton(QString label) :
+DeuteriumcoinPushButton::DeuteriumcoinPushButton(QString label) :
     QPushButton(label)
 {
     this->setLayoutDirection(Qt::RightToLeft);
 }
 
-void NavcoinPushButton::setBadge(int nValue)
+void DeuteriumcoinPushButton::setBadge(int nValue)
 {
     this->setIcon(nValue <= 0 ? QIcon() : getBadgeIcon(nValue));
 }
 
-void NavcoinPushButton::paintEvent(QPaintEvent *e)
+void DeuteriumcoinPushButton::paintEvent(QPaintEvent *e)
 {
     QPushButton::paintEvent(e);
 }
 
-QIcon NavcoinPushButton::getBadgeIcon(int nValue)
+QIcon DeuteriumcoinPushButton::getBadgeIcon(int nValue)
 {
     QImage img(32, 32, QImage::Format_ARGB32);
     img.fill(QColor(0, 0, 0, 0));

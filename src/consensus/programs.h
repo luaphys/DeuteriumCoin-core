@@ -1,9 +1,9 @@
-// Copyright (c) 2018-2021 The Navcoin Core developers
+// Copyright (c) 2018-2021 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_PROGRAMS_H
-#define NAVCOIN_PROGRAMS_H
+#ifndef DEUTERIUMCOIN_PROGRAMS_H
+#define DEUTERIUMCOIN_PROGRAMS_H
 
 #include <vector>
 #include <amount.h>
@@ -227,4 +227,4 @@ public:
 
 std::string PredicateToStr(const std::vector<unsigned char>& program);
 
-#endif // NAVCOIN_PROGRAMS_H
+#endif // DEUTERIUMCOIN_PROGRAMS_H

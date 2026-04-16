@@ -1,9 +1,9 @@
-// Copyright (c) 2020 The Navcoin Core developers
+// Copyright (c) 2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #include "blsct/bulletproofs.h"
-#include "test/test_navcoin.h"
+#include "test/test_deuteriumcoin.h"
 
 #include <map>
 

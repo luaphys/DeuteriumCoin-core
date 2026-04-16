@@ -18,7 +18,7 @@
 
 -qtHaveModule(widgets) {
 -    no-png {
--        message("Some graphics-related tools are unavailable without PNG support")
+-        message("Some graphics-related tools are udeuailable without PNG support")
 -    } else {
 -        SUBDIRS = assistant \
 -                  pixeltool \

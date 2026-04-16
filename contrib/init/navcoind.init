@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  navcoind The navcoin core server.
+#  deuteriumcoind The deuteriumcoin core server.
 #
 #
 # chkconfig: 345 80 20
-# description: navcoind
-# processname: navcoind
+# description: deuteriumcoind
+# processname: deuteriumcoind
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/navcoind, see below
-if [ -f /etc/sysconfig/navcoind ]; then
-        . /etc/sysconfig/navcoind
+# you can override defaults in /etc/sysconfig/deuteriumcoind, see below
+if [ -f /etc/sysconfig/deuteriumcoind ]; then
+        . /etc/sysconfig/deuteriumcoind
 fi
 
 RETVAL=0
 
-prog=navcoind
-# you can override the lockfile via NAVCOIND_LOCKFILE in /etc/sysconfig/navcoind
-lockfile=${NAVCOIND_LOCKFILE-/var/lock/subsys/navcoind}
+prog=deuteriumcoind
+# you can override the lockfile via DEUTERIUMCOIND_LOCKFILE in /etc/sysconfig/deuteriumcoind
+lockfile=${DEUTERIUMCOIND_LOCKFILE-/var/lock/subsys/deuteriumcoind}
 
-# navcoind defaults to /usr/bin/navcoind, override with NAVCOIND_BIN
-navcoind=${NAVCOIND_BIN-/usr/bin/navcoind}
+# deuteriumcoind defaults to /usr/bin/deuteriumcoind, override with DEUTERIUMCOIND_BIN
+deuteriumcoind=${DEUTERIUMCOIND_BIN-/usr/bin/deuteriumcoind}
 
-# navcoind opts default to -disablewallet, override with NAVCOIND_OPTS
-navcoind_opts=${NAVCOIND_OPTS--disablewallet}
+# deuteriumcoind opts default to -disablewallet, override with DEUTERIUMCOIND_OPTS
+deuteriumcoind_opts=${DEUTERIUMCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $navcoind $navcoind_opts
+    daemon $DAEMONOPTS $deuteriumcoind $deuteriumcoind_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

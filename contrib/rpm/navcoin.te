@@ -1,81 +1,81 @@
-policy_module(navcoin, 1.100.1)
+policy_module(deuteriumcoin, 1.100.1)
 
 ########################################
 #
 # Declarations
 #
 
-type navcoin_t;
-type navcoin_exec_t;
-init_daemon_domain(navcoin_t, navcoin_exec_t)
+type deuteriumcoin_t;
+type deuteriumcoin_exec_t;
+init_daemon_domain(deuteriumcoin_t, deuteriumcoin_exec_t)
 
-permissive navcoin_t;
+permissive deuteriumcoin_t;
 
-type navcoin_initrc_exec_t;
-init_script_file(navcoin_initrc_exec_t)
+type deuteriumcoin_initrc_exec_t;
+init_script_file(deuteriumcoin_initrc_exec_t)
 
-type navcoin_conf_t;
-files_type(navcoin_conf_t)
+type deuteriumcoin_conf_t;
+files_type(deuteriumcoin_conf_t)
 
-type navcoin_var_lib_t;
-files_type(navcoin_var_lib_t)
+type deuteriumcoin_var_lib_t;
+files_type(deuteriumcoin_var_lib_t)
 
-type navcoin_var_run_t;
-files_type(navcoin_var_run_t)
+type deuteriumcoin_var_run_t;
+files_type(deuteriumcoin_var_run_t)
 
-type navcoin_port_t;
-corenet_port(navcoin_port_t)
+type deuteriumcoin_port_t;
+corenet_port(deuteriumcoin_port_t)
 
 ########################################
 #
-# navcoin local policy
+# deuteriumcoin local policy
 #
-allow navcoin_t self:process { fork };
+allow deuteriumcoin_t self:process { fork };
 
-allow navcoin_t self:fifo_file rw_fifo_file_perms;
-allow navcoin_t self:unix_stream_socket create_stream_socket_perms;
+allow deuteriumcoin_t self:fifo_file rw_fifo_file_perms;
+allow deuteriumcoin_t self:unix_stream_socket create_stream_socket_perms;
 
-manage_dirs_pattern(navcoin_t, navcoin_conf_t, navcoin_conf_t)
-manage_files_pattern(navcoin_t, navcoin_conf_t, navcoin_conf_t)
+manage_dirs_pattern(deuteriumcoin_t, deuteriumcoin_conf_t, deuteriumcoin_conf_t)
+manage_files_pattern(deuteriumcoin_t, deuteriumcoin_conf_t, deuteriumcoin_conf_t)
 
-manage_dirs_pattern(navcoin_t, navcoin_var_lib_t, navcoin_var_lib_t)
-manage_files_pattern(navcoin_t, navcoin_var_lib_t, navcoin_var_lib_t)
-files_var_lib_filetrans(navcoin_t, navcoin_var_lib_t, { dir file })
+manage_dirs_pattern(deuteriumcoin_t, deuteriumcoin_var_lib_t, deuteriumcoin_var_lib_t)
+manage_files_pattern(deuteriumcoin_t, deuteriumcoin_var_lib_t, deuteriumcoin_var_lib_t)
+files_var_lib_filetrans(deuteriumcoin_t, deuteriumcoin_var_lib_t, { dir file })
 
-manage_dirs_pattern(navcoin_t, navcoin_var_run_t, navcoin_var_run_t)
-manage_files_pattern(navcoin_t, navcoin_var_run_t, navcoin_var_run_t)
+manage_dirs_pattern(deuteriumcoin_t, deuteriumcoin_var_run_t, deuteriumcoin_var_run_t)
+manage_files_pattern(deuteriumcoin_t, deuteriumcoin_var_run_t, deuteriumcoin_var_run_t)
 
-sysnet_dns_name_resolve(navcoin_t)
-corenet_all_recvfrom_unlabeled(navcoin_t)
+sysnet_dns_name_resolve(deuteriumcoin_t)
+corenet_all_recvfrom_unlabeled(deuteriumcoin_t)
 
-allow navcoin_t self:tcp_socket create_stream_socket_perms;
-corenet_tcp_sendrecv_generic_if(navcoin_t)
-corenet_tcp_sendrecv_generic_node(navcoin_t)
-corenet_tcp_sendrecv_all_ports(navcoin_t)
-corenet_tcp_bind_generic_node(navcoin_t)
-
-gen_require(`
-    type navcoin_port_t;
-')
-allow navcoin_t navcoin_port_t:tcp_socket name_bind;
+allow deuteriumcoin_t self:tcp_socket create_stream_socket_perms;
+corenet_tcp_sendrecv_generic_if(deuteriumcoin_t)
+corenet_tcp_sendrecv_generic_node(deuteriumcoin_t)
+corenet_tcp_sendrecv_all_ports(deuteriumcoin_t)
+corenet_tcp_bind_generic_node(deuteriumcoin_t)
 
 gen_require(`
-    type navcoin_port_t;
+    type deuteriumcoin_port_t;
 ')
-allow navcoin_t navcoin_port_t:tcp_socket name_connect;
+allow deuteriumcoin_t deuteriumcoin_port_t:tcp_socket name_bind;
 
-domain_use_interactive_fds(navcoin_t)
+gen_require(`
+    type deuteriumcoin_port_t;
+')
+allow deuteriumcoin_t deuteriumcoin_port_t:tcp_socket name_connect;
 
-files_read_etc_files(navcoin_t)
+domain_use_interactive_fds(deuteriumcoin_t)
 
-miscfiles_read_localization(navcoin_t)
+files_read_etc_files(deuteriumcoin_t)
 
-sysnet_dns_name_resolve(navcoin_t)
+miscfiles_read_localization(deuteriumcoin_t)
 
-allow navcoin_t navcoin_exec_t:file execute_no_trans;
-allow navcoin_t self:process setsched;
-corecmd_exec_ls(navcoin_t)
-corenet_tcp_connect_http_port(navcoin_t)
-dev_read_urand(navcoin_t)
-fs_getattr_xattr_fs(navcoin_t)
-kernel_read_system_state(navcoin_t)
+sysnet_dns_name_resolve(deuteriumcoin_t)
+
+allow deuteriumcoin_t deuteriumcoin_exec_t:file execute_no_trans;
+allow deuteriumcoin_t self:process setsched;
+corecmd_exec_ls(deuteriumcoin_t)
+corenet_tcp_connect_http_port(deuteriumcoin_t)
+dev_read_urand(deuteriumcoin_t)
+fs_getattr_xattr_fs(deuteriumcoin_t)
+kernel_read_system_state(deuteriumcoin_t)

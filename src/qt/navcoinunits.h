@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_NAVCOINUNITS_H
-#define NAVCOIN_QT_NAVCOINUNITS_H
+#ifndef DEUTERIUMCOIN_QT_DEUTERIUMCOINUNITS_H
+#define DEUTERIUMCOIN_QT_DEUTERIUMCOINUNITS_H
 
 #include <amount.h>
 
@@ -41,25 +41,25 @@
 #define THIN_SP_UTF8 REAL_THIN_SP_UTF8
 #define THIN_SP_HTML HTML_HACK_SP
 
-/** Navcoin unit definitions. Encapsulates parsing and formatting
+/** Deuteriumcoin unit definitions. Encapsulates parsing and formatting
    and serves as list model for drop-down selection boxes.
 */
-class NavcoinUnits: public QAbstractListModel
+class DeuteriumcoinUnits: public QAbstractListModel
 {
     Q_OBJECT
 
 public:
-    explicit NavcoinUnits(QObject *parent);
+    explicit DeuteriumcoinUnits(QObject *parent);
 
-    /** Navcoin units.
-      @note Source: https://en.navcoin.it/wiki/Units . Please add only sensible ones
+    /** Deuteriumcoin units.
+      @note Source: https://en.deuteriumcoin.it/wiki/Units . Please add only sensible ones
      */
     enum Unit
     {
         // Base currencies
-        NAV, // Navcoin
-        mNAV, // back compat
-        uNAV, // back compat
+        DEU, // Deuteriumcoin
+        mDEU, // back compat
+        uDEU, // back compat
         BTC, // Bitcoin
         EUR, // Euro
         USD, // United States Dollar
@@ -161,8 +161,8 @@ public:
     static CAmount maxMoney();
 
 private:
-    QList<NavcoinUnits::Unit> unitlist;
+    QList<DeuteriumcoinUnits::Unit> unitlist;
 };
-typedef NavcoinUnits::Unit NavcoinUnit;
+typedef DeuteriumcoinUnits::Unit DeuteriumcoinUnit;
 
-#endif // NAVCOIN_QT_NAVCOINUNITS_H
+#endif // DEUTERIUMCOIN_QT_DEUTERIUMCOINUNITS_H

@@ -1,4 +1,4 @@
-# Navcoin v4.2.1 Release Notes
+# Deuteriumcoin v4.2.1 Release Notes
 
 ### Hot Fix:
 

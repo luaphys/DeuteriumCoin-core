@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_CHECKQUEUE_H
-#define NAVCOIN_CHECKQUEUE_H
+#ifndef DEUTERIUMCOIN_CHECKQUEUE_H
+#define DEUTERIUMCOIN_CHECKQUEUE_H
 
 #include <algorithm>
 #include <vector>
@@ -211,4 +211,4 @@ public:
     }
 };
 
-#endif // NAVCOIN_CHECKQUEUE_H
+#endif // DEUTERIUMCOIN_CHECKQUEUE_H

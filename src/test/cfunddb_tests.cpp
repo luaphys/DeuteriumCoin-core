@@ -1,4 +1,4 @@
-// Copyright (c) 2019-2020 The Navcoin Core developers
+// Copyright (c) 2019-2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,7 +7,7 @@
 #include <coins.h>
 #include <random.h>
 #include <uint256.h>
-#include <test/test_navcoin.h>
+#include <test/test_deuteriumcoin.h>
 #include <main.h>
 
 #include <vector>

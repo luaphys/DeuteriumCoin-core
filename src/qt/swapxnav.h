@@ -1,14 +1,14 @@
-// Copyright (c) 2020 The Navcoin Core developers
+// Copyright (c) 2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SWAPXNAV_H
-#define SWAPXNAV_H
+#ifndef SWAPXDEU_H
+#define SWAPXDEU_H
 
 #include "aggregationsession.h"
-#include "navcoinunits.h"
+#include "deuteriumcoinunits.h"
 #include "optionsmodel.h"
-#include "navcoinamountfield.h"
+#include "deuteriumcoinamountfield.h"
 #include "blsct/key.h"
 #include "wallet/wallet.h"
 #include "clientmodel.h"
@@ -28,12 +28,12 @@
 
 #define DEFAULT_UNIT 0
 
-class SwapXNAVDialog : public QDialog
+class SwapXDEUDialog : public QDialog
 {
     Q_OBJECT
 
 public:
-    SwapXNAVDialog(QWidget *parent);
+    SwapXDEUDialog(QWidget *parent);
 
     void setModel(WalletModel *model);
     void setClientModel(ClientModel *model);
@@ -54,7 +54,7 @@ private:
     QLabel *toplabel1;
     QLabel *toplabel2;
     QPushButton *swapButton;
-    NavcoinAmountField *amount;
+    DeuteriumcoinAmountField *amount;
 
     QLabel *icon1;
     QLabel *icon2;
@@ -64,4 +64,4 @@ private Q_SLOTS:
     void Ok();
 };
 
-#endif // SWAPXNAV_H
+#endif // SWAPXDEU_H

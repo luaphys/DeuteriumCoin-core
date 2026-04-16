@@ -2,14 +2,14 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_QT_OPTIONSMODEL_H
-#define NAVCOIN_QT_OPTIONSMODEL_H
+#ifndef DEUTERIUMCOIN_QT_OPTIONSMODEL_H
+#define DEUTERIUMCOIN_QT_OPTIONSMODEL_H
 
 #include <amount.h>
 
 #include <QAbstractListModel>
 
-/** Interface from Qt to configuration data structure for Navcoin client.
+/** Interface from Qt to configuration data structure for Deuteriumcoin client.
    To Qt, the options are presented as a list with the different options
    laid out vertically.
    This can be changed to a tree once the settings become sufficiently
@@ -34,7 +34,7 @@ public:
         ProxyUseTor,            // bool
         ProxyIPTor,             // QString
         ProxyPortTor,           // int
-        DisplayUnit,            // NavcoinUnits::Unit
+        DisplayUnit,            // DeuteriumcoinUnits::Unit
         ThirdPartyTxUrls,       // QString
         Theme,                  // QString
         Scaling,                // int
@@ -93,4 +93,4 @@ Q_SIGNALS:
     void hideTrayIconChanged(bool);
 };
 
-#endif // NAVCOIN_QT_OPTIONSMODEL_H
+#endif // DEUTERIUMCOIN_QT_OPTIONSMODEL_H

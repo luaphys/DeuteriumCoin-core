@@ -288,7 +288,7 @@ static void http_request_cb(struct evhttp_request* req, void* arg)
             item.release(); /* if true, queue took ownership */
         else {
             LogPrintf("WARNING: request rejected because http work queue depth exceeded, it can be increased with the -rpcworkqueue= setting\n");
-            item->req->WriteReply(HTTP_SERVICE_UNAVAILABLE, "Work queue depth exceeded");
+            item->req->WriteReply(HTTP_SERVICE_UDEUAILABLE, "Work queue depth exceeded");
         }
     } else {
         hreq->WriteReply(HTTP_NOTFOUND);
@@ -299,13 +299,13 @@ static void http_request_cb(struct evhttp_request* req, void* arg)
 static void http_reject_request_cb(struct evhttp_request* req, void*)
 {
     LogPrint("http", "Rejecting request while shutting down\n");
-    evhttp_send_error(req, HTTP_SERVUNAVAIL, nullptr);
+    evhttp_send_error(req, HTTP_SERVUDEUAIL, nullptr);
 }
 
 /** Event dispatcher thread */
 static void ThreadHTTP(struct event_base* base, struct evhttp* http)
 {
-    RenameThread("navcoin-http");
+    RenameThread("deuteriumcoin-http");
     LogPrint("http", "Entering http event loop\n");
     event_base_dispatch(base);
     // Event loop will be interrupted by InterruptHTTPServer()
@@ -354,7 +354,7 @@ static bool HTTPBindAddresses(struct evhttp* http)
 /** Simple wrapper to set thread name and run work queue */
 static void HTTPWorkQueueRun(WorkQueue<HTTPClosure>* queue)
 {
-    RenameThread("navcoin-httpworker");
+    RenameThread("deuteriumcoin-httpworker");
     queue->Run();
 }
 
@@ -482,7 +482,7 @@ void StopHTTPServer()
         // at least libevent 2.0.21 and always introduced a delay. In libevent
         // master that appears to be solved, so in the future that solution
         // could be used again (if desirable).
-        // (see discussion in https://github.com/navcoin/navcoin/pull/6990)
+        // (see discussion in https://github.com/deuteriumcoin/deuteriumcoin/pull/6990)
 #if BOOST_VERSION >= 105000
         if (!threadHTTP.try_join_for(boost::chrono::milliseconds(2000))) {
 #else

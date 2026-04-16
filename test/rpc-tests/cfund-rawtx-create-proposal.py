@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
-# Copyright (c) 2018 The Navcoin Core developers
+# Copyright (c) 2018 The Deuteriumcoin Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-from test_framework.test_framework import NavcoinTestFramework
+from test_framework.test_framework import DeuteriumcoinTestFramework
 from test_framework.cfund_util import *
 
 import time
 
-class CommunityFundRawTXCreateProposalTest(NavcoinTestFramework):
+class CommunityFundRawTXCreateProposalTest(DeuteriumcoinTestFramework):
     """Tests the state transition of proposals of the Community fund."""
 
     def __init__(self):
@@ -17,7 +17,7 @@ class CommunityFundRawTXCreateProposalTest(NavcoinTestFramework):
         self.num_nodes = 1
 
 
-        self.goodDescription = "these are not the NAV Droids you are looking for"
+        self.goodDescription = "these are not the DEU Droids you are looking for"
         self.goodDuration = 360000
         self.goodAmount = 100
         self.goodPropHash = ""
@@ -56,7 +56,7 @@ class CommunityFundRawTXCreateProposalTest(NavcoinTestFramework):
         self.test_invalid_proposal("", self.goodAmount, self.goodDuration, "I should not work")
         self.test_invalid_proposal("a", self.goodAmount, self.goodDuration, "I should not work")
         self.test_invalid_proposal("1KFHE7w8BhaENAswwryaoccDb6qcT6DbYY", self.goodAmount, self.goodDuration, "I should not work") # bitcoin address
-        self.test_invalid_proposal("NPyEJsv82GaguVsY3Ur4pu4WwnFCsYQ94g", self.goodAmount, self.goodDuration, "I should not work") # nav address we don't own
+        self.test_invalid_proposal("NPyEJsv82GaguVsY3Ur4pu4WwnFCsYQ94g", self.goodAmount, self.goodDuration, "I should not work") # deu address we don't own
         self.test_invalid_proposal(False, self.goodAmount, self.goodDuration, "I should not work")
         self.test_invalid_proposal(True, self.goodAmount, self.goodDuration, "I should not work")
         self.test_invalid_proposal(8888, self.goodAmount, self.goodDuration, "I should not work")

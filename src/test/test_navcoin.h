@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_TEST_TEST_NAVCOIN_H
-#define NAVCOIN_TEST_TEST_NAVCOIN_H
+#ifndef DEUTERIUMCOIN_TEST_TEST_DEUTERIUMCOIN_H
+#define DEUTERIUMCOIN_TEST_TEST_DEUTERIUMCOIN_H
 
 #include <fs.h>
 #include <chainparamsbase.h>

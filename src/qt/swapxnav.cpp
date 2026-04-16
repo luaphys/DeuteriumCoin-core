@@ -1,10 +1,10 @@
-// Copyright (c) 2020 The Navcoin Core developers
+// Copyright (c) 2020 The Deuteriumcoin Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "swapxnav.h"
+#include "swapxdeu.h"
 
-SwapXNAVDialog::SwapXNAVDialog(QWidget *parent) :
+SwapXDEUDialog::SwapXDEUDialog(QWidget *parent) :
     layout(new QVBoxLayout)
 {
     this->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Expanding);
@@ -26,7 +26,7 @@ SwapXNAVDialog::SwapXNAVDialog(QWidget *parent) :
     icon1 = new QLabel("");
     icon2 = new QLabel("");
 
-    amount = new NavcoinAmountField(0, 0);
+    amount = new DeuteriumcoinAmountField(0, 0);
 
     QPixmap pixmap(":/icons/swap");
     QIcon ButtonIcon(pixmap);
@@ -88,43 +88,43 @@ SwapXNAVDialog::SwapXNAVDialog(QWidget *parent) :
     Swap();
 }
 
-void SwapXNAVDialog::setModel(WalletModel *model)
+void SwapXDEUDialog::setModel(WalletModel *model)
 {
     this->model = model;
 }
 
-void SwapXNAVDialog::setClientModel(ClientModel *model)
+void SwapXDEUDialog::setClientModel(ClientModel *model)
 {
     this->clientModel = model;
 }
 
-void SwapXNAVDialog::SetPublicBalance(CAmount a)
+void SwapXDEUDialog::SetPublicBalance(CAmount a)
 {
     int unit = 0;
 
     this->publicBalance = a;
     if (fMode)
-        label1->setText(QString::fromStdString(_("Available: ")) + NavcoinUnits::formatWithUnit(unit, a, false, NavcoinUnits::separatorAlways, false));
+        label1->setText(QString::fromStdString(_("Available: ")) + DeuteriumcoinUnits::formatWithUnit(unit, a, false, DeuteriumcoinUnits::separatorAlways, false));
     else
-        label2->setText(QString::fromStdString(_("Available: ")) + NavcoinUnits::formatWithUnit(unit, a, false, NavcoinUnits::separatorAlways, false));
+        label2->setText(QString::fromStdString(_("Available: ")) + DeuteriumcoinUnits::formatWithUnit(unit, a, false, DeuteriumcoinUnits::separatorAlways, false));
 }
 
-void SwapXNAVDialog::SetPrivateBalance(CAmount a)
+void SwapXDEUDialog::SetPrivateBalance(CAmount a)
 {
     int unit = 0;
 
     this->privateBalance = a;
     if (fMode)
-        label2->setText(QString::fromStdString(_("Available: ")) + NavcoinUnits::formatWithUnit(unit, a, false, NavcoinUnits::separatorAlways, true));
+        label2->setText(QString::fromStdString(_("Available: ")) + DeuteriumcoinUnits::formatWithUnit(unit, a, false, DeuteriumcoinUnits::separatorAlways, true));
     else
-        label1->setText(QString::fromStdString(_("Available: ")) + NavcoinUnits::formatWithUnit(unit, a, false, NavcoinUnits::separatorAlways, true));
+        label1->setText(QString::fromStdString(_("Available: ")) + DeuteriumcoinUnits::formatWithUnit(unit, a, false, DeuteriumcoinUnits::separatorAlways, true));
 }
 
-void SwapXNAVDialog::Swap()
+void SwapXDEUDialog::Swap()
 {
     fMode = !fMode;
 
-    QPixmap pix(":/icons/mininav");
+    QPixmap pix(":/icons/minideu");
     QPixmap scaled = pix.scaled(64,64,Qt::KeepAspectRatio,Qt::SmoothTransformation);
 
     QBitmap map(64,64);
@@ -134,7 +134,7 @@ void SwapXNAVDialog::Swap()
     painter.drawRect( 0, 0, 64, 64);
     scaled.setMask(map);
 
-    QPixmap pix2(":/icons/minixnav");
+    QPixmap pix2(":/icons/minixdeu");
     QPixmap scaled2 = pix2.scaled(64,64,Qt::KeepAspectRatio,Qt::SmoothTransformation);
 
     QBitmap map2(64,64);
@@ -146,16 +146,16 @@ void SwapXNAVDialog::Swap()
 
     if (fMode)
     {
-        toplabel1->setText(tr("From: NAV"));
+        toplabel1->setText(tr("From: DEU"));
         icon1->setPixmap(scaled);
-        toplabel2->setText(tr("To: xNAV"));
+        toplabel2->setText(tr("To: xDEU"));
         icon2->setPixmap(scaled2);
     }
     else
     {
-        toplabel1->setText(tr("From: xNAV"));
+        toplabel1->setText(tr("From: xDEU"));
         icon1->setPixmap(scaled2);
-        toplabel2->setText(tr("To: NAV"));
+        toplabel2->setText(tr("To: DEU"));
         icon2->setPixmap(scaled);
     }
 
@@ -163,7 +163,7 @@ void SwapXNAVDialog::Swap()
     SetPrivateBalance(this->privateBalance);
 }
 
-void SwapXNAVDialog::Ok()
+void SwapXDEUDialog::Ok()
 {
     CAmount nAmount = amount->value();
 
@@ -182,11 +182,11 @@ void SwapXNAVDialog::Ok()
     if ((fMode ? publicBalance : privateBalance) < nAmount)
     {
         QMessageBox msgBox(this);
-        std::string str = tr("You don't have that many coins to swap!\n\nAvailable:\n%1").arg(NavcoinUnits::formatWithUnit(0, fMode ? publicBalance : privateBalance, false, NavcoinUnits::separatorAlways, !fMode)).toStdString();
+        std::string str = tr("You don't have that many coins to swap!\n\nAvailable:\n%1").arg(DeuteriumcoinUnits::formatWithUnit(0, fMode ? publicBalance : privateBalance, false, DeuteriumcoinUnits::separatorAlways, !fMode)).toStdString();
         msgBox.setText(tr(str.c_str()));
         msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
         msgBox.setIcon(QMessageBox::Warning);
-        msgBox.setWindowTitle("Insufficient NAV");
+        msgBox.setWindowTitle("Insufficient DEU");
         msgBox.exec();
         return;
     }
@@ -201,17 +201,17 @@ void SwapXNAVDialog::Ok()
         return;
     }
 
-    CNavcoinAddress address;
+    CDeuteriumcoinAddress address;
 
     if (fMode)
     {
         blsctDoublePublicKey k;
         if (pwalletMain->GetBLSCTSubAddressPublicKeys(std::make_pair(0, 0), k))
-            address = CNavcoinAddress(k);
+            address = CDeuteriumcoinAddress(k);
         else
         {
             QMessageBox msgBox(this);
-            msgBox.setText(tr("Swap failed: your wallet does not support receiving xNAV"));
+            msgBox.setText(tr("Swap failed: your wallet does not support receiving xDEU"));
             msgBox.addButton(tr("Ok"), QMessageBox::AcceptRole);
             msgBox.setIcon(QMessageBox::Warning);
             msgBox.setWindowTitle("Error");
@@ -242,7 +242,7 @@ void SwapXNAVDialog::Ok()
         }
         CKeyID keyID = newKey.GetID();
 
-        address = CNavcoinAddress(keyID);
+        address = CDeuteriumcoinAddress(keyID);
     }
 
     CScript scriptPubKey = GetScriptForDestination(address.Get());
@@ -306,11 +306,11 @@ void SwapXNAVDialog::Ok()
         if (QMessageBox::No == QMessageBox(QMessageBox::Information,
                                            tr("Swap!"),
                                            tr("In order to swap %1 to %2, you will have to pay a fee of %3.").arg(
-                                               NavcoinUnits::formatWithUnit(0, nAmount, false, NavcoinUnits::separatorAlways, !fMode),
-                                               fMode ? "xNAV" : "NAV",
-                                               NavcoinUnits::formatWithUnit(0, nFeeRequired, false, NavcoinUnits::separatorAlways, !fMode))
+                                               DeuteriumcoinUnits::formatWithUnit(0, nAmount, false, DeuteriumcoinUnits::separatorAlways, !fMode),
+                                               fMode ? "xDEU" : "DEU",
+                                               DeuteriumcoinUnits::formatWithUnit(0, nFeeRequired, false, DeuteriumcoinUnits::separatorAlways, !fMode))
                                                +"<br><br>"+tr("You will receive a total of %1.").arg(
-                                               NavcoinUnits::formatWithUnit(0, nAmount - nFeeRequired, false, NavcoinUnits::separatorAlways, fMode))
+                                               DeuteriumcoinUnits::formatWithUnit(0, nAmount - nFeeRequired, false, DeuteriumcoinUnits::separatorAlways, fMode))
                                                +"<br><br>"+tr("Do you want to continue?"),
                                            QMessageBox::Yes|QMessageBox::No).exec())
         {

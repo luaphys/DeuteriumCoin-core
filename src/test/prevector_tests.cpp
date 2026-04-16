@@ -9,7 +9,7 @@
 #include <serialize.h>
 #include <streams.h>
 
-#include <test/test_navcoin.h>
+#include <test/test_deuteriumcoin.h>
 
 #include <boost/range/adaptor/reversed.hpp>
 #include <boost/test/unit_test.hpp>

@@ -139,7 +139,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>I-sign ing &amp;mensayi</translation>
@@ -201,8 +201,8 @@
         <translation>Address king pamag-Tanggap</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Magpadalang barya king Navcoin address</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Magpadalang barya king Deuteriumcoin address</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -225,8 +225,8 @@
         <translation>&amp;Beripikan ing message...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -322,8 +322,8 @@
         <translation>&amp;Network</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ibuklat yang antimanu ing Navcoin client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ibuklat yang antimanu ing Deuteriumcoin client port king router. Gagana yamu ini istung ing router mu susuporta yang UPnP at magsilbi ya.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -480,7 +480,7 @@
         <translation>I-Clear ing console</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
         <translation>Gamitan me ing patas at pababang arrow para alibut me ing kasalesayan, at &lt;b&gt;Ctrl-L&lt;/b&gt; ban I-clear ya ing screen.</translation>
     </message>
     <message>
@@ -608,8 +608,8 @@
         <translation>Kopyan ing kasalungsungan pirma king system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Pirman ing mensayi ban patune na keka ya ining Navcoin address</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Pirman ing mensayi ban patune na keka ya ining Deuteriumcoin address</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -628,8 +628,8 @@
         <translation>&amp;Beripikan ing Mensayi</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Navcoin address</source>
-        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Navcoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Deuteriumcoin address</source>
+        <translation>Beripikan ing mensayi ban asiguradu a me pirma ya ini gamit ing mepiling Deuteriumcoin address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -710,7 +710,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Pipamilian:</translation>
@@ -740,8 +740,8 @@
         <translation>Tumanggap koneksion menibat king kilwal (default: 1 if no -proxy or -connect)</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Kapilubluban ning Navcoin</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Kapilubluban ning Deuteriumcoin</translation>
     </message>
     <message>
         <source>Block creation options:</source>
@@ -857,13 +857,13 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Form</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     </context>
 </TS>

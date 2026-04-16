@@ -7,11 +7,11 @@
  * Server/client environment: argument handling, config file parsing,
  * logging, thread wrappers
  */
-#ifndef NAVCOIN_UTIL_H
-#define NAVCOIN_UTIL_H
+#ifndef DEUTERIUMCOIN_UTIL_H
+#define DEUTERIUMCOIN_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/navcoin-config.h>
+#include <config/deuteriumcoin-config.h>
 #endif
 
 #include <fs.h>
@@ -58,8 +58,8 @@ extern bool fLogIPs;
 extern std::atomic<bool> fReopenLogFiles;
 extern CTranslationInterface translationInterface;
 
-extern const char * const NAVCOIN_CONF_FILENAME;
-extern const char * const NAVCOIN_PID_FILENAME;
+extern const char * const DEUTERIUMCOIN_CONF_FILENAME;
+extern const char * const DEUTERIUMCOIN_PID_FILENAME;
 extern const char * const DEFAULT_WALLET_DAT;
 
 /**
@@ -264,7 +264,7 @@ void RenameThread(const char* name);
  */
 template <typename Callable> void TraceThread(const char* name,  Callable func)
 {
-    std::string s = strprintf("navcoin-%s", name);
+    std::string s = strprintf("deuteriumcoin-%s", name);
     RenameThread(s.c_str());
     try
     {
@@ -289,7 +289,7 @@ template <typename Callable> void TraceThread(const char* name,  Callable func)
 
 template <typename Callable, typename Arg1> void TraceThread(const char* name,  Callable func, Arg1 arg)
 {
-    std::string s = strprintf("navcoin-%s", name);
+    std::string s = strprintf("deuteriumcoin-%s", name);
     RenameThread(s.c_str());
     try
     {
@@ -322,4 +322,4 @@ bool BdbEncrypted(fs::path wallet);
 int __getch();
 std::string __getpass(const std::string& prompt, bool show_asterisk = true);
 
-#endif // NAVCOIN_UTIL_H
+#endif // DEUTERIUMCOIN_UTIL_H

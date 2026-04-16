@@ -2,9 +2,9 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/navcoinamountfield.h>
+#include <qt/deuteriumcoinamountfield.h>
 
-#include <qt/navcoinunits.h>
+#include <qt/deuteriumcoinunits.h>
 #include <qt/guiconstants.h>
 #include <qt/qvaluecombobox.h>
 
@@ -49,7 +49,7 @@ public:
         CAmount val = parse(input, &valid);
         if(valid)
         {
-            input = NavcoinUnits::format(NavcoinUnits::NAV, val, false, NavcoinUnits::separatorAlways);
+            input = DeuteriumcoinUnits::format(DeuteriumcoinUnits::DEU, val, false, DeuteriumcoinUnits::separatorAlways);
             lineEdit()->setText(input);
         }
     }
@@ -61,7 +61,7 @@ public:
 
     void setValue(CAmount val)
     {
-        lineEdit()->setText(NavcoinUnits::format(NavcoinUnits::NAV, val, false, NavcoinUnits::separatorAlways));
+        lineEdit()->setText(DeuteriumcoinUnits::format(DeuteriumcoinUnits::DEU, val, false, DeuteriumcoinUnits::separatorAlways));
         Q_EMIT valueChanged();
     }
 
@@ -70,7 +70,7 @@ public:
         bool valid = false;
         CAmount val = value(&valid);
         val = val + steps * singleStep;
-        val = qMin(qMax(val, CAmount(0)), NavcoinUnits::maxMoney());
+        val = qMin(qMax(val, CAmount(0)), DeuteriumcoinUnits::maxMoney());
         setValue(val);
     }
 
@@ -87,7 +87,7 @@ public:
 
             const QFontMetrics fm(fontMetrics());
             int h = lineEdit()->minimumSizeHint().height();
-            int w = fm.width(NavcoinUnits::format(NavcoinUnits::NAV, NavcoinUnits::maxMoney(), false, NavcoinUnits::separatorAlways));
+            int w = fm.width(DeuteriumcoinUnits::format(DeuteriumcoinUnits::DEU, DeuteriumcoinUnits::maxMoney(), false, DeuteriumcoinUnits::separatorAlways));
             w += 2; // cursor blinking space
 
             QStyleOptionSpinBox opt;
@@ -124,10 +124,10 @@ private:
     CAmount parse(const QString &text, bool *valid_out=0) const
     {
         CAmount val = 0;
-        bool valid = NavcoinUnits::parse(NavcoinUnits::NAV, text, &val);
+        bool valid = DeuteriumcoinUnits::parse(DeuteriumcoinUnits::DEU, text, &val);
         if(valid)
         {
-            if(val < 0 || val > NavcoinUnits::maxMoney())
+            if(val < 0 || val > DeuteriumcoinUnits::maxMoney())
                 valid = false;
         }
         if(valid_out)
@@ -165,7 +165,7 @@ protected:
         {
             if(val > 0)
                 rv |= StepDownEnabled;
-            if(val < NavcoinUnits::maxMoney())
+            if(val < DeuteriumcoinUnits::maxMoney())
                 rv |= StepUpEnabled;
         }
         return rv;
@@ -176,9 +176,9 @@ Q_SIGNALS:
 
 };
 
-#include <qt/navcoinamountfield.moc>
+#include <qt/deuteriumcoinamountfield.moc>
 
-NavcoinAmountField::NavcoinAmountField(QWidget *parent, bool fUnit) :
+DeuteriumcoinAmountField::DeuteriumcoinAmountField(QWidget *parent, bool fUnit) :
     QWidget(parent),
     amount(0)
 {
@@ -203,17 +203,17 @@ NavcoinAmountField::NavcoinAmountField(QWidget *parent, bool fUnit) :
     connect(amount, SIGNAL(valueChanged()), this, SLOT(valueDidChange()));
 }
 
-void NavcoinAmountField::clear()
+void DeuteriumcoinAmountField::clear()
 {
     amount->clear();
 }
 
-void NavcoinAmountField::setEnabled(bool fEnabled)
+void DeuteriumcoinAmountField::setEnabled(bool fEnabled)
 {
     amount->setEnabled(fEnabled);
 }
 
-bool NavcoinAmountField::validate()
+bool DeuteriumcoinAmountField::validate()
 {
     bool valid = false;
     value(&valid);
@@ -221,7 +221,7 @@ bool NavcoinAmountField::validate()
     return valid;
 }
 
-void NavcoinAmountField::setValid(bool valid)
+void DeuteriumcoinAmountField::setValid(bool valid)
 {
     if (valid)
         amount->setStyleSheet("");
@@ -229,7 +229,7 @@ void NavcoinAmountField::setValid(bool valid)
         amount->setStyleSheet(STYLE_INVALID);
 }
 
-bool NavcoinAmountField::eventFilter(QObject *object, QEvent *event)
+bool DeuteriumcoinAmountField::eventFilter(QObject *object, QEvent *event)
 {
     if (event->type() == QEvent::FocusIn)
     {
@@ -239,43 +239,43 @@ bool NavcoinAmountField::eventFilter(QObject *object, QEvent *event)
     return QWidget::eventFilter(object, event);
 }
 
-QWidget *NavcoinAmountField::setupTabChain(QWidget *prev)
+QWidget *DeuteriumcoinAmountField::setupTabChain(QWidget *prev)
 {
     QWidget::setTabOrder(prev, amount);
     QWidget::setTabOrder(amount, unit);
     return unit;
 }
 
-CAmount NavcoinAmountField::value(bool *valid_out) const
+CAmount DeuteriumcoinAmountField::value(bool *valid_out) const
 {
     return amount->value(valid_out);
 }
 
-void NavcoinAmountField::setValue(const CAmount& value)
+void DeuteriumcoinAmountField::setValue(const CAmount& value)
 {
     amount->setValue(value);
 }
 
-void NavcoinAmountField::setReadOnly(bool fReadOnly)
+void DeuteriumcoinAmountField::setReadOnly(bool fReadOnly)
 {
     amount->setReadOnly(fReadOnly);
 }
 
-void NavcoinAmountField::setDisplayUnit(int newUnit)
+void DeuteriumcoinAmountField::setDisplayUnit(int newUnit)
 {
     nCurrentUnit = newUnit;
     valueDidChange();
 }
 
-void NavcoinAmountField::valueDidChange()
+void DeuteriumcoinAmountField::valueDidChange()
 {
-    if (nCurrentUnit != NavcoinUnits::NAV)
-        unit->setText(" " + tr("or") + " " + NavcoinUnits::formatWithUnit(nCurrentUnit, value()));
+    if (nCurrentUnit != DeuteriumcoinUnits::DEU)
+        unit->setText(" " + tr("or") + " " + DeuteriumcoinUnits::formatWithUnit(nCurrentUnit, value()));
     else
-        unit->setText(" " + tr("or") + " " + NavcoinUnits::formatWithUnit(NavcoinUnits::BTC, value()));
+        unit->setText(" " + tr("or") + " " + DeuteriumcoinUnits::formatWithUnit(DeuteriumcoinUnits::BTC, value()));
 }
 
-void NavcoinAmountField::setSingleStep(const CAmount& step)
+void DeuteriumcoinAmountField::setSingleStep(const CAmount& step)
 {
     amount->setSingleStep(step);
 }

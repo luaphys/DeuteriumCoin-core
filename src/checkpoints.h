@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_CHECKPOINTS_H
-#define NAVCOIN_CHECKPOINTS_H
+#ifndef DEUTERIUMCOIN_CHECKPOINTS_H
+#define DEUTERIUMCOIN_CHECKPOINTS_H
 
 #include <uint256.h>
 
@@ -29,4 +29,4 @@ double GuessVerificationProgress(const CCheckpointData& data, CBlockIndex* pinde
 
 } //namespace Checkpoints
 
-#endif // NAVCOIN_CHECKPOINTS_H
+#endif // DEUTERIUMCOIN_CHECKPOINTS_H

@@ -3,10 +3,10 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/navcoin-config.h>
+#include <config/deuteriumcoin-config.h>
 #endif
 
-#include <qt/navcoingui.h>
+#include <qt/deuteriumcoingui.h>
 
 #include <chainparams.h>
 #include <qt/clientmodel.h>
@@ -82,7 +82,7 @@ static void InitMessage(const std::string &message)
  */
 static std::string Translate(const char* psz)
 {
-    return QCoreApplication::translate("navcoin-core", psz).toStdString();
+    return QCoreApplication::translate("deuteriumcoin-core", psz).toStdString();
 }
 
 static QString GetLangTerritory()
@@ -129,11 +129,11 @@ static void initTranslations(QTranslator &qtTranslatorBase, QTranslator &qtTrans
     if (qtTranslator.load("qt_" + lang_territory, QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
         QApplication::installTranslator(&qtTranslator);
 
-    // Load e.g. navcoin_de.qm (shortcut "de" needs to be defined in navcoin.qrc)
+    // Load e.g. deuteriumcoin_de.qm (shortcut "de" needs to be defined in deuteriumcoin.qrc)
     if (translatorBase.load(lang, ":/translations/"))
         QApplication::installTranslator(&translatorBase);
 
-    // Load e.g. navcoin_de_DE.qm (shortcut "de_DE" needs to be defined in navcoin.qrc)
+    // Load e.g. deuteriumcoin_de_DE.qm (shortcut "de_DE" needs to be defined in deuteriumcoin.qrc)
     if (translator.load(lang_territory, ":/translations/"))
         QApplication::installTranslator(&translator);
 }
@@ -146,14 +146,14 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
     LogPrint(category, "GUI: %s\n", msg.toStdString());
 }
 
-/** Class encapsulating Navcoin Core startup and shutdown.
+/** Class encapsulating Deuteriumcoin Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class NavcoinCore: public QObject
+class DeuteriumcoinCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit NavcoinCore(std::string& wordlist, std::string& password);
+    explicit DeuteriumcoinCore(std::string& wordlist, std::string& password);
 
 public Q_SLOTS:
     void initialize();
@@ -179,13 +179,13 @@ private:
     std::string password;
 };
 
-/** Main Navcoin application object */
-class NavcoinApplication: public QApplication
+/** Main Deuteriumcoin application object */
+class DeuteriumcoinApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit NavcoinApplication(int &argc, char **argv);
-    ~NavcoinApplication();
+    explicit DeuteriumcoinApplication(int &argc, char **argv);
+    ~DeuteriumcoinApplication();
 
     /** Load the stylesheet and base style for the app */
     void loadTheme();
@@ -210,7 +210,7 @@ public:
     /// Get process return value
     int getReturnValue() { return returnValue; }
 
-    /// Get window identifier of QMainWindow (NavcoinGUI)
+    /// Get window identifier of QMainWindow (DeuteriumcoinGUI)
     WId getMainWinId() const;
 
 public Q_SLOTS:
@@ -229,7 +229,7 @@ private:
     QThread *coreThread;
     OptionsModel *optionsModel;
     ClientModel *clientModel;
-    NavcoinGUI *window;
+    DeuteriumcoinGUI *window;
     QTimer *pollShutdownTimer;
 #ifdef ENABLE_WALLET
     WalletModel *walletModel;
@@ -243,22 +243,22 @@ private:
     void startThread();
 };
 
-#include <qt/navcoin.moc>
+#include <qt/deuteriumcoin.moc>
 
-NavcoinCore::NavcoinCore(std::string& wordlist, std::string& password):
+DeuteriumcoinCore::DeuteriumcoinCore(std::string& wordlist, std::string& password):
     QObject(),
     words(wordlist),
     password(password)
 {
 }
 
-void NavcoinCore::handleRunawayException(const std::exception *e)
+void DeuteriumcoinCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(strMiscWarning));
 }
 
-void NavcoinCore::initialize()
+void DeuteriumcoinCore::initialize()
 {
     execute_restart = true;
     try
@@ -273,7 +273,7 @@ void NavcoinCore::initialize()
     }
 }
 
-void NavcoinCore::restart(QStringList args)
+void DeuteriumcoinCore::restart(QStringList args)
 {
     if (execute_restart) { // Only restart 1x, no matter how often a user clicks on a restart-button
         execute_restart = false;
@@ -296,7 +296,7 @@ void NavcoinCore::restart(QStringList args)
     }
 }
 
-void NavcoinCore::shutdown()
+void DeuteriumcoinCore::shutdown()
 {
     try
     {
@@ -313,7 +313,7 @@ void NavcoinCore::shutdown()
     }
 }
 
-NavcoinApplication::NavcoinApplication(int &argc, char **argv):
+DeuteriumcoinApplication::DeuteriumcoinApplication(int &argc, char **argv):
     QApplication(argc, argv),
     coreThread(0),
     optionsModel(0),
@@ -328,7 +328,7 @@ NavcoinApplication::NavcoinApplication(int &argc, char **argv):
     setQuitOnLastWindowClosed(false);
 }
 
-NavcoinApplication::~NavcoinApplication()
+DeuteriumcoinApplication::~DeuteriumcoinApplication()
 {
     if(coreThread)
     {
@@ -346,7 +346,7 @@ NavcoinApplication::~NavcoinApplication()
     platformStyle = 0;
 }
 
-void NavcoinApplication::loadTheme()
+void DeuteriumcoinApplication::loadTheme()
 {
     // Get an instance of settings
     QSettings settings;
@@ -393,19 +393,19 @@ void NavcoinApplication::loadTheme()
     }
 
     // UI per-platform customization
-    // This must be done inside the NavcoinApplication constructor, or after it, because
+    // This must be done inside the DeuteriumcoinApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     platformStyle = PlatformStyle::instantiate();
     assert(platformStyle);
 }
 
-void NavcoinApplication::createOptionsModel(bool resetSettings)
+void DeuteriumcoinApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(NULL, resetSettings);
 }
 
 // this will be used to get mnemonic words
-bool NavcoinApplication::setupMnemonicWords(std::string& wordlist, std::string& password) {
+bool DeuteriumcoinApplication::setupMnemonicWords(std::string& wordlist, std::string& password) {
     namespace fs = boost::filesystem;
     if (GetBoolArg("-disablewallet", false)) {
         LogPrintf("Wallet disabled!\n");
@@ -424,13 +424,13 @@ bool NavcoinApplication::setupMnemonicWords(std::string& wordlist, std::string& 
     return false;
 }
 
-bool NavcoinApplication::createWindow(const NetworkStyle *networkStyle)
+bool DeuteriumcoinApplication::createWindow(const NetworkStyle *networkStyle)
 {
     if (!setupMnemonicWords(wordlist, password)) {
         if (wordlist.empty()) return false;
     }
 
-    window = new NavcoinGUI(platformStyle, networkStyle, 0);
+    window = new DeuteriumcoinGUI(platformStyle, networkStyle, 0);
 
     pollShutdownTimer = new QTimer(window);
     connect(pollShutdownTimer, SIGNAL(timeout()), window, SLOT(detectShutdown()));
@@ -438,7 +438,7 @@ bool NavcoinApplication::createWindow(const NetworkStyle *networkStyle)
     return true;
 }
 
-void NavcoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void DeuteriumcoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(0, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, so use
@@ -448,12 +448,12 @@ void NavcoinApplication::createSplashScreen(const NetworkStyle *networkStyle)
     connect(this, SIGNAL(requestedShutdown()), splash, SLOT(close()));
 }
 
-void NavcoinApplication::startThread()
+void DeuteriumcoinApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    NavcoinCore *executor = new NavcoinCore(wordlist, password);
+    DeuteriumcoinCore *executor = new DeuteriumcoinCore(wordlist, password);
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
@@ -470,20 +470,20 @@ void NavcoinApplication::startThread()
     coreThread->start();
 }
 
-void NavcoinApplication::parameterSetup()
+void DeuteriumcoinApplication::parameterSetup()
 {
     InitLogging();
     InitParameterInteraction();
 }
 
-void NavcoinApplication::requestInitialize()
+void DeuteriumcoinApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void NavcoinApplication::requestShutdown()
+void DeuteriumcoinApplication::requestShutdown()
 {
     qDebug() << __func__ << ": Requesting shutdown";
     startThread();
@@ -506,7 +506,7 @@ void NavcoinApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void NavcoinApplication::initializeResult(int retval)
+void DeuteriumcoinApplication::initializeResult(int retval)
 {
     qDebug() << __func__ << ": Initialization result: " << retval;
     // Set exit result: 0 if successful, 1 if failure
@@ -524,8 +524,8 @@ void NavcoinApplication::initializeResult(int retval)
         {
             walletModel = new WalletModel(platformStyle, pwalletMain, optionsModel);
 
-            window->addWallet(NavcoinGUI::DEFAULT_WALLET, walletModel);
-            window->setCurrentWallet(NavcoinGUI::DEFAULT_WALLET);
+            window->addWallet(DeuteriumcoinGUI::DEFAULT_WALLET, walletModel);
+            window->setCurrentWallet(DeuteriumcoinGUI::DEFAULT_WALLET);
         }
 #endif
 
@@ -551,19 +551,19 @@ void NavcoinApplication::initializeResult(int retval)
     }
 }
 
-void NavcoinApplication::shutdownResult(int retval)
+void DeuteriumcoinApplication::shutdownResult(int retval)
 {
     qDebug() << __func__ << ": Shutdown result: " << retval;
     quit(); // Exit main loop after shutdown finished
 }
 
-void NavcoinApplication::handleRunawayException(const QString &message)
+void DeuteriumcoinApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(0, "Runaway exception", NavcoinGUI::tr("A fatal error occurred. Navcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(0, "Runaway exception", DeuteriumcoinGUI::tr("A fatal error occurred. Deuteriumcoin can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(1);
 }
 
-WId NavcoinApplication::getMainWinId() const
+WId DeuteriumcoinApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -571,7 +571,7 @@ WId NavcoinApplication::getMainWinId() const
     return window->winId();
 }
 
-#ifndef NAVCOIN_QT_TEST
+#ifndef DEUTERIUMCOIN_QT_TEST
 int main(int argc, char *argv[])
 {
     // Address 4K screen resolution: http://doc.qt.io/qt-5/highdpi.html
@@ -585,11 +585,11 @@ int main(int argc, char *argv[])
     ParseParameters(argc, argv);
 
     /// 2. Basic Qt initialization (not dependent on parameters or configuration)
-    Q_INIT_RESOURCE(navcoin);
-    Q_INIT_RESOURCE(navcoin_locale);
+    Q_INIT_RESOURCE(deuteriumcoin);
+    Q_INIT_RESOURCE(deuteriumcoin_locale);
 
     // Load the app
-    NavcoinApplication app(argc, argv);
+    DeuteriumcoinApplication app(argc, argv);
 
     // Generate high-dpi pixmaps
     QApplication::setAttribute(Qt::AA_UseHighDpiPixmaps);
@@ -629,7 +629,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    /// 5. Determine availability of data directory and parse navcoin.conf
+    /// 5. Determine availability of data directory and parse deuteriumcoin.conf
     /// - Do not call GetDataDir(true) before this step finishes
     if (!fs::is_directory(GetDataDir(false)))
     {
@@ -711,4 +711,4 @@ int main(int argc, char *argv[])
     }
     return app.getReturnValue();
 }
-#endif // NAVCOIN_QT_TEST
+#endif // DEUTERIUMCOIN_QT_TEST

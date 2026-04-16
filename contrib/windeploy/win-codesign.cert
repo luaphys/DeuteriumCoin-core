@@ -1,7 +1,7 @@
 Bag Attributes
     friendlyName: alex v
     localKeyID: 61 6C 65 78 20 76 
-subject=C = Germany, emailAddress = alex@nav.community, CN = alex v
+subject=C = Germany, emailAddress = alex@deu.community, CN = alex v
 
 issuer=C = GB, O = Ascertia, CN = Ascertia Public CA 1
 
@@ -28,7 +28,7 @@ aWNhdGVzIGZvciB2YWx1YWJsZSB0cmFuc2FjdGlvbnMuIE5PIExJQUJJTElUWSBJ
 UyBBQ0NFUFRFRC4wTAYDVR0fBEUwQzBBoD+gPYY7aHR0cDovL3d3dy5nbG9iYWx0
 cnVzdGZpbmRlci5jb20vY3Jscy9Bc2NlcnRpYVB1YmxpY0NBMS5jcmwwEwYDVR0l
 BAwwCgYIKwYBBQUHAwMwDQYJKoZIhvcNAQELBQADggEBAHU3rNAahAag/HqQgvB7
-jhKofPrZBiZpw3B3Es2+3wGmViNs84WpiRBzH/VGmsItxRPn8ucobNIJNAVkEydO
+jhKofPrZBiZpw3B3Es2+3wGmViNs84WpiRBzH/VGmsItxRPn8ucobNIJDEUkEydO
 ZZau/8V5T6RHMT9UUDedmZrfLK+c1cUitMSYWq7vdK0zetmqmLCq2xv1P2GeyghF
 uVGk5VsdkRwUGCHaVhAZ8XWZC2rODFvQmRnRj9YcKEMNdUYA67GUVskQD9B88/UI
 HP5uFyFPgoTs+0aF1Wgv6WQTW8EDKQijWUJGL5UG9WhLtGyBNosiMzQWGyej3qCD

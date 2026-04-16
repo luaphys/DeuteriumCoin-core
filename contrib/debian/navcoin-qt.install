@@ -1,6 +1,6 @@
-usr/local/bin/navcoin-qt usr/bin
-share/pixmaps/navcoin32.xpm usr/share/pixmaps
-share/pixmaps/navcoin16.xpm usr/share/pixmaps
-share/pixmaps/navcoin128.png usr/share/pixmaps
-debian/navcoin-qt.desktop usr/share/applications
-debian/navcoin-qt.protocol usr/share/kde4/services/
+usr/local/bin/deuteriumcoin-qt usr/bin
+share/pixmaps/deuteriumcoin32.xpm usr/share/pixmaps
+share/pixmaps/deuteriumcoin16.xpm usr/share/pixmaps
+share/pixmaps/deuteriumcoin128.png usr/share/pixmaps
+debian/deuteriumcoin-qt.desktop usr/share/applications
+debian/deuteriumcoin-qt.protocol usr/share/kde4/services/

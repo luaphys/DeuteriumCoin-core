@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef NAVCOIN_TEST_SCRIPTNUM10_H
-#define NAVCOIN_TEST_SCRIPTNUM10_H
+#ifndef DEUTERIUMCOIN_TEST_SCRIPTNUM10_H
+#define DEUTERIUMCOIN_TEST_SCRIPTNUM10_H
 
 #include <algorithm>
 #include <limits>
@@ -23,7 +23,7 @@ public:
 class CScriptNum10
 {
 /**
- * The ScriptNum implementation from Navcoin Core 0.10.0, for cross-comparison.
+ * The ScriptNum implementation from Deuteriumcoin Core 0.10.0, for cross-comparison.
  */
 public:
 
@@ -180,4 +180,4 @@ private:
 };
 
 
-#endif // NAVCOIN_TEST_BIGNUM_H
+#endif // DEUTERIUMCOIN_TEST_BIGNUM_H

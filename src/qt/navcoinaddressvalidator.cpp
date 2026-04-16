@@ -2,7 +2,7 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include <qt/navcoinaddressvalidator.h>
+#include <qt/deuteriumcoinaddressvalidator.h>
 
 #include <base58.h>
 #include <utils/dns_utils.h>
@@ -17,12 +17,12 @@
   - All lower-case letters except for 'l'
 */
 
-NavcoinAddressEntryValidator::NavcoinAddressEntryValidator(QObject *parent) :
+DeuteriumcoinAddressEntryValidator::DeuteriumcoinAddressEntryValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State NavcoinAddressEntryValidator::validate(QString &input, int &pos) const
+QValidator::State DeuteriumcoinAddressEntryValidator::validate(QString &input, int &pos) const
 {
     Q_UNUSED(pos);
 
@@ -82,17 +82,17 @@ QValidator::State NavcoinAddressEntryValidator::validate(QString &input, int &po
     return state;
 }
 
-NavcoinAddressCheckValidator::NavcoinAddressCheckValidator(QObject *parent) :
+DeuteriumcoinAddressCheckValidator::DeuteriumcoinAddressCheckValidator(QObject *parent) :
     QValidator(parent)
 {
 }
 
-QValidator::State NavcoinAddressCheckValidator::validate(QString &input, int &pos) const
+QValidator::State DeuteriumcoinAddressCheckValidator::validate(QString &input, int &pos) const
 {
   Q_UNUSED(pos);
   utils::DNSResolver* DNS = nullptr;
 
-  // Validate the passed Navcoin address
+  // Validate the passed Deuteriumcoin address
   if(DNS->check_address_syntax(input.toStdString().c_str()))
   {
 
@@ -108,7 +108,7 @@ QValidator::State NavcoinAddressCheckValidator::validate(QString &input, int &po
   else
   {
 
-    CNavcoinAddress addr(input.toStdString());
+    CDeuteriumcoinAddress addr(input.toStdString());
     if (addr.IsValid())
       return QValidator::Acceptable;
 

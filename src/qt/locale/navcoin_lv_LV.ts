@@ -195,7 +195,7 @@
     <name>IntroPage</name>
     </context>
 <context>
-    <name>NavcoinGUI</name>
+    <name>DeuteriumcoinGUI</name>
     <message>
         <source>Sign &amp;message...</source>
         <translation>Parakstīt &amp;ziņojumu...</translation>
@@ -273,8 +273,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a Navcoin address</source>
-        <translation>Nosūtīt bitkoinus uz Navcoin adresi</translation>
+        <source>Send coins to a Deuteriumcoin address</source>
+        <translation>Nosūtīt bitkoinus uz Deuteriumcoin adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -297,8 +297,8 @@
         <translation>&amp;Pārbaudīt ziņojumu...</translation>
     </message>
     <message>
-        <source>Navcoin</source>
-        <translation>Navcoin</translation>
+        <source>Deuteriumcoin</source>
+        <translation>Deuteriumcoin</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -325,12 +325,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your Navcoin addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām Navcoin adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your Deuteriumcoin addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Deuteriumcoin adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Navcoin addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Navcoin adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified Deuteriumcoin addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Deuteriumcoin adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -345,12 +345,12 @@
         <translation>&amp;Palīdzība</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and navcoin: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un navcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and deuteriumcoin: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un deuteriumcoin: URIs)</translation>
     </message>
     <message>
-        <source>Open a navcoin: URI or payment request</source>
-        <translation>Atvērt navcoin URI vai maksājuma pieprasījumu</translation>
+        <source>Open a deuteriumcoin: URI or payment request</source>
+        <translation>Atvērt deuteriumcoin URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -495,15 +495,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt navcoin &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt deuteriumcoin &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the Navcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt Navcoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Deuteriumcoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Deuteriumcoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -555,7 +555,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt Navcoin kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Deuteriumcoin kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -579,7 +579,7 @@
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Norādītā starpniekservera adrese nav derīga.</translation>
+        <translation>Norādītā starpniekservera adrese deu derīga.</translation>
     </message>
 </context>
 <context>
@@ -716,7 +716,7 @@
         <translation>Notīrīt konsoli</translation>
     </message>
     <message>
-        <source>Use up and down arrows to navigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
+        <source>Use up and down arrows to deuigate history, and &lt;b&gt;Ctrl-L&lt;/b&gt; to clear screen.</source>
         <translation>Izmantojiet bultiņas uz augšu un leju, lai pārvietotos pa vēsturi, un &lt;b&gt;Ctrl-L&lt;/b&gt; ekrāna notīrīšanai.</translation>
     </message>
     <message>
@@ -756,7 +756,7 @@
     </message>
     <message>
         <source>R&amp;euse an existing receiving address (not recommended)</source>
-        <translation>&amp;Atkārtoti izmantot esošo saņemšanas adresi (nav ieteicams)</translation>
+        <translation>&amp;Atkārtoti izmantot esošo saņemšanas adresi (deu ieteicams)</translation>
     </message>
     <message>
         <source>Clear all fields of the form.</source>
@@ -972,8 +972,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Navcoin address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Navcoin adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Deuteriumcoin address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Deuteriumcoin adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1086,7 +1086,7 @@
     </message>
     </context>
 <context>
-    <name>navcoin-core</name>
+    <name>deuteriumcoin-core</name>
     <message>
         <source>Options:</source>
         <translation>Iespējas:</translation>
@@ -1112,8 +1112,8 @@
         <translation>Darbināt fonā kā servisu un pieņemt komandas</translation>
     </message>
     <message>
-        <source>Navcoin Core</source>
-        <translation>Navcoin Core</translation>
+        <source>Deuteriumcoin Core</source>
+        <translation>Deuteriumcoin Core</translation>
     </message>
     <message>
         <source>&lt;category&gt; can be:</source>
@@ -1257,14 +1257,14 @@
     </message>
 </context>
 <context>
-    <name>navtechitem</name>
+    <name>deutechitem</name>
     <message>
         <source>Form</source>
         <translation>Forma</translation>
     </message>
     </context>
 <context>
-    <name>navtechsetup</name>
+    <name>deutechsetup</name>
     <message>
         <source>Remove</source>
         <translation>Noņemt</translation>

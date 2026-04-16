@@ -1,11 +1,11 @@
 Sample configuration files for:
 
-SystemD: navcoind.service
-Upstart: navcoind.conf
-OpenRC:  navcoind.openrc
-         navcoind.openrcconf
-CentOS:  navcoind.init
-OS X:    org.navcoin.navcoind.plist
+SystemD: deuteriumcoind.service
+Upstart: deuteriumcoind.conf
+OpenRC:  deuteriumcoind.openrc
+         deuteriumcoind.openrcconf
+CentOS:  deuteriumcoind.init
+OS X:    org.deuteriumcoin.deuteriumcoind.plist
 
 have been made available to assist packagers in creating node packages here.
 
