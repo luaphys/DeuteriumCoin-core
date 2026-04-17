@@ -279,6 +279,7 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
+         
         pchMessageStart[0] = 0x15;
         pchMessageStart[1] = 0x27;
         pchMessageStart[2] = 0x57;
@@ -293,7 +294,27 @@ public:
 
         assert(consensus.hashGenesisBlock == uint256S("b4961bab96256eb70fc195ccd5fe47d77cacbe2ee24d44ef13d3628f3f000000"));
         assert(genesis.hashMerkleRoot == uint256S("dfc7e909709aeb3c3cee3b704ed54369dc59e4e799ed50ec261c230f4f11896f"));
-
+if (true && genesis.GetHash() != consensus.hashGenesisBlock)
+{
+    printf("Searching for genesis block...\n");
+    arith_uint256 hashTarget = arith_uint256().SetCompact(genesis.nBits);
+    uint256 hash;
+    genesis.nNonce = 0;
+    while (UintToArith256(genesis.GetHash()) > hashTarget)
+    {
+        ++genesis.nNonce;
+        if (genesis.nNonce == 0)
+        {
+            printf("NONCE WRAPPED\n");
+            ++genesis.nTime;
+        }
+    }
+    printf("genesis.nTime = %u\n", genesis.nTime);
+    printf("genesis.nNonce = %u\n", genesis.nNonce);
+    printf("genesis.nBits = %08x\n", genesis.nBits);
+    printf("genesis.GetHash = %s\n", genesis.GetHash().ToString().c_str());
+    printf("genesis.hashMerkleRoot = %s\n", genesis.hashMerkleRoot.ToString().c_str());
+}
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1,53);
         base58Prefixes[BLS_PRIVATE_ADDRESS] = boost::assign::list_of(73)(33).convert_to_container<std::vector<unsigned char> >();
         base58Prefixes[SECRET_BLSCT_SPEND_KEY] = boost::assign::list_of(151)(181).convert_to_container<std::vector<unsigned char> >();
