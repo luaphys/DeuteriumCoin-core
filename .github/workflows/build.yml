@@ -1,51 +1,130 @@
-name: Build Windows Coin (NavCoin Fork)
+name: DeuteriumCoin Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ master ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ master ]
+  workflow_dispatch:
 
 jobs:
-  build-windows:
-    runs-on: windows-latest
+  build-linux:
+    name: Build Linux
+    runs-on: ubuntu-20.04
 
     steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
 
-      - name: Set up MSVC environment
-        uses: ilammy/msvc-dev-cmd@v1
-
-      - name: Install dependencies (vcpkg)
+      - name: Install dependencies
         run: |
-          git clone https://github.com/microsoft/vcpkg
-          cd vcpkg
-          .\bootstrap-vcpkg.bat
-          .\vcpkg install boost-filesystem boost-system boost-thread openssl berkeleydb
+          sudo apt-get update
+          sudo apt-get install -y \
+            autoconf \
+            automake \
+            libtool \
+            pkg-config \
+            build-essential \
+            libssl-dev \
+            libboost-all-dev \
+            libdb++-dev \
+            libdb-dev \
+            libminiupnpc-dev \
+            libqt5gui5 \
+            libqt5core5a \
+            libqt5dbus5 \
+            qttools5-dev \
+            qttools5-dev-tools \
+            libprotobuf-dev \
+            protobuf-compiler \
+            libqrencode-dev \
+            libzmq3-dev \
+            cmake \
+            git \
+            curl \
+            python3
 
-      - name: Run autogen (if exists)
-        shell: bash
-        run: |
-          if [ -f "./autogen.sh" ]; then
-            ./autogen.sh
-          fi
+      - name: Run autogen
+        run: ./autogen.sh
 
-      - name: Configure build (MSVC)
-        shell: bash
+      - name: Configure
         run: |
-          if [ -f "./configure" ]; then
-            ./configure --with-boost-libdir=/vcpkg/installed/x64-windows/lib
-          fi
+          ./configure \
+            --disable-tests \
+            --disable-bench \
+            --without-gui \
+            --with-incompatible-bdb
 
-      - name: Build (MSBuild)
-        shell: pwsh
-        run: |
-          msbuild *.sln /p:Configuration=Release /m
+      - name: Build
+        run: make -j$(nproc)
 
       - name: Upload binaries
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v3
         with:
-          name: windows-binaries
+          name: deuteriumcoin-linux
           path: |
-            **/Release/*.exe
+            src/deuteriumcoind
+            src/deuteriumcoin-cli
+            src/deuteriumcoin-tx
+          if-no-files-found: warn
+
+  build-windows:
+    name: Build Windows (cross-compile)
+    runs-on: ubuntu-20.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            autoconf \
+            automake \
+            libtool \
+            pkg-config \
+            build-essential \
+            cmake \
+            curl \
+            git \
+            python3 \
+            g++-mingw-w64-x86-64 \
+            mingw-w64 \
+            mingw-w64-tools \
+            nsis
+
+      - name: Build depends for Windows
+        run: |
+          cd depends
+          make HOST=x86_64-w64-mingw32 -j$(nproc)
+
+      - name: Run autogen
+        run: ./autogen.sh
+
+      - name: Configure for Windows
+        run: |
+          CONFIG_SITE=$PWD/depends/x86_64-w64-mingw32/share/config.site \
+          ./configure \
+            --prefix=/ \
+            --disable-tests \
+            --disable-bench \
+            --without-gui \
+            HOST=x86_64-w64-mingw32
+
+      - name: Build
+        run: make -j$(nproc)
+
+      - name: Upload Windows binaries
+        uses: actions/upload-artifact@v3
+        with:
+          name: deuteriumcoin-windows
+          path: |
+            src/deuteriumcoind.exe
+            src/deuteriumcoin-cli.exe
+            src/deuteriumcoin-tx.exe
+          if-no-files-found: warn
